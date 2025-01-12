@@ -1,0 +1,5 @@
+/* Change cursor to a pointer when hovering over Plotly graphs */
+#graph-id .plotly .cursor-crosshair {
+    cursor: default;
+}
+
