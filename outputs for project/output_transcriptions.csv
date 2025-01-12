@@ -1,0 +1,3074 @@
+_id,_createdAt,_updatedAt,user_id,upload_date,analysis_date,file_name_stemmed,file_name,record_file_url,record_type,video_length_secs,size_in_mb,status,record_name,_updatedAt,_uid,transcript,translation,override_transcript,override_translation
+1,43:58.9,31:08.0,AdminUser,43:58.9,,file_name_stemmed,20241210_1243_f1136d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1243_f1136d_s3_sensor/input_video/20241210_1243_f1136d_s3_sensor.mp4,video,5.759,1.67,Done,#Labrador Dog Barking clip #Dog traing.mp4,31:02.9,6758378eddcc81c453c0,"""WEBVTT\n\n""","""WEBVTT\n\n00:00:00.349 --> 00:00:27.170\nFake line\n\n""",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.000
+{{Audio Event 1}}
+People Talking
+
+00:00:02.349 --> 00:00:05.349
+{{Audio Event 2}}
+Barking"
+2,37:05.5,40:53.6,AdminUser,37:05.5,,file_name_stemmed,20241210_1243_92470f_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1243_92470f_s3_sensor/input_video/20241210_1243_92470f_s3_sensor.mp4,video,17.485,18.81,Done,0530(6).mp4,40:49.5,67584401716a1f59bf8e,"""WEBVTT\n\n00:00:13.131 --> 00:00:13.695\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.000
+{{Audio Event 1}}
+Gunshots
+
+00:00:11.349 --> 00:00:15.349
+{{Audio Event 2}}
+People Talking"
+3,53:05.0,04:45.1,AdminUser,53:05.0,,file_name_stemmed,20241210_1452_60e54c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1452_60e54c_s3_sensor/input_video/20241210_1452_60e54c_s3_sensor.mp4,video,30.1,5.63,Done,20240826_0621_1412db_s3_sensor_cut.mp4,04:40.8,675855d106df50de81a8,"""WEBVTT\n\n00:00:00.950 --> 00:00:05.293\n\u0627\u0639\u0648\u0630 \u0628\u0627\u0644\u0644\u0647 \u0645\u0646 \u0627\u0644\u0634\u064a\u0637\u0627\u0646 \u0627\u0644\u0631\u062c\u064a\u0645 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062d\u0645\u0646 \u0627\u0644\u0631\u062d\u064a\u0645.\n\n00:00:05.613 --> 00:00:20.344\n\u0633\u064a\u0645\u0632\u0645\u0648\u0627 \u0627\u0644\u0646\u062c\u0645 \u0648\u064a\u0648\u0644\u0648\u0647\u0646 \u0627\u0644\u0630\u0642\u0631 \u0641\u0644\u0633\u0627\u062a \u0645\u0648\u0639\u062f\u0647\u0645 \u0648\u0633\u0627\u0639\u0627\u062a \u0627\u062f\u0639\u0627\u0621 \u0648\u0633\u0627\u0639\u0627\u062a \u0627\u062f\u0639\u0627\u0621 \u0648\u0627\u0645\u0631 \u0627\u0646 \u0645\u062c\u0631\u0645\u064a\u0646 \u0641\u064a \u0636\u0644\u0627\u0644.\n\n00:00:22.676 --> 00:00:25.443\n\u0627\u0646 \u0627\u0644\u0645\u062f\u0646 \u0647\u064a \u0645\u0646\u0627\u0631 \u0647\u064a \u0636\u0631\u0627\u0626\u0628\u0647\u0627 \u064a\u0633\u062d\u0628\u0648\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:04.099
+{{Audio Event 1}}
+People Talking
+
+00:00:05.349 --> 00:00:30.099
+{{Audio Event 2}}
+Music"
+4,56:10.9,41:42.7,AdminUser,56:10.9,,file_name_stemmed,20241210_1452_5a36f2_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1452_5a36f2_s3_sensor/input_video/20241210_1452_5a36f2_s3_sensor.mp4,video,31.75,11.67,Done,20241127_1507_f823fb_s3_sensor.mp4,41:34.8,6758568ad54307435229,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:31.170
+{{Audio Event 1}}
+Music
+
+00:00:30.349 --> 00:00:31.349
+{{Audio Event 2}}
+People Talking"
+5,59:06.2,41:30.4,AdminUser,59:06.2,,file_name_stemmed,20241210_1452_73b35e_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1452_73b35e_s3_sensor/input_video/20241210_1452_73b35e_s3_sensor.mp4,video,11.893,3.21,Done,20241127_1513_4c6d27_s3_sensor.mp4,41:19.6,6758573a3a8d253714cb,"""WEBVTT\n\n00:00:04.735 --> 00:00:10.893\n\u064a\u0627 \u0644\u0627 \u0639\u0644\u0645 \u0627\u0644\u0647 \u0627\u0644\u0627 \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 .\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 .\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.000
+{{Audio Event 1}}
+Shouting
+
+00:00:01.349 --> 00:00:02.349
+{{Audio Event 2}}
+Crowd
+
+00:00:02.349 --> 00:00:04.349
+{{Audio Event 3}}
+Shouting
+
+00:00:04.349 --> 00:00:06.349
+{{Audio Event 4}}
+Crowd
+
+00:00:07.349 --> 00:00:08.349
+{{Audio Event 5}}
+Shouting
+
+00:00:08.349 --> 00:00:10.349
+{{Audio Event 6}}
+Crowd
+
+00:00:10.349 --> 00:00:11.000
+{{Audio Event 7}}
+Shouting"
+6,02:21.6,42:45.5,AdminUser,02:21.6,,file_name_stemmed,20241210_1453_74debe_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1453_74debe_s3_sensor/input_video/20241210_1453_74debe_s3_sensor.mp4,video,6.405166667,1.17,Done,20241127_1537_83dfea_s3_sensor.mp4,42:35.6,675857fd947db72f1b15,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 1}}
+Engine"
+7,05:22.7,02:59.1,AdminUser,05:22.7,,file_name_stemmed,20241210_1453_a59e01_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1453_a59e01_s3_sensor/input_video/20241210_1453_a59e01_s3_sensor.mp4,video,8.933333333,1.86,Done,20241127_1552_061bbb_s3_sensor.mp4,02:47.8,675858b2b2d5b741896c,"""WEBVTT\n\n00:00:00.009 --> 00:00:01.276\n\u05d0\u05dd \u05d4\u05d9\u05d4 \u05de\u05d7\u05d1\u05d1 \u05e4\u05d4?\n\n00:00:02.403 --> 00:00:02.484\n\u05db\u05df.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 1}}
+People Talking
+
+00:00:00.349 --> 00:00:01.349
+{{Audio Event 4}}
+Shouting
+
+00:00:02.349 --> 00:00:08.349
+{{Audio Event 2}}
+Siren
+
+00:00:03.349 --> 00:00:08.349
+{{Audio Event 3}}
+Traffic"
+8,08:18.9,04:25.6,AdminUser,08:18.9,,file_name_stemmed,20241210_1453_0863dd_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1453_0863dd_s3_sensor/input_video/20241210_1453_0863dd_s3_sensor.mp4,video,30.015,12.13,Done,20241127_1633_19ae30_s3_sensor_cut.mp4,04:06.7,67585962d1590904969c,"""WEBVTT\n\n00:00:10.096 --> 00:00:18.248\n\u0642\u062f\u0633 \u0627\u0644\u0627\u0642\u062f\u0627\u0633 \u062a\u0646\u0627\u062f\u064a\u0646\u0627 \u0641\u0627\u0639\u062f\u0648\u0627 \u0627\u0644\u0639\u062f\u0629 \u0627\u0646 \u0639\u062f\u062a\u0645 \u0639\u062f\u0646\u0627 \u0641\u0627\u0646\u062a\u0638\u0644\u0648\u0627 \u0627\u0639\u062f\u062f\u0646\u0627 \u0627\u0644\u0631\u062f.\n\n00:00:18.489 --> 00:00:29.765\n\u0627\u0644\u0645\u062d\u0648\u0631 \u0628\u0627\u062a \u064a\u062d\u0627\u0635\u0631\u0643\u0645 \u0642\u064a\u0627\u0647 \u0627\u0644\u062f\u0645 \u0639\u0627\u0642\u0644 \u062f\u0648\u0644\u062a\u0643\u0645 \u0627\u0644\u0645\u062d\u0648\u0631 \u0628\u0627\u062a \u064a\u062d\u0627\u0635\u0631\u0643\u0645 \u0642\u064a\u0627\u0647 \u0627\u0644\u062f\u0645 \u0639\u0627\u0642\u0644 \u062f\u0648\u0644\u062a\u0643\u0645 \u062d\u0632\u0628\u0627 \u062d\u0631\u0633\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.014
+{{Audio Event 1}}
+Music"
+9,11:18.4,13:10.2,AdminUser,11:18.4,,file_name_stemmed,20241210_1502_8edea0_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1502_8edea0_s3_sensor/input_video/20241210_1502_8edea0_s3_sensor.mp4,video,3.5,0.31,Done,20241127_1644_755172_s3_sensor.mp4,13:08.0,67585a165d070f32f6ad,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 1}}
+Siren"
+10,14:08.8,17:08.8,AdminUser,14:08.8,,file_name_stemmed,20241210_1502_117945_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1502_117945_s3_sensor/input_video/20241210_1502_117945_s3_sensor.mp4,video,13.66666667,2.51,Done,20241127_1655_df80b0_s3_sensor.mp4,16:49.6,67585ac0c68ad6174fa3,"""WEBVTT\n\n00:00:00.765 --> 00:00:11.601\n\u0627\u0644\u0648\u0644\u0627\u062f\u0629 \u0627\u0644\u064a\u0647\u0648\u062f\u064a\u0629 \u0647\u0630\u0647 \u0645\u0627\u062a\u062a \u062e\u0648\u0641 \u0644\u0627 \u062a\u062e\u0627\u0641\u064a \u064a\u0627 \u0628\u0646\u062a \u0627\u0644\u0646\u0627\u0633 \u0627\u0644\u0645\u0648\u062a \u0648\u062d\u062f\u0629 .\n\n00:00:11.740 --> 00:00:12.882\n\u062e\u0644\u0635 \u064a\u062e\u0631\u0628\u0646\u0627 \u0648\u0644\u0643 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.699
+{{Audio Event 1}}
+Crying
+
+00:00:00.349 --> 00:00:05.349
+{{Audio Event 4}}
+People Talking
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 2}}
+Crying
+
+00:00:05.349 --> 00:00:12.349
+{{Audio Event 3}}
+Crying
+
+00:00:11.349 --> 00:00:13.349
+{{Audio Event 5}}
+People Talking"
+11,17:24.8,38:18.5,AdminUser,17:24.8,,file_name_stemmed,20241210_1502_547183_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1502_547183_s3_sensor/input_video/20241210_1502_547183_s3_sensor.mp4,video,19.89833333,2.62,Done,20241128_0807_bca58f_s3_sensor.mp4,38:05.7,67585b84cdd7210f88d5,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:19.898
+{{Audio Event 1}}
+Traffic
+
+00:00:04.349 --> 00:00:19.898
+{{Audio Event 2}}
+Siren"
+12,20:25.9,18:12.3,AdminUser,20:25.9,,file_name_stemmed,20241210_1511_2f89c1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1511_2f89c1_s3_sensor/input_video/20241210_1511_2f89c1_s3_sensor.mp4,video,22.46666667,4.47,Done,20241128_0818_586814_s3_sensor.mp4,18:10.8,67585c39e306b3305731,"""WEBVTT\n\n00:00:00.049 --> 00:00:07.234\n\u0627\u064a\u0648\u0629 \u064a\u0627\u0644\u0644\u0647 \u0647\u0627\u064a \u062d\u0644\u0648\u0627\u0646\u0629 \u062d\u0644\u0648\u0627\u0646 \u062d\u0644\u0648\u0627\u0646 \u062d\u0644\u0648\u0627\u0646 .\u0647\u064a \u062a\u0633\u0639\u0629 \u0648\u062a\u0633\u0639\u064a\u0646 .\u0627\u064a\u0648\u0629 \u0645\u0626\u062a\u064a\u0646 \u0635\u0627\u0631\u0648\u062e \u0645\u0626\u062a\u064a\u0646 \u0635\u0627\u0631\u0648\u062e \u0647\u0630\u0648\u0644 \u0645\u0626\u062a\u064a\u0646.\n\n00:00:07.275 --> 00:00:14.080\n\u064a\u0627\u0644\u0644\u0647 \u062d\u0644\u0648\u0627\u0646 \u0627\u0644\u0635\u0648\u0627\u0631\u064a\u062e .\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u064a\u0627 \u0631\u0628 \u0646\u0648\u0632\u0639\u0647\u0627 \u0628\u0627\u0644\u062e\u064a\u0631 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u064a\u0627 \u0631\u0628 \u064a\u0627\u0644\u0644\u0647 \u064a\u0627 \u0631\u0628 \u064a\u0627\u0644\u0644\u0647 \u064a\u0627 \u0631\u0628 \u064a\u0627\u0644\u0644\u0647 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:22.466
+{{Audio Event 1}}
+People Talking"
+13,23:27.0,44:03.8,AdminUser,23:27.0,,file_name_stemmed,20241210_1511_2e2ba7_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1511_2e2ba7_s3_sensor/input_video/20241210_1511_2e2ba7_s3_sensor.mp4,video,21.14,7.69,Done,20241128_1203_ccc1dc_s3_sensor.mp4,44:00.6,67585ceee969165f7c64,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.000
+{{Audio Event 1}}
+Street"
+14,26:22.0,19:17.4,AdminUser,26:22.0,,file_name_stemmed,20241210_1511_fcfd8d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1511_fcfd8d_s3_sensor/input_video/20241210_1511_fcfd8d_s3_sensor.mp4,video,21.93333333,7.94,Done,20241128_1332_f23a00_s3_sensor.mp4,19:14.6,67585d9de9e6d5aa3713,"""WEBVTT\n\n00:00:00.309 --> 00:00:13.224\n\u0642\u0633\u0645\u0627 \u0628\u0631\u0628 \u0627\u0644\u0639\u0631\u0634 \u0647\u0630\u0627 \u0639\u0647\u062f\u0646\u0627 \u0627\u0646 \u0633\u0646\u062b\u0627\u0631 \u0648\u0627\u0644\u064a\u0645\u064a\u0646 \u0646\u0637\u0627\u0642 \u0648\u0633\u062a\u062f\u0641\u0639\u0648\u0646 \u062f\u0645\u0627\u0621\u0646\u0627 \u0627\u0636\u0639\u0641\u0647\u0627.\n\n00:00:13.364 --> 00:00:20.852\n\u064a\u0648\u0645 \u0628\u064a\u0648\u0645 \u0648\u062f\u0645 \u0627\u0633\u062a\u062d\u0642\u0627\u0642 .\u0648\u0643\u0644 \u0646\u0648\u0641 \u0648\u0627\u0644\u062d\u064a\u0627\u0629 \u0644\u0642\u0648\u0644\u0646\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.933
+{{Audio Event 1}}
+Music"
+15,29:18.2,22:32.1,AdminUser,29:18.2,,file_name_stemmed,20241210_1520_4716a3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1520_4716a3_s3_sensor/input_video/20241210_1520_4716a3_s3_sensor.mp4,video,21.16,15.74,Done,20241128_1414_3cc61c_s3_sensor.mp4,22:27.5,67585e4e2c87c310a584,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.000
+{{Audio Event 1}}
+Street
+
+00:00:08.349 --> 00:00:21.160
+{{Audio Event 2}}
+Traffic
+
+00:00:10.349 --> 00:00:13.349
+{{Audio Event 3}}
+Engine
+
+00:00:16.349 --> 00:00:21.160
+{{Audio Event 4}}
+Engine"
+16,32:28.7,26:43.6,AdminUser,32:28.7,,file_name_stemmed,20241210_1520_adf015_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1520_adf015_s3_sensor/input_video/20241210_1520_adf015_s3_sensor.mp4,video,14.03333333,5.19,Done,20241128_1416_316d82_s3_sensor.mp4,26:41.8,67585f0ca4dadb34f4e6,"""WEBVTT\n\n00:00:00.009 --> 00:00:06.501\n\u0627\u0644\u0644\u0647 \u064a\u0633\u0639\u062f \u0635\u0628\u0627\u062d\u0643\u0648\u0627 \u064a\u0648\u0645 \u0627\u0644\u0627\u0631\u0628\u0639\u0627\u0621 \u062b\u0645\u0627\u0646\u064a\u0629 \u0627\u0644\u0627 \u0639\u0634\u0631\u0629 \u0648\u0644\u0627 \u0648\u0627\u062d\u062f \u0639\u0627\u0644\u0633\u062f\u0629 \u0628\u064a\u0639\u062f\u064a.\n\n00:00:06.602 --> 00:00:13.996\n\u0641\u064a\u0634 \u0648\u0644\u0627 \u0645\u062e\u0644\u0648\u0642 \u0628\u064a\u0639\u062f\u064a \u064a\u0627 \u0634\u0628\u0627\u0628 \u0627\u0644\u0644\u0647 \u064a\u0633\u0639\u062f \u0635\u0628\u0627\u062d \u0627\u0644\u062c\u0645\u064a\u0639 \u0648\u0627\u0644\u062c\u064a\u0634 \u0645\u0633\u062a\u0646\u0641\u0631 \u0639\u0627\u0644\u0627\u062e\u0631 \u0627\u0644\u0644\u0647 \u064a\u0633\u0639\u062f \u0635\u0628\u0627\u062d\u0643 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:14.000
+{{Audio Event 1}}
+People Talking
+
+00:00:00.349 --> 00:00:14.048
+{{Audio Event 2}}
+Street"
+17,35:34.6,03:28.9,AdminUser,35:34.5,,file_name_stemmed,20241210_1520_efe58d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1520_efe58d_s3_sensor/input_video/20241210_1520_efe58d_s3_sensor.mp4,video,30.016,6.47,Done,20241201_1220_1f0dc6_s3_sensor_cut.mp4,03:05.4,67585fc686aec4128cf9,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:01.170
+{{Audio Event 1}}
+Gunshot
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 2}}
+Gunshot
+
+00:00:05.349 --> 00:00:13.349
+{{Audio Event 9}}
+Crowd
+
+00:00:13.349 --> 00:00:13.349
+{{Audio Event 3}}
+Gunshot
+
+00:00:14.349 --> 00:00:14.349
+{{Audio Event 4}}
+Gunshot
+
+00:00:15.349 --> 00:00:16.349
+{{Audio Event 5}}
+Gunshot
+
+00:00:17.349 --> 00:00:18.349
+{{Audio Event 6}}
+Gunshot
+
+00:00:20.349 --> 00:00:21.349
+{{Audio Event 7}}
+Gunshot
+
+00:00:21.349 --> 00:00:22.349
+{{Audio Event 8}}
+Gunshot
+
+00:00:24.349 --> 00:00:26.349
+{{Audio Event 10}}
+Traffic
+
+00:00:27.349 --> 00:00:30.015
+{{Audio Event 11}}
+Alarm"
+18,38:19.7,25:18.1,AdminUser,38:19.7,,file_name_stemmed,20241210_1529_008bb2_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1529_008bb2_s3_sensor/input_video/20241210_1529_008bb2_s3_sensor.mp4,video,8.966666667,0.8,Done,20241201_1616_12d27b_s3_sensor.mp4,25:15.4,6758606bb6b3de587515,"""WEBVTT\n\n00:00:00.470 --> 00:00:02.454\n\u0648\u062f\u0639\u064a \u064a\u0648\u0645\u064a \u0641\u064a \u0627\u0644\u0646\u0627\u0639\u0645\u0629 \u0644\u0633\u0639\u064a\u0647\u0627.\n\n00:00:02.474 --> 00:00:08.266\n\u0648\u062f\u0639\u064a \u064a\u0648\u0645\u064a \u0641\u064a \u0627\u0644\u0646\u0627\u0639\u0645\u0629 \u0644\u0633\u0639\u064a\u0647\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:08.000
+{{Audio Event 1}}
+Music"
+19,41:10.2,22:16.3,AdminUser,41:10.2,,file_name_stemmed,20241210_1529_e25be9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1529_e25be9_s3_sensor/input_video/20241210_1529_e25be9_s3_sensor.mp4,video,12.04,3.97,Done,20241202_1342_374d78_s3_sensor_cut.mp4,22:11.5,675861162f31c5c8e2f7,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.000
+{{Audio Event 1}}
+Gunshots
+
+00:00:06.349 --> 00:00:10.349
+{{Audio Event 1}}
+Gunshots"
+22,47:56.6,35:40.0,AdminUser,47:56.6,,file_name_stemmed,20241210_1538_1bf67d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1538_1bf67d_s3_sensor/input_video/20241210_1538_1bf67d_s3_sensor.mp4,video,9.04,1.28,Done,20241202_1533_8e2108_s3_sensor_cut.mp4,35:20.8,675862ac879838851500,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:05.000
+{{Audio Event 1}}
+Explosion
+
+00:00:06.349 --> 00:00:07.349
+{{Audio Event 2}}
+Buzzing"
+26,59:39.2,34:07.5,AdminUser,59:39.2,,file_name_stemmed,20241210_1544_c055cb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1544_c055cb_s3_sensor/input_video/20241210_1544_c055cb_s3_sensor.mp4,video,30.674,11.05,Done,20241203_1112_6c2efb_s3_sensor.mp4,33:47.2,6758656b33c1c310a9f4,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.673
+{{Audio Event 1}}
+Music
+
+00:00:09.349 --> 00:00:10.349
+{{Audio Event 2}}
+Explosion
+
+00:00:11.349 --> 00:00:12.349
+{{Audio Event 3}}
+Shouting"
+27,02:54.4,36:03.5,AdminUser,02:54.3,,file_name_stemmed,20241210_1553_0117dc_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1553_0117dc_s3_sensor/input_video/20241210_1553_0117dc_s3_sensor.mp4,video,11.12,0.41,Done,20241203_1122_1024cb_s3_sensor_cut.mp4,35:51.0,6758662e55ac1f3777ce,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.000
+{{Audio Event 1}}
+Siren
+
+00:00:00.349 --> 00:00:11.080
+{{Audio Event 3}}
+Music
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 2}}
+People Talking
+
+00:00:05.349 --> 00:00:06.349
+{{Audio Event 4}}
+Explosion
+
+00:00:07.349 --> 00:00:08.349
+{{Audio Event 5}}
+Explosion
+
+00:00:07.349 --> 00:00:09.000
+{{Audio Event 6}}
+Shouting"
+28,05:56.1,21:23.3,AdminUser,05:56.1,,file_name_stemmed,20241210_1553_679e3b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1553_679e3b_s3_sensor/input_video/20241210_1553_679e3b_s3_sensor.mp4,video,25.04,3.58,Done,20241203_1122_1024cb_s3_sensor_cut_1.mp4,21:18.1,675866e4182ecaf506e6,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:25.021
+{{Audio Event 1}}
+Music
+
+00:00:00.349 --> 00:00:25.021
+{{Audio Event 2}}
+People talking"
+29,08:50.5,06:08.1,AdminUser,08:50.5,,file_name_stemmed,20241210_1553_373ffd_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1553_373ffd_s3_sensor/input_video/20241210_1553_373ffd_s3_sensor.mp4,video,35.945,9.63,Done,20241203_1135_b7236b_s3_sensor.mp4,05:59.9,675867927514cc2f1991,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:35.944
+{{Audio Event 1}}
+Music"
+30,11:41.3,19:57.7,AdminUser,11:41.3,,file_name_stemmed,20241210_1602_648596_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1602_648596_s3_sensor/input_video/20241210_1602_648596_s3_sensor.mp4,video,23.04,7.79,Done,20241203_1141_268e86_s3_sensor_cut.mp4,19:54.2,6758683d3ed3ec4a0b43,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.019
+{{Audio Event 1}}
+Traffic
+
+00:00:00.000 --> 00:00:23.019
+{{Audio Event 3}}
+Crowd
+
+00:00:03.349 --> 00:00:18.349
+{{Audio Event 2}}
+People talking
+
+00:00:15.349 --> 00:00:19.019
+{{Audio Event 1}}
+Traffic"
+31,14:36.3,41:15.6,AdminUser,14:36.3,,file_name_stemmed,20241210_1602_621927_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1602_621927_s3_sensor/input_video/20241210_1602_621927_s3_sensor.mp4,video,14.04,6.5,Done,20241203_1141_268e86_s3_sensor_cut_2.mp4,41:05.6,675868ec45afab6ce1d3,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:02.000
+{{Audio Event 1}}
+Gunshots
+
+00:00:12.349 --> 00:00:13.349
+{{Audio Event 2}}
+Gunshots"
+32,17:41.7,37:14.0,AdminUser,17:41.7,,file_name_stemmed,20241210_1602_b05e7f_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1602_b05e7f_s3_sensor/input_video/20241210_1602_b05e7f_s3_sensor.mp4,video,13.04,1.98,Done,20241203_1141_cd2695_s3_sensor_cut.mp4,37:12.3,675869a5a58a83e3b4d5,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:11.000
+{{Audio Event 1}}
+People Talking"
+33,20:42.5,39:06.3,AdminUser,20:42.5,,file_name_stemmed,20241210_1611_7944c9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1611_7944c9_s3_sensor/input_video/20241210_1611_7944c9_s3_sensor.mp4,video,6.04,0.77,Done,20241203_1141_cd2695_s3_sensor_cut_1.mp4,39:04.7,67586a5a746911325d47,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:06.000
+{{Audio Event 1}}
+Alarm
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 2}}
+People Talking"
+34,23:33.2,07:50.0,AdminUser,23:33.2,,file_name_stemmed,20241210_1611_572af6_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1611_572af6_s3_sensor/input_video/20241210_1611_572af6_s3_sensor.mp4,video,30.034,5.78,Done,20241203_1157_1c85bb_s3_sensor_cut.mp4,07:43.1,67586b0531a5b4bc70a1,"""WEBVTT\n\n00:00:05.261 --> 00:00:11.127\n\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 .\n\n00:00:11.426 --> 00:00:13.648\n\u062e\u0630 \u0631\u0627\u062d\u062a\u0643 \u064a\u0627 \u0632\u0644\u0645\u0629 \u0628\u0627\u0644\u062c\u0648\u0627\u0632\u0629 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:03.349 --> 00:00:05.170
+{{Audio Event 1}}
+Explosion
+
+00:00:05.349 --> 00:00:07.349
+{{Audio Event 2}}
+Shouting
+
+00:00:07.349 --> 00:00:10.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:11.349 --> 00:00:23.349
+{{Audio Event 4}}
+People talking
+
+00:00:24.349 --> 00:00:25.349
+{{Audio Event 3}}
+New Audio Event
+
+00:00:26.349 --> 00:00:30.012
+{{Audio Event 2}}
+Shouting"
+35,26:23.9,59:52.8,AdminUser,26:23.9,,file_name_stemmed,20241210_1611_aa1ef1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1611_aa1ef1_s3_sensor/input_video/20241210_1611_aa1ef1_s3_sensor.mp4,video,30.034,5.77,Done,20241203_1157_1c85bb_s3_sensor_cut_1.mp4,59:39.0,67586bafd89a199bc5b7,"""WEBVTT\n\n00:00:21.844 --> 00:00:27.528\n\u0647\u0627\u064a \u0647\u0627\u064a \u062c\u064a\u0628\u0627\u062a\u0647\u0645 \u0647\u0627\u064a \u062c\u064a\u0628\u0627\u062a\u0647\u0645 \u062c\u064a\u0628\u0627\u062a\u0647\u0645 \u062c\u064a\u0628\u0627\u062a\u0647\u0645 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.170
+{{Audio Event 1}}
+Shouting
+
+00:00:01.349 --> 00:00:05.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:06.349 --> 00:00:06.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:09.349 --> 00:00:09.349
+{{Audio Event 4}}
+Gunshots
+
+00:00:10.349 --> 00:00:13.349
+{{Audio Event 5}}
+Gunshots
+
+00:00:14.349 --> 00:00:18.349
+{{Audio Event 6}}
+Gunshots
+
+00:00:21.349 --> 00:00:25.349
+{{Audio Event 7}}
+Shouting
+
+00:00:26.349 --> 00:00:27.349
+{{Audio Event 8}}
+People Talking
+
+00:00:28.349 --> 00:00:30.000
+{{Audio Event 9}}
+Gunshots"
+36,29:19.2,59:03.9,AdminUser,29:19.2,,file_name_stemmed,20241210_1620_9d2b32_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1620_9d2b32_s3_sensor/input_video/20241210_1620_9d2b32_s3_sensor.mp4,video,44.034,8.74,Done,20241203_1157_1c85bb_s3_sensor_cut_2.mp4,02:21.7,67586c5f2e4944b6c7c8,"""WEBVTT\n\n00:00:15.080 --> 00:00:24.594\n\u0631\u0627\u0633\u0643 \u0647\u0630\u0647 \u0631\u0633\u0627\u0644\u0629 \u0646\u062d\u0646 \u0642\u0627\u062f\u0629 \u0639\u0627\u0645\u0644\u0629 \u0642\u0627\u062f\u0629 \u0636\u064a\u0627\u0641\u0629 \u0627\u0644\u0639\u0645\u0627\u0644 \u0645\u0627 \u062a\u0645 \u0627\u0644\u0627\u064a\u062f \u0648\u0627\u062d\u0646\u0627 \u0645\u0646 \u0634\u0639\u0628\u0646\u0627 \u0648\u0646\u062d\u0646 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u0628\u0648\u062c\u0647\u0647 \u0627\u0644\u0646\u0648\u0639 \u0627\u0644\u0628\u0627\u0642\u064a \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u0648\u0627\u0644\u0642\u0627\u062f\u0645 \u0627\u0639\u062f\u0645 .\n\n00:00:24.634 --> 00:00:25.234\n\u062d\u0642\u0631\u0627\u0621 \u062d\u0642\u0631\u0627\u0621.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:11.170
+{{Audio Event 1}}
+Gunshots
+
+00:00:15.349 --> 00:00:25.349
+{{Audio Event 2}}
+People talking
+
+00:00:26.349 --> 00:00:31.349
+{{Audio Event 3}}
+Shouting
+
+00:00:41.349 --> 00:00:42.349
+{{Audio Event 1}}
+Gunshots"
+37,32:39.5,33:55.6,AdminUser,32:39.5,,file_name_stemmed,20241210_1620_8d67b9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1620_8d67b9_s3_sensor/input_video/20241210_1620_8d67b9_s3_sensor.mp4,video,13.86666667,1.13,Done,20241203_1157_bd3fc3_s3_sensor.mp4,33:53.1,67586d27834a39c78902,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.000
+{{Audio Event 1}}
+Gunshots
+
+00:00:03.349 --> 00:00:13.349
+{{Audio Event 2}}
+People talking
+
+00:00:07.349 --> 00:00:13.866
+{{Audio Event 1}}
+Gunshots"
+38,35:40.4,10:54.0,AdminUser,35:40.4,,file_name_stemmed,20241210_1620_8d376b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1620_8d376b_s3_sensor/input_video/20241210_1620_8d376b_s3_sensor.mp4,video,30.034,10.67,Done,20241203_1221_283e24_s3_sensor_cut.mp4,10:43.8,67586ddc63008c0f1fe7,"""WEBVTT\n\n00:00:00.109 --> 00:00:09.233\n\u064a\u0627 \u0631\u0628 \u064a\u0635\u062d\u0644\u0648\u0646\u0627 \u0627\u0644\u0639\u0645\u0644 \u064a\u0627 \u0631\u0628 .\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 \u0648\u0627\u0644\u0644\u0647 \u0647\u0627\u0644\u062d\u0645\u062f \u0647\u064a \u0627\u0644\u0634\u063a\u0644 \u0637\u064a\u0628 \u0647\u064a \u0627\u0644\u0634\u063a\u0644.\n\n00:00:13.695 --> 00:00:20.396\n\u0647\u064a\u0647 \u0647\u064a\u0647 \u0642\u062a\u0644\u0648\u0647 \u0642\u062a\u0644\u0648\u0647 \u0648\u0627\u0644\u0644\u0647 \u0642\u0644\u0628\u062a \u0627\u0644\u0633\u064a\u0627\u0631\u0629 \u0642\u0644\u0628\u062a.\n\n00:00:20.696 --> 00:00:26.280\n\u0627\u064a\u0647 \u0648\u064a\u0646 \u0633\u062c\u0648\u0646\u0647 \u0648\u0627\u0642\u0641 \u0648\u0627\u0642\u0641 \u0648\u064a\u0646 \u0633\u064a\u0627\u0631\u0629 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.012
+{{Audio Event 1}}
+People Talking
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 2}}
+Engine
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 3}}
+Explosion
+
+00:00:04.349 --> 00:00:08.349
+{{Audio Event 4}}
+People Talking
+
+00:00:12.349 --> 00:00:15.349
+{{Audio Event 5}}
+Gunshots
+
+00:00:13.349 --> 00:00:21.349
+{{Audio Event 6}}
+Shouting
+
+00:00:20.349 --> 00:00:22.349
+{{Audio Event 7}}
+Gunshots
+
+00:00:22.349 --> 00:00:25.349
+{{Audio Event 8}}
+Shouting
+
+00:00:26.349 --> 00:00:30.012
+{{Audio Event 9}}
+Engine"
+39,38:35.7,45:43.5,AdminUser,38:35.7,,file_name_stemmed,20241210_1629_5948b3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1629_5948b3_s3_sensor/input_video/20241210_1629_5948b3_s3_sensor.mp4,video,8.034,2.57,Done,20241203_1221_283e24_s3_sensor_cut_2.mp4,45:38.7,67586e8bab26aaf164bb,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.016
+{{Audio Event 1}}
+Gunshots
+
+00:00:02.349 --> 00:00:04.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:04.349 --> 00:00:04.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:05.349 --> 00:00:05.000
+{{Audio Event 4}}
+Gunshots
+
+00:00:06.349 --> 00:00:07.000
+{{Audio Event 5}}
+Gunshots"
+40,41:21.2,44:33.8,AdminUser,41:21.2,,file_name_stemmed,20241210_1629_7dac9c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1629_7dac9c_s3_sensor/input_video/20241210_1629_7dac9c_s3_sensor.mp4,video,33.15777778,3.37,Done,20241203_1221_442975_s3_sensor.mp4,44:08.7,67586f31322ce658daee,"""WEBVTT\n\n00:00:10.039 --> 00:00:10.340\nAlarm.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.170
+{{Audio Event 1}}
+Explosion
+
+00:00:10.349 --> 00:00:11.349
+{{Audio Event 2}}
+People talking
+
+00:00:20.349 --> 00:00:33.158
+{{Audio Event 3}}
+Buzzing
+
+00:00:23.349 --> 00:00:25.349
+{{Audio Event 1}}
+Explosion
+
+00:00:31.158 --> 00:00:33.158
+{{Audio Event 4}}
+Siren"
+41,44:11.6,40:12.7,AdminUser,44:11.6,,file_name_stemmed,20241210_1629_22f2b4_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1629_22f2b4_s3_sensor/input_video/20241210_1629_22f2b4_s3_sensor.mp4,video,21.66666667,3.89,Done,20241203_1221_58d53a_s3_sensor.mp4,40:22.2,67586fdb88d3664eacc7,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:18.666
+{{Audio Event 1}}
+Engine"
+42,47:17.2,33:01.4,AdminUser,47:17.2,,file_name_stemmed,20241210_1638_517d78_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1638_517d78_s3_sensor/input_video/20241210_1638_517d78_s3_sensor.mp4,video,37.5,3.06,Done,20241203_1233_9ba01e_s3_sensor.mp4,32:54.8,6758709533adc3bb0f8e,"""WEBVTT\n\n00:00:06.599 --> 00:00:06.660\nOh.\n\n00:00:36.067 --> 00:00:37.479\n\u0637\u064a\u0628 \u0645\u0627 \u0647\u0648 \u0627\u0644\u0645\u0647\u0645 \u0647\u0648 \u062f\u0641\u062a\u0631 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:26.170
+{{Audio Event 1}}
+Buzzing
+
+00:00:19.349 --> 00:00:21.349
+{{Audio Event 2}}
+Whistle
+
+00:00:28.349 --> 00:00:29.349
+{{Audio Event 3}}
+People Talking
+
+00:00:35.349 --> 00:00:37.349
+{{Audio Event 4}}
+Shouting"
+43,50:22.5,27:00.8,AdminUser,50:22.5,,file_name_stemmed,20241210_1638_6efcbb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1638_6efcbb_s3_sensor/input_video/20241210_1638_6efcbb_s3_sensor.mp4,video,18.34333333,0.94,Done,20241203_1233_fb31c6_s3_sensor.mp4,26:57.9,6758714e85b4fa215a14,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:17.000
+{{Audio Event 1}}
+Barking
+
+00:00:07.349 --> 00:00:18.343
+{{Audio Event 3}}
+People talking
+
+00:00:10.349 --> 00:00:17.349
+{{Audio Event 2}}
+Engine"
+44,53:14.1,23:16.6,AdminUser,53:14.1,,file_name_stemmed,20241210_1638_177fd1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1638_177fd1_s3_sensor/input_video/20241210_1638_177fd1_s3_sensor.mp4,video,11.66666667,3.21,Done,20241203_1234_2dfbfa_s3_sensor.mp4,23:07.9,675871fa17bece03b457,"""WEBVTT\n\n00:00:00.649 --> 00:00:01.050\n\u064a\u0627 \u0627\u0644\u0644\u0647 \u0627\u062e\u0636\u0631.\n\n00:00:01.070 --> 00:00:01.752\n\u064a\u0627 \u0627\u0644\u0644\u0647 \u0627\u062e\u0636\u0631.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.000
+{{Audio Event 1}}
+People talking
+
+00:00:05.349 --> 00:00:06.349
+{{Audio Event 1}}
+People talking
+
+00:00:07.349 --> 00:00:11.666
+{{Audio Event 2}}
+Explosion"
+45,56:03.9,20:23.3,AdminUser,56:03.9,,file_name_stemmed,20241210_1650_8666d8_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1650_8666d8_s3_sensor/input_video/20241210_1650_8666d8_s3_sensor.mp4,video,5.033333333,0.44,Done,20241203_1237_5203ac_s3_sensor.mp4,20:22.2,675872a3d7007a7415cc,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.000
+{{Audio Event 1}}
+Shouting
+
+00:00:02.349 --> 00:00:05.033
+{{Audio Event 2}}
+Gunshots"
+46,58:49.4,18:34.7,AdminUser,58:49.4,,file_name_stemmed,20241210_1650_5e1163_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1650_5e1163_s3_sensor/input_video/20241210_1650_5e1163_s3_sensor.mp4,video,15.067,5.96,Done,20241203_1237_64cba6_s3_sensor_cut.mp4,18:33.0,67587349632da8e9ebe2,"""WEBVTT\n\n00:00:01.351 --> 00:00:10.769\n\u0648\u0644\u0627 \u062d\u062f\u0627 \u0637\u0628\u0639\u0627 \u0627\u0644\u0627\u0646 \u0627\u062e\u0648\u0627\u0646\u0646\u0627 \u0641\u064a \u0627\u0644\u0633\u0631\u0627\u064a\u0627 \u0627\u062e\u0648\u0627\u0646 \u0648\u0643\u062a\u0627\u0626\u0628 \u0627\u0644\u0642\u0633\u0627\u0645 \u062c\u0646\u062f\u064a \u062c\u0648\u0629 \u0627\u0644\u0642\u0644\u0628\u0629 \u0634\u0628\u0627\u0628 \u062c\u0646\u062f\u064a \u062c\u0648\u0629 \u0627\u0644\u0642\u0644\u0628\u0629 .\n\n00:00:10.888 --> 00:00:14.897\n\u0628\u062f\u0647\u0645 \u064a\u0641\u0643\u0631\u0648\u0647\u0627 \u0634\u0628\u0627\u0628 \u0628\u062f\u0647\u0645 \u064a\u0641\u0643\u0631\u0648\u0647\u0627 \u0634\u0628\u0627\u0628 \u0627\u0644\u0633\u0631\u0627\u064a\u0627 \u0648-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.066
+{{Audio Event 1}}
+People talking
+
+00:00:02.349 --> 00:00:15.066
+{{Audio Event 2}}
+Shouting"
+47,02:05.3,16:42.9,AdminUser,02:05.2,,file_name_stemmed,20241210_1650_b26fd9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1650_b26fd9_s3_sensor/input_video/20241210_1650_b26fd9_s3_sensor.mp4,video,35.1,6.02,Done,20241203_1238_647aed_s3_sensor_cut.mp4,16:38.7,6758740d3e13aff35533,"""WEBVTT\n\n00:00:00.009 --> 00:00:01.308\n\u05d4\u05dd \u05d9\u05d5\u05e8\u05d9\u05dd \u05d9\u05e9\u05e8 \u05e2\u05dd \u05e7\u05dc\u05d8 \u05e9\u05d0\u05ea\u05d4 \u05d7\u05d5\u05e5 \u05dc\u05e9\u05dd?\n\n00:00:01.369 --> 00:00:05.150\n\u05d0\u05e8\u05d1\u05e2\u05d4 \u05de\u05d7\u05d1\u05dc\u05d9\u05dd \u05d0\u05e8\u05d1\u05e2\u05d4 \u05de\u05d7\u05d1\u05dc\u05d9\u05dd \u05d0\u05e8\u05d1\u05e2\u05d4 \u05de\u05d7\u05d1\u05dc\u05d9\u05dd \u05d0\u05e8\u05d1\u05e2\u05d4 \u05de\u05d7\u05d1\u05dc\u05d9\u05dd \u05e4\u05d4?\n\n00:00:05.190 --> 00:00:05.331\n\u05db\u05de\u05d4?\n\n00:00:05.450 --> 00:00:27.257\n\u05dc\u05d0 \u05d9\u05e8\u05d9, \u05d6\u05d4 \u05d8\u05d9\u05dc\u05d9\u05dd \u05dc\u05d0 \u05e9\u05de\u05e2 \u05db\u05dc\u05d5\u05dd \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9 \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9 \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9, \u05d9\u05e8\u05d9 \u05ea\u05d9\u05db\u05e0\u05e1\u05d5 \u05dc\u05d1\u05d9\u05ea, \u05dc\u05d3\u05e2\u05ea\u05d9 \u05d4\u05d5\u05d0 \u05e0\u05db\u05e0\u05e1 \u05dc\u05ea\u05d5\u05da \u05d4\u05d1\u05d9\u05ea, \u05d6\u05d4 \u05de\u05d4 \u05e9\u05d0\u05d5\u05de\u05e8\u05d9\u05dd \u05d6\u05d4 \u05de\u05d7\u05d1\u05dc \u05d6\u05d4?\n\n00:00:27.317 --> 00:00:29.437\n\u05ea\u05e4\u05ea\u05d7 \u05d0\u05d5\u05ea\u05d5, \u05ea\u05e4\u05ea\u05d7 \u05d0\u05d5\u05ea\u05d5, \u05de\u05e2\u05d1\u05e8 \u05dc\u05d7\u05d5\u05de\u05d4\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+{{Audio Event 1}}
+People talking
+
+00:00:06.349 --> 00:00:08.349
+{{Audio Event 2}}
+Explosion
+
+00:00:10.349 --> 00:00:21.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:26.349 --> 00:00:29.349
+{{Audio Event 4}}
+Shouting
+
+00:00:33.349 --> 00:00:35.099
+{{Audio Event 4}}
+Shouting"
+48,05:11.1,17:05.2,AdminUser,05:11.1,,file_name_stemmed,20241210_1656_76c770_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1656_76c770_s3_sensor/input_video/20241210_1656_76c770_s3_sensor.mp4,video,10.56666667,2.09,Done,20241203_1238_8396a9_s3_sensor.mp4,12:11.0,675874c713ceb4303bf0,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:10.000
+{{Audio Event 1}}
+Shouting
+
+00:00:00.349 --> 00:00:10.349
+{{Audio Event 2}}
+People talking
+
+00:00:00.349 --> 00:00:01.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:04.349 --> 00:00:07.349
+{{Audio Event 3}}
+Gunshots"
+49,07:55.9,09:01.7,AdminUser,07:55.9,,file_name_stemmed,20241210_1656_4a8f16_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1656_4a8f16_s3_sensor/input_video/20241210_1656_4a8f16_s3_sensor.mp4,video,10.034,1.87,Done,20241203_1241_78fee9_s3_sensor_cut.mp4,58:10.4,6758756bd6982ec4c872,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:10.000
+{{Audio Event 1}}
+Engine"
+50,10:46.6,56:54.2,AdminUser,10:46.6,,file_name_stemmed,20241210_1656_03c04b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1656_03c04b_s3_sensor/input_video/20241210_1656_03c04b_s3_sensor.mp4,video,12.39,2.45,Done,20241203_1243_6fe1c1_s3_sensor.mp4,53:16.0,675876169d457a69f8bc,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:12.000
+{{Audio Event 1}}
+Street
+
+00:00:03.349 --> 00:00:08.349
+{{Audio Event 3}}
+Explosion
+
+00:00:08.349 --> 00:00:12.349
+{{Audio Event 2}}
+People talking"
+51,13:31.9,58:56.3,AdminUser,13:31.9,,file_name_stemmed,20241210_1705_f22630_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1705_f22630_s3_sensor/input_video/20241210_1705_f22630_s3_sensor.mp4,video,17.56666667,1.54,Done,20241203_1246_5ccb9c_s3_sensor.mp4,57:48.9,675876bbdeef821b46fe,"""WEBVTT\n\n00:00:00.615 --> 00:00:09.464\n\u0627\u064a\u0648\u0629 \u064a\u0627 \u0631\u0648\u062d \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 \u0634\u0631\u0641\u0648\u0627 \u064a\u0627 \u062c\u0645\u0627\u0639\u0629 \u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645 \u0627\u0644\u062c\u062f\u0627\u0631 \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631.\n\n00:00:09.644 --> 00:00:12.387\n\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:17.566
+{{Audio Event 1}}
+Shouting"
+52,16:47.8,56:20.7,AdminUser,16:47.8,,file_name_stemmed,20241210_1705_7747f1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1705_7747f1_s3_sensor/input_video/20241210_1705_7747f1_s3_sensor.mp4,video,30.016,5.52,Done,20241203_1246_85f3f0_s3_sensor_cut.mp4,56:14.8,6758777fbdc109f59f1a,"""WEBVTT\n\n00:00:01.250 --> 00:00:11.035\n\u0628\u0633 \u0647\u0648 \u0646\u0641\u0633 \u0627\u0644\u0627\u0634\u064a \u062c\u064a\u0628 \u062e\u0635\u0648\u0635\u064a \u0646\u0641\u0633\u0647\u0627 \u0627\u0644\u0643\u0631\u064a\u0633 \u0643\u0627\u0631\u062f\u064a\u064a\u0647 .\n\n00:00:11.076 --> 00:00:11.576\n\u0627\u0644\u0643\u0631\u064a\u0633 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.170
+{{Audio Event 1}}
+Fake line
+
+00:00:00.349 --> 00:00:30.015
+{{Audio Event 3}}
+Crowd
+
+00:00:11.349 --> 00:00:27.349
+{{Audio Event 2}}
+People talking"
+53,19:58.4,53:09.3,AdminUser,19:58.4,,file_name_stemmed,20241210_1705_48e61f_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1705_48e61f_s3_sensor/input_video/20241210_1705_48e61f_s3_sensor.mp4,video,37.8625,11.7,Done,20241203_1246_a7cd62_s3_sensor.mp4,53:03.3,6758783e5b7fc0891ffd,"""WEBVTT\n\n00:00:00.503 --> 00:00:00.543\nOh,\n\n00:00:29.326 --> 00:00:29.365\nOh!\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:37.862
+{{Audio Event 1}}
+Crowd
+
+00:00:03.349 --> 00:00:06.349
+{{Audio Event 2}}
+Whistle
+
+00:00:10.349 --> 00:00:12.349
+{{Audio Event 2}}
+Whistle
+
+00:00:23.349 --> 00:00:29.349
+{{Audio Event 2}}
+Whistle"
+54,22:54.0,51:14.0,AdminUser,22:54.0,,file_name_stemmed,20241210_1713_01a6bd_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1713_01a6bd_s3_sensor/input_video/20241210_1713_01a6bd_s3_sensor.mp4,video,30.034,2.56,Done,20241203_1249_1e56c7_s3_sensor_cut.mp4,45:11.8,675878edf1507f1a0ae3,"""WEBVTT\n\n00:00:00.592 --> 00:00:05.134\n\u0648\u0627\u0644\u0644\u0647 \u062d\u064a \u0645\u0646 \u062c\u0648\u0629 \u0627\u0644\u0644\u0647 \u064a\u062d\u0628\u0643 \u064a\u0627 \u062d\u0627\u0635 \u0627\u0644\u0644\u0647 \u064a\u062d\u0628\u0643 \u064a\u0627 \u062d\u0627\u0635.\n\n00:00:06.193 --> 00:00:17.378\n\u0648\u0627\u0644\u0644\u0647 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u062c\u0627\u0628\u0627\u062a\u0646\u0627 \u0644\u0648\u0627\u0621 \u0627\u0646\u0627 \u0627\u062d\u0646\u0627 \u0628\u0642\u064a\u0627\u062f\u0629 \u0645\u062d\u0645\u062f \u0627\u0644\u0636\u064a\u0641 \u0627\u062d\u0646\u0627 \u0628\u0642\u064a\u0627\u062f\u062a\u0643 \u0645\u062d\u0645\u062f \u0627\u0644\u0636\u064a\u0641 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u0627\u062d\u0646\u0627 \u0646\u0637\u0644\u0639 \u0646\u062d\u0643\u064a \u0645\u0646 \u0642\u0644\u0628 \u0627\u0644\u0643\u0641\u0627\u0646\u064a\u0646 \u0645\u064a\u0646 \u0633\u0645\u0639\u062a\u0647 \u0645\u064a\u0646 \u0633\u0645\u0639\u0647 \u0647\u0630\u0627.\n\n00:00:17.437 --> 00:00:27.881\n\u0645\u064a\u0646 \u0633\u0645\u0639\u062a\u0647 \u0642\u0644\u062a\u0644\u0647 \u062e\u0646\u0632\u064a\u0631 \u062a\u0639\u0627\u0644 \u0627\u0639\u064a\u062f\u0647\u0627 \u0627\u062d\u0646\u0627 \u0644\u0648\u0627\u0621 \u0627\u062e\u0648\u0646\u0627 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.170
+{{Audio Event 1}}
+Engine
+
+00:00:00.349 --> 00:00:30.012
+{{Audio Event 2}}
+People talking
+
+00:00:02.349 --> 00:00:30.012
+{{Audio Event 3}}
+Shouting"
+55,25:54.3,22:38.8,AdminUser,25:54.3,,file_name_stemmed,20241210_1713_2c9abc_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1713_2c9abc_s3_sensor/input_video/20241210_1713_2c9abc_s3_sensor.mp4,video,15.76666667,2.73,Done,20241203_1249_3fdb08_s3_sensor.mp4,22:28.7,675879a248c0ed145808,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:03.349 --> 00:00:04.000
+{{Audio Event 1}}
+Explosion"
+56,28:45.3,46:47.5,AdminUser,28:45.3,,file_name_stemmed,20241210_1713_884735_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1713_884735_s3_sensor/input_video/20241210_1713_884735_s3_sensor.mp4,video,65.6,5.7,Done,20241203_1249_bc5b29_s3_sensor.mp4,46:39.7,67587a4d3ecdc4ba0cb1,"""WEBVTT\n\n00:00:00.450 --> 00:00:05.115\n\u064a\u0627\u0644\u0644\u0647 \u062f\u0645 \u0627\u062e\u0648\u0643 \u0637\u062e\u0647 \u062f\u0645 \u0627\u062e\u0648\u0643 \u0637\u062e .\n\n00:00:12.002 --> 00:00:19.050\n\u0628\u062f\u0647\u0645 \u064a\u0633\u0639\u0648\u0627 \u0627\u0644\u0646\u0633\u0648\u0627\u0646 \u0641\u064a \u0627\u0644\u0642\u062f\u0633 \u0637\u0627\u0644\u0639\u0629 \u0639\u0634\u0627\u0646 \u0628\u062f\u0646\u0627 \u0646\u0637\u0644\u0639 \u0627\u062d\u0646\u0627 \u0639\u0634\u0627\u0646 \u0628\u062f\u0646\u0627 \u0646\u062c\u064a\u0628\u0644\u0647\u0645 .\n\n00:00:46.402 --> 00:00:56.106\n\u0647\u0630\u0627 \u0627\u0644\u0641\u064a\u062f\u064a\u0648 \u0648\u0646\u0648\u0635\u0644\u0647 \u0644\u0643\u0644 \u0627\u0644\u0639\u0627\u0644\u0645 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0647\u0630\u0647 \u062e\u0648\u0630\u0629 \u0627\u0644\u062c\u0646\u062f\u064a \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0646\u0642\u0635 \u062b\u0645\u0647 \u062d\u0646\u062c\u064a\u0628\u0644\u0647 \u062e\u0634\u064a\u0646\u0627 \u0643\u0644 \u0627\u0644\u062f\u0634\u0645 \u0648\u062e\u0628\u0635\u0646\u0627 \u0628\u0631\u062c\u0644\u064a\u0646\u0627 \u0627\u0644\u0634\u0631\u064a\u0641\u0629.\n\n00:00:56.265 --> 00:01:03.509\n\u0639\u0644\u0649 \u0643\u0644 \u0639\u0643\u0644 \u0645\u0644\u062c\u0627 \u0628\u064a\u0642\u0639\u062f\u0648\u0627 \u0641\u064a\u0647 \u0648\u0645\u0627 \u0641\u064a\u0634 \u0631\u062c\u0627\u0644 \u0645\u0627 \u0641\u064a\u0634 \u0632\u0644\u0627\u0645 \u0648\u0645\u0627 \u0631\u0645\u064a\u062a \u0627\u064a\u062f \u0631\u0645\u064a\u062a \u0648\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0627\u0631\u0645\u0649.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.170
+{{Audio Event 1}}
+Shouting
+
+00:00:02.349 --> 00:00:05.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:12.349 --> 00:00:17.349
+{{Audio Event 1}}
+Shouting
+
+00:00:17.349 --> 00:00:19.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:46.349 --> 00:01:04.349
+{{Audio Event 3}}
+People talking
+
+00:01:04.349 --> 00:01:05.599
+{{Audio Event 2}}
+Gunshots"
+57,32:11.3,41:46.3,AdminUser,32:11.3,,file_name_stemmed,20241210_1722_3d88e3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1722_3d88e3_s3_sensor/input_video/20241210_1722_3d88e3_s3_sensor.mp4,video,13.53666667,2.49,Done,20241203_1313_880604_s3_sensor.mp4,41:21.1,67587b1b54e85ce54222,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.000
+{{Audio Event 1}}
+Engine
+
+00:00:10.349 --> 00:00:13.537
+{{Audio Event 2}}
+Street"
+58,35:11.6,07:44.9,AdminUser,35:11.6,,file_name_stemmed,20241210_1722_ace0d7_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1722_ace0d7_s3_sensor/input_video/20241210_1722_ace0d7_s3_sensor.mp4,video,21.87111111,4.11,Done,20241203_1314_3d55f6_s3_sensor.mp4,07:38.8,67587bcf98defd60e776,"""WEBVTT\n\n00:00:01.030 --> 00:00:12.785\n\u0628\u064a\u062c\u0648\u0632 \u0637\u0627\u0644\u0639\u064a\u0646 \u064a\u0639\u0646\u064a \u0628\u0639\u062f \u0627\u0644\u062e\u064a\u0631 \u0627\u0644\u0633\u0627\u0639\u0629 \u0627\u062b\u0646\u062a\u064a\u0646 \u0641\u064a \u0627\u0644\u0644\u064a\u0644 \u0639\u0644\u0649 \u0627\u0633\u062a\u0639\u062f\u0627\u062f \u0642\u0631\u064a\u0628 \u0645\u0646 \u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u062f\u064a\u0631 \u0627\u0644\u0628\u0644\u062d \u062e\u0644\u064a\u0646\u0627 \u0627\u062d\u0646\u0627 \u0648\u0631\u0627\u0621 \u0627\u0644- \u0627\u0644\u0627\u0633\u0639\u0627\u0641.\n\n00:00:12.845 --> 00:00:13.846\n\u0631\u0628\u0646\u0627 \u064a\u0627 \u0631\u0628 \u064a\u0633\u0644\u0645.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.000
+{{Audio Event 1}}
+Siren
+
+00:00:01.349 --> 00:00:18.349
+{{Audio Event 2}}
+People talking"
+59,38:12.2,29:14.7,AdminUser,38:12.2,,file_name_stemmed,20241210_1722_38c655_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1722_38c655_s3_sensor/input_video/20241210_1722_38c655_s3_sensor.mp4,video,13.14222222,2.43,Done,20241203_1314_4510da_s3_sensor.mp4,29:11.1,67587c843c2b110ff654,"""WEBVTT\n\n00:00:00.529 --> 00:00:03.291\n\u0647\u0630\u0627 \u0647\u0648 \u0627\u0644\u0645\u0634\u0647\u062f \u0627\u0644\u0622\u0646 \u0641\u064a \u0645\u062f\u0631\u0633\u0629 \u0623\u0628\u0648 \u0627\u0644\u0631\u0648\u0634 \u060c .\n\n00:00:06.535 --> 00:00:11.900\n\u0647\u0630\u0627 \u0647\u0648 \u0627\u0644\u0645\u0634\u0647\u062f \u0627\u0644\u0622\u0646 \u0641\u064a \u0645\u062f\u0631\u0633\u0629 \u0623\u0628\u0648 \u0627\u0644\u0631\u0648\u0634 \u064a\u0639\u0646\u064a \u062d\u0627\u0648\u0644\u0646\u0627 \u0646\u0633\u062d\u0628 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:13.142
+{{Audio Event 1}}
+Buzzing
+
+00:00:00.000 --> 00:00:13.142
+{{Audio Event 3}}
+Crowd
+
+00:00:02.349 --> 00:00:04.349
+{{Audio Event 2}}
+People talking
+
+00:00:06.349 --> 00:00:12.142
+{{Audio Event 2}}
+New Audio Event"
+60,41:07.9,41:28.9,AdminUser,41:07.9,,file_name_stemmed,20241210_1732_17341a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1732_17341a_s3_sensor/input_video/20241210_1732_17341a_s3_sensor.mp4,video,15.1,2.82,Done,20241203_1351_47588b_s3_sensor_cut.mp4,41:25.6,67587d33d47f6e595b52,"""WEBVTT\n\n00:00:00.009 --> 00:00:12.473\n\u05d0\u05d6 \u05d4\u05d2\u05d9\u05de\u05d5\u05e8 \u05e4\u05d4 \u05d1\u05e2\u05e6\u05dd \u05de\u05d3\u05d1\u05e8\u05ea \u05d4\u05d0\u05dd \u05d0\u05e0\u05d7\u05e0\u05d5 \u05d9\u05db\u05d5\u05dc\u05d9\u05dd \u05dc\u05e2\u05e9\u05d5\u05ea \u05d0\u05ea \u05db\u05dc\u05d9 \u05d4\u05de\u05e7\u05d3\u05d5\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d3\u05d1\u05e8\u05d9\u05dd \u05e4\u05d4 \u05e2\u05dc \u05d4\u05de\u05e0\u05d5\u05d9\u05e8\u05d5\u05ea \u05d0\u05ea\u05dd \u05de\u05e7\u05e9\u05d9\u05d1\u05d9\u05dd?\n\n00:00:13.673 --> 00:00:14.874\n\u05d4\u05d0\u05dd \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e9\u05d5\u05ea...\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.066
+{{Audio Event 1}}
+People talking"
+61,44:02.6,57:10.3,AdminUser,44:02.6,,file_name_stemmed,20241210_1732_51491a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1732_51491a_s3_sensor/input_video/20241210_1732_51491a_s3_sensor.mp4,video,14.39555556,1.22,Done,20241203_1351_8c7be3_s3_sensor.mp4,57:01.4,67587de29da0fa3cfdf9,"""WEBVTT\n\n00:00:08.580 --> 00:00:09.144\nAh!\n\n00:00:09.849 --> 00:00:09.951\nAh!\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:14.396
+{{Audio Event 1}}
+Crowd
+
+00:00:00.349 --> 00:00:14.396
+{{Audio Event 2}}
+Street
+
+00:00:01.349 --> 00:00:05.349
+{{Audio Event 3}}
+People talking
+
+00:00:05.349 --> 00:00:10.396
+{{Audio Event 4}}
+Shouting
+
+00:00:11.349 --> 00:00:14.396
+{{Audio Event 3}}
+People talking"
+62,47:18.2,38:01.9,AdminUser,47:18.2,,file_name_stemmed,20241210_1732_b2089e_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1732_b2089e_s3_sensor/input_video/20241210_1732_b2089e_s3_sensor.mp4,video,8.3,1.6,Done,20241203_1352_bed53a_s3_sensor.mp4,37:59.6,67587ea62e00ec8aaa3b,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:08.300
+{{Audio Event 1}}
+Street"
+63,50:19.2,39:53.1,AdminUser,50:19.2,,file_name_stemmed,20241210_1741_d94179_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1741_d94179_s3_sensor/input_video/20241210_1741_d94179_s3_sensor.mp4,video,17.96233333,9,Done,20241203_1352_c69973_s3_sensor.mp4,39:51.0,67587f5b2d30dd38c08f,"""WEBVTT\n\n00:00:00.870 --> 00:00:09.804\n\u062d\u0633\u0628 \u0627\u0644\u0635\u0631\u0641 \u062d\u0633\u0628 \u0627\u0644\u0635\u0631\u0641 \u062d\u0633\u0628\u064a \u0627\u0644\u0644\u0647 \u0648\u0646\u0639\u0645 \u0627\u0644\u0648\u0643\u064a\u0644 .\u0646\u0639\u0645 .\u0634\u064a\u0644\u0648\u0647 \u0647\u0630\u0627 \u0634\u064a\u0644\u0648\u0647 \u0647\u0630\u0627 \u0634\u064a\u0621 \u0647\u0644\u0642 \u0634\u064a\u0644\u0647 \u0627\u0628\u0648 \u0639\u0645\u064a\u062f .\u0645\u0646 \u0648\u064a\u0646 \u0627\u062c\u0648\u0647 .\u0628\u064a\u062a \u0644\u0627\u0647\u064a\u0627 \u0639\u0646\u062f \u0633\u0644\u064a\u0645\u0627\u0646.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:17.962
+{{Audio Event 1}}
+Engine
+
+00:00:02.349 --> 00:00:17.962
+{{Audio Event 2}}
+People talking
+
+00:00:08.349 --> 00:00:11.349
+{{Audio Event 3}}
+Shouting"
+64,53:15.6,55:12.1,AdminUser,53:15.6,,file_name_stemmed,20241210_1741_f559f3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1741_f559f3_s3_sensor/input_video/20241210_1741_f559f3_s3_sensor.mp4,video,6,1.79,Done,20241203_1359_455460_s3_sensor.mp4,55:06.7,6758800b8e0476b5c643,"""WEBVTT\n\n00:00:00.049 --> 00:00:03.040\n\u064a\u0627 \u0627\u062e\u064a \u0627\u0630\u0627 \u0643\u0631\u062d\u0645\u0646\u0627 \u064a\u0627 \u0627\u0644\u0644\u0647 \u0648\u0627\u0644\u0644\u0647 \u0633\u0627\u0644\u0646\u0627 \u0648\u0627\u0644\u0644\u0647 \u0627\u0644\u0648\u0627\u062d\u062f \u064a\u0642\u062f\u0633 \u0627\u064a.\n\n00:00:03.060 --> 00:00:05.009\n\u0628\u064a\u062f\u062e\u0644\u0647\u0627 \u0643\u0631\u062d\u0645\u0646\u0627 \u064a\u0627 \u0627\u0644\u0644\u0647 \u0648\u0627\u0644\u0644\u0647 \u0633\u0627\u0644\u0646\u0627 \u0648\u0627\u0644\u0644\u0647 \u0627\u0644\u0648\u0627\u062d\u062f \u064a\u0642\u062f\u0633 \u0627\u064a.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.000
+{{Audio Event 1}}
+Crying"
+65,56:10.6,53:45.3,AdminUser,56:10.6,,file_name_stemmed,20241210_1741_e4e55f_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1741_e4e55f_s3_sensor/input_video/20241210_1741_e4e55f_s3_sensor.mp4,video,16.9,6.28,Done,20241203_1359_8f0f46_s3_sensor.mp4,53:40.4,675880ba991a353bc48a,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:16.927
+{{Audio Event 1}}
+Buzzing
+
+00:00:00.349 --> 00:00:16.349
+{{Audio Event 2}}
+Street"
+67,56:01.0,42:23.1,AdminUser,56:01.0,,file_name_stemmed,20241210_1750_96057a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1750_96057a_s3_sensor/input_video/20241210_1750_96057a_s3_sensor.mp4,video,31.00333333,2.71,Done,20241203_1408_34eacd_s3_sensor.mp4,42:05.5,6759459108b46fb1fb1c,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.170
+{{Audio Event 1}}
+Engine
+
+00:00:00.349 --> 00:00:15.349
+{{Audio Event 2}}
+Barking
+
+00:00:17.349 --> 00:00:21.349
+{{Audio Event 2}}
+Barking
+
+00:00:22.349 --> 00:00:31.045
+{{Audio Event 2}}
+Barking"
+68,01:22.9,36:18.5,AdminUser,01:22.8,,file_name_stemmed,20241210_1750_0ca013_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1750_0ca013_s3_sensor/input_video/20241210_1750_0ca013_s3_sensor.mp4,video,30.12266667,45.5,Done,20241203_1408_7bca51_s3_sensor.mp4,36:01.1,675946d2d01a756ce722,"""WEBVTT\n\n00:00:00.182 --> 00:00:09.830\n\u0639\u0644\u0649 \u0627\u064a \u0627\u0633\u062a\u0647\u062f\u0627\u0641\u0627\u062a \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0627\u0637\u0641\u0627\u0644 \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 \u0627\u0637\u0641\u0627\u0644 \u0627\u0637\u0641\u0627\u0644 \u064a\u0627 \u0627\u0644\u0644\u0647 \u0627\u0637\u0641\u0627\u0644 .\n\n00:00:10.031 --> 00:00:25.583\n\u0647\u0627\u0646 \u0643\u0627\u0647\u062f\u0627\u0641 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0648\u0644\u0644\u0627\u0637\u0641\u0627\u0644 .\u0647\u0627\u0646 \u0643\u0627\u0647\u062f\u0627\u0641 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0648\u0644\u0644\u0627\u0637\u0641\u0627\u0644 .\u064a\u0627\u0644\u0644\u0647 \u0627\u062d\u0643\u064a\u0644\u064a \u0627\u062d\u0643\u064a\u0644\u064a \u0627\u062d\u0643\u064a\u0644\u064a \u0627\u062d\u0643\u064a\u0644\u064a \u0634\u0648 \u0628\u062f\u0643 \u062a\u0642\u0648\u0644 \u0634\u0648 \u0628\u062f\u0643 \u062a\u0642\u0648\u0644 .\n\n00:00:25.643 --> 00:00:28.326\n\u062e\u0644\u0635 \u0644\u0627 \u064a\u0647\u0645\u0643 \u0628\u062f\u064a \u0627\u0639\u0637\u064a \u0627\u0639\u0645\u0627\u0644\u064a \u0648\u0644\u0627 \u0633\u0645\u0627\u0639\u0627\u062a\u064a \u0633\u0645\u0627\u0639\u0627\u062a .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.170
+{{Audio Event 1}}
+Shouting
+
+00:00:07.349 --> 00:00:30.096
+{{Audio Event 2}}
+Crying
+
+00:00:15.349 --> 00:00:17.349
+{{Audio Event 1}}
+Shouting"
+69,04:32.8,02:22.7,AdminUser,04:32.8,,file_name_stemmed,20241210_1759_26fad6_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1759_26fad6_s3_sensor/input_video/20241210_1759_26fad6_s3_sensor.mp4,video,13.147,3.21,Done,20241203_1408_befff2_s3_sensor_cut.mp4,01:38.4,67594790cd6474eaa2f6,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.000
+{{Audio Event 1}}
+Music 
+
+00:00:07.349 --> 00:00:09.349
+{{Audio Event 2}}
+Explosion"
+70,07:23.2,39:58.2,AdminUser,07:23.2,,file_name_stemmed,20241210_1759_aad4f7_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1759_aad4f7_s3_sensor/input_video/20241210_1759_aad4f7_s3_sensor.mp4,video,7.16,2.8,Done,20241203_1408_befff2_s3_sensor_cut_2.mp4,39:44.8,6759483b3af0ab30b97c,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:04.125
+{{Audio Event 1}}
+Explosion"
+71,10:09.1,30:24.0,AdminUser,10:09.1,,file_name_stemmed,20241210_1759_ac7fb4_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241210_1759_ac7fb4_s3_sensor/input_video/20241210_1759_ac7fb4_s3_sensor.mp4,video,6.428344671,2.36,Done,20241203_1414_59de83_s3_sensor.mp4,30:22.2,675948e11f9b09204c2a,"""WEBVTT\n\n00:00:01.788 --> 00:00:02.650\n\u0639\u0631\u0636\u0648\u0627 \u0628\u0646\u0635 \u0627\u0644\u0634\u0627\u0631\u0639 \u0627\u0648\u0644 \u062f\u062e\u0644\u0629 \u0627\u0644\u0648\u0642\u062a.\n\n00:00:02.690 --> 00:00:05.636\n\u0627\u0639\u0631\u0636\u0648\u0627 \u0628\u0646\u0635 \u0627\u0644\u0634\u0627\u0631\u0639 \u0627\u0648\u0644 \u062f\u062e\u0644\u0629 \u0627\u0644\u0648\u0642\u062a.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:02.349 --> 00:00:06.000
+{{Audio Event 1}}
+People talking"
+72,12:59.1,08:11.1,AdminUser,12:59.1,,file_name_stemmed,20241211_0804_094dd7_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0804_094dd7_s3_sensor/input_video/20241211_0804_094dd7_s3_sensor.mp4,video,6.9,2.23,Done,20241203_1414_97303c_s3_sensor.mp4,08:00.3,6759498b0e13239f68b0,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.000
+{{Audio Event 1}}
+Engine"
+73,16:10.0,52:08.2,AdminUser,16:10.0,,file_name_stemmed,20241211_0804_fc08a9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0804_fc08a9_s3_sensor/input_video/20241211_0804_fc08a9_s3_sensor.mp4,video,7.801111111,1.43,Done,20241203_1414_a19a07_s3_sensor.mp4,52:00.2,67594a4a09758eee675c,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.000
+{{Audio Event 1}}
+Engine"
+74,19:06.2,21:30.3,AdminUser,19:06.2,,file_name_stemmed,20241211_0804_0507ed_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0804_0507ed_s3_sensor/input_video/20241211_0804_0507ed_s3_sensor.mp4,video,15.067,4.74,Done,20241203_1440_b417b5_s3_sensor_cut.mp4,19:34.2,67594afa28b591625630,"""WEBVTT\n\n00:00:00.089 --> 00:00:11.851\n\u0648\u0641\u064a \u0627\u0644\u0639\u0628\u0627\u0621 \u0627\u062d\u0646\u0627 \u0635\u0648\u062a \u0627\u0644\u0631\u062f\u0627\u0621 \u0627\u062d\u0646\u0627 \u0627\u0647\u0644 \u0627\u0644\u0641\u062f\u0627\u0621 \u0627\u062d\u0646\u0627 \u0645\u0646 \u0645\u062e\u064a\u0645 \u062c\u0646\u064a\u0646 \u0648\u0647\u0645 \u0635\u0631\u0627\u0628 \u0647\u0645.\n\n00:00:11.930 --> 00:00:14.795\n\u0641\u0627\u062a\u0648\u0627 \u0627\u0644\u0639\u0630\u0627\u0628 \u0647\u0645 \u0639\u0627\u0634\u0648\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,
+75,22:01.2,42:22.8,AdminUser,22:01.2,,file_name_stemmed,20241211_0813_7bd046_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0813_7bd046_s3_sensor/input_video/20241211_0813_7bd046_s3_sensor.mp4,video,6.1,2.18,Done,20241203_1440_f7395a_s3_sensor.mp4,42:15.4,67594ba9355d3213bd98,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:06.106
+{{Audio Event 1}}
+Traffic"
+76,24:46.7,47:11.0,AdminUser,24:46.7,,file_name_stemmed,20241211_0813_8f4740_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0813_8f4740_s3_sensor/input_video/20241211_0813_8f4740_s3_sensor.mp4,video,9.937777778,0.91,Done,20241203_1507_cc5430_s3_sensor.mp4,47:04.6,67594c4eb2cab06ede41,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.000
+{{Audio Event 1}}
+People talking"
+77,27:32.7,21:19.9,AdminUser,27:32.7,,file_name_stemmed,20241211_0813_166176_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0813_166176_s3_sensor/input_video/20241211_0813_166176_s3_sensor.mp4,video,37.40666667,6.75,Done,20241203_1509_32225a_s3_sensor.mp4,22:36.1,67594cf4a410d52e584a,"""WEBVTT\n\n00:00:18.390 --> 00:00:32.140\n\u064a\u0644\u0639\u0646 \u0627\u0644\u062f\u0646\u064a\u0627 \u064a\u0645\u0627 \u0648\u0644\u0643 \u0648\u064a\u0646 \u0639\u062a\u0648\u0646 \u0627\u064a\u0647 \u0648\u064a\u0646 \u0639\u062a\u0648\u0646.\n\n00:00:32.261 --> 00:00:36.445\n\u064a\u0644\u0639\u0646 \u0627\u0644\u0633\u0644\u0637\u0629 \u0648\u0627\u062d\u062f\u0629 \u064a\u0648\u0645 \u0648\u0627\u062d\u062f\u0629 \u064a\u0648\u0645 \u0639\u0646\u0627 \u0628\u0627\u0644\u062d\u0627\u0631\u0629.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.170
+{{Audio Event 1}}
+Siren
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 6}}
+Explosion
+
+00:00:04.349 --> 00:00:06.349
+{{Audio Event 4}}
+Explosion
+
+00:00:14.349 --> 00:00:15.349
+{{Audio Event 5}}
+Explosion
+
+00:00:18.349 --> 00:00:23.349
+{{Audio Event 8}}
+Shouting
+
+00:00:25.349 --> 00:00:27.349
+{{Audio Event 3}}
+People talking
+
+00:00:31.349 --> 00:00:37.349
+{{Audio Event 7}}
+People talking"
+78,30:58.1,11:45.4,AdminUser,30:58.1,,file_name_stemmed,20241211_0821_cc51fa_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0821_cc51fa_s3_sensor/input_video/20241211_0821_cc51fa_s3_sensor.mp4,video,22,4.32,Done,20241203_1509_79bc2f_s3_sensor.mp4,11:32.4,67594dc21e7011cc84ad,"""WEBVTT\n\n00:00:03.575 --> 00:00:09.423\n\u064a\u0627 \u0631\u0628 \u0647\u0627\u0644\u062d\u064a\u0646 \u0627\u0628\u0646\u064a \u0639\u0627\u0626\u0634 \u0627\u0628\u0646\u064a \u0639\u0627\u0626\u0634 \u0637\u0628 \u064a\u0627 \u0627\u0647\u0644 \u0646\u0641-.\n\n00:00:09.464 --> 00:00:11.166\n\u0628\u0631\u0636\u0647 \u0647\u0627\u0644\u062d\u064a\u0646 \u0627\u0628\u0646\u064a \u0639\u0627\u0626\u0634 \u0627\u0628\u0646\u064a \u0639\u0627\u0626\u0634 \u0637\u0628 \u064a\u0627 \u0627\u0647\u0644 \u0646\u0641-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+{{Audio Event 1}}
+Traffic 
+
+00:00:03.349 --> 00:00:05.349
+{{Audio Event 2}}
+People talking
+
+00:00:08.349 --> 00:00:11.349
+{{Audio Event 2}}
+People talking
+
+00:00:12.349 --> 00:00:13.349
+{{Audio Event 3}}
+Whistle
+
+00:00:16.349 --> 00:00:18.349
+{{Audio Event 3}}
+Whistle"
+79,33:59.2,02:41.6,AdminUser,33:59.2,,file_name_stemmed,20241211_0821_21503c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0821_21503c_s3_sensor/input_video/20241211_0821_21503c_s3_sensor.mp4,video,16.9,3.37,Done,20241203_1509_e18404_s3_sensor.mp4,02:39.6,67594e772695d93809eb,"""WEBVTT\n\n00:00:00.269 --> 00:00:02.851\n\u0648\u0627\u0644\u064a \u0627\u0633\u062a\u0635\u062d\u0627\u0628 \u0648\u0633\u0627\u0626\u0644 \u0627\u0644\u0642\u0648\u0645 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:16.899
+{{Audio Event 1}}
+Music
+
+00:00:06.349 --> 00:00:16.899
+{{Audio Event 2}}
+People talking"
+80,36:49.4,10:15.4,AdminUser,36:49.4,,file_name_stemmed,20241211_0821_565df5_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0821_565df5_s3_sensor/input_video/20241211_0821_565df5_s3_sensor.mp4,video,15.6,3.1,Done,20241203_1510_060311_s3_sensor.mp4,10:11.3,67594f21619fb5d294fe,"""WEBVTT\n\n00:00:00.430 --> 00:00:03.701\n\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0631\u0628\u0646\u0627 \u0628\u064a\u064a\u0633\u0631\u0647\u0627 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0631\u0628\u0646\u0627 \u0628\u064a\u064a\u0633\u0631\u0647\u0627 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0631\u0628\u0646\u0627 \u0628\u064a\u064a\u0633\u0631\u0647\u0627 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0631\u0628\u0646\u0627 \u0628\u064a\u064a\u0633\u0631\u0647\u0627 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.000
+{{Audio Event 1}}
+Shouting
+
+00:00:02.349 --> 00:00:15.603
+{{Audio Event 1}}
+Crowd"
+81,39:39.6,13:08.4,AdminUser,39:39.6,,file_name_stemmed,20241211_0830_93bbb2_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0830_93bbb2_s3_sensor/input_video/20241211_0830_93bbb2_s3_sensor.mp4,video,18.03333333,3.62,Done,20241203_1516_3eda62_s3_sensor.mp4,12:52.7,67594fcb931b561c62b0,"""WEBVTT\n\n00:00:04.291 --> 00:00:10.525\n\u0628\u064a\u062d\u0643\u064a\u0644\u064a \u0628\u064a\u062d\u0643\u064a\u0644\u064a \u0641\u064a\u0633\u0647\u0645 \u0628\u0627\u0644\u062d\u062f\u064a\u062f \u0628\u064a\u062d\u0643\u064a\u0644\u064a .\u0637\u064a\u0628 \u0645\u0628\u0644\u063a \u0647\u0648 \u0642\u062f\u0631\u0647 \u0647\u0627\u064a .\u0628\u064a\u062f\u0641\u0639\u0648\u0644\u0647 \u0627\u0644\u0641\u0643\u0631\u0629 \u0627\u064a\u0647.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:18.000
+{{Audio Event 1}}
+Siren
+
+00:00:03.349 --> 00:00:12.349
+{{Audio Event 1}}
+People talking"
+82,42:30.4,16:45.2,AdminUser,42:30.4,,file_name_stemmed,20241211_0830_1737d9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0830_1737d9_s3_sensor/input_video/20241211_0830_1737d9_s3_sensor.mp4,video,29.999,3.54,Done,22.mp4,16:15.4,675950766bec29f99415,"""WEBVTT\n\n00:00:11.430 --> 00:00:17.919\n\u064a\u0627 \u0644\u0637\u064a\u0641 \u064a\u0627 \u0644\u0637\u064a\u0641 \u064a\u0627 \u0631\u0628 \u062a\u0633\u062a\u0631\u0646\u0627 \u064a\u0627 \u0631\u0628 \u062a\u0633\u062a\u0631\u0646\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:02.170
+{{Audio Event 1}}
+Whistle
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 2}}
+Explosion
+
+00:00:04.349 --> 00:00:05.349
+{{Audio Event 3}}
+Explosion
+
+00:00:11.349 --> 00:00:12.349
+{{Audio Event 4}}
+People Talking
+
+00:00:13.349 --> 00:00:17.349
+{{Audio Event 5}}
+People Talking
+
+00:00:19.349 --> 00:00:22.349
+{{Audio Event 6}}
+Explosion
+
+00:00:23.349 --> 00:00:27.349
+{{Audio Event 7}}
+Engine
+
+00:00:25.349 --> 00:00:27.000
+{{Audio Event 8}}
+Explosion
+
+00:00:28.349 --> 00:00:30.349
+{{Audio Event 9}}
+Music"
+83,45:45.8,21:31.6,AdminUser,45:45.8,,file_name_stemmed,20241211_0830_21a393_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0830_21a393_s3_sensor/input_video/20241211_0830_21a393_s3_sensor.mp4,video,33.042,9.55,Done,2814536.mp4,21:25.7,67595139c15e07384d5e,"""WEBVTT\n\n00:00:00.590 --> 00:00:07.136\n\u062f\u0639\u064a\u0646\u064a \u0628\u0627\u0644\u0631\u062d\u0645\u0629 \u064a\u0627 \u062d\u062c\u0629 .\u062f\u0639\u064a\u0646\u064a \u0628\u0627\u0644\u0631\u062d\u0645\u0629 \u064a\u0627 \u062d\u062c\u0629 .\u062f\u0639\u064a\u0646\u064a \u0628\u0627\u0644\u0627\u0642\u0635\u0649 \u0648\u0628\u0627\u0633\u0647\u0644 \u0639\u0644\u064a\u0643 \u0648\u0628\u0627\u0633\u0647\u0644 \u0639\u0644\u064a\u0643 \u0648\u0628\u0627\u0633\u0647\u0644 \u0639\u0644\u064a\u0643.\n\n00:00:07.336 --> 00:00:21.428\n\u0648\u0628\u0627\u0633\u0647\u0644 \u0639\u0644\u064a\u0643 \u064a\u0627 \u062d\u062c\u0629 .\u062e\u0644\u064a\u0643 \u0645\u0639 \u0627\u062e\u0648\u0643 \u0645\u0639 \u0633\u064a\u062f\u0643 \u0648\u0645\u0639 \u0643\u0644 \u0627\u0644\u0634\u0647\u062f\u0627\u0621 \u0627\u0644\u0644\u064a \u0639\u0644\u064a\u0646\u0627 \u0648\u0645\u0634 \u0639\u0646\u0627 \u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 \u0647\u064a\u0647 \u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 \u064a\u0627 \u0627\u0645 \u0645\u062d\u0645\u062f \u0639\u0628\u062f \u0627\u0644\u0643\u0631\u064a\u0645 \u0647\u0646\u064a\u0629 .\u0627\u0644\u0639\u0631\u0628 \u0648\u0627\u0644\u0645\u0633\u0644\u0645\u064a\u0646 .\u0627\u064a\u0648\u0629 .\u0627\u0644\u0645\u062a\u0648\u0627\u062c\u062f\u064a\u0646 .\n\n00:00:21.568 --> 00:00:23.050\n\u064a\u0627\u0644\u0644\u0647 \u0627\u0631\u0641\u0639 \u0627\u0631\u0641\u0639 \u064a\u0627 \u0634\u064a\u062e .\n\n00:00:24.170 --> 00:00:27.856\n\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 .\u0627\u062d\u0645\u0644\u0647 \u064a\u0627 \u0639\u0627\u062f\u0644 \u0627\u062d\u0645\u0644 \u0627\u062d\u0645\u0644 \u064a\u0627 \u0634\u0628\u0627\u0628 \u064a\u0627\u0644\u0644\u0647 \u0627\u0631\u0641\u0639\u0647 .\u0627\u0631\u0641\u0639\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 \u062f\u0627\u062e\u0644\u0646\u0627 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:33.041
+{{Audio Event 1}}
+Crowd
+
+00:00:00.349 --> 00:00:33.065
+{{Audio Event 2}}
+People talking"
+84,48:51.5,19:51.3,AdminUser,48:51.5,,file_name_stemmed,20241211_0839_824ae6_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0839_824ae6_s3_sensor/input_video/20241211_0839_824ae6_s3_sensor.mp4,video,4.733333333,1.2,Done,2815617.mp4,19:46.0,675951f36fa908e47b0f,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 1}}
+Engine
+
+00:00:00.349 --> 00:00:04.349
+{{Audio Event 2}}
+Street
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 3}}
+Traffic"
+85,51:37.0,18:26.1,AdminUser,51:37.0,,file_name_stemmed,20241211_0839_0a5892_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0839_0a5892_s3_sensor/input_video/20241211_0839_0a5892_s3_sensor.mp4,video,9.867777778,0.97,Done,2816117.mp4,18:42.3,6759529903cff0c1918c,"""WEBVTT\n\n00:00:05.282 --> 00:00:08.352\n\u0627\u0647\u0644\u0627 \u0628\u0643\u0645 \u0645\u0646 \u062c\u062f\u064a\u062f \u0645\u0633\u062a\u0645\u0639\u064a\u0646\u0646\u0627 \u0627\u0644\u0643\u0631\u0627\u0645 \u0627\u0647\u0644\u0627 \u0628\u0643\u0645 \u0641\u064a \u062d\u0644\u0642\u0629 \u062c\u062f\u064a\u062f\u0629 \u0645\u0646 \u0628\u0631\u0646\u0627\u0645\u062c \u0628\u0631\u0646\u0627\u0645\u062c \u0645\u0627\u0644 \u0648\u0627\u0639\u0645\u0627\u0644.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.868
+{{Audio Event 1}}
+Music"
+86,54:27.9,13:54.1,AdminUser,54:27.9,,file_name_stemmed,20241211_0839_2b96e3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0839_2b96e3_s3_sensor/input_video/20241211_0839_2b96e3_s3_sensor.mp4,video,21.72501134,17.08,Done,2820515.mp4,13:47.7,67595343e35fb174cacb,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.000
+{{Audio Event 1}}
+Street
+
+00:00:07.349 --> 00:00:21.349
+{{Audio Event 2}}
+Engine"
+87,57:12.9,19:39.6,AdminUser,57:12.9,,file_name_stemmed,20241211_0848_638371_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0848_638371_s3_sensor/input_video/20241211_0848_638371_s3_sensor.mp4,video,30.1,11.09,Done,2821152.mp4,19:38.5,675953e8d1163e5fa483,"""WEBVTT\n\n00:00:00.809 --> 00:00:03.330\n\u0645\u0631\u0642\u0647 \u0645\u0631\u0642\u0647 \u0645\u0631\u0642\u0647 \u0645\u0635\u0631\u0645\u0637 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.100
+{{Audio Event 1}}
+Buzzing
+
+00:00:00.349 --> 00:00:30.139
+{{Audio Event 2}}
+People talking"
+88,00:03.5,15:17.9,AdminUser,00:03.5,,file_name_stemmed,20241211_0848_ea034d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0848_ea034d_s3_sensor/input_video/20241211_0848_ea034d_s3_sensor.mp4,video,29,2.54,Done,2821912.mp4,26:50.1,675954937b6a85552929,"""WEBVTT\n\n00:00:06.440 --> 00:00:14.708\n\u062a\u0639\u0632\u064a\u0627\u062a \u064a\u0627 \u0634\u0628\u0627\u0628 \u0635\u064a\u0635\u0629 \u062a\u0639\u0632\u064a\u0627\u062a \u0634\u0628\u0627\u0628 \u0634\u0628\u0627\u0628 \u062a\u0639\u0632\u064a\u0627\u062a \u0647\u064a\u0647\u0645 \u0627\u062e\u0648\u0627\u062a \u0627\u0644\u0634\u0631\u0645\u0648\u0637\u0629.\n\n00:00:17.911 --> 00:00:28.981\n\u0643\u0633 \u0627\u062e\u062a\u0643\u0648\u0627 \u0648\u0627\u062d\u062f \u0648\u0631\u0627\u0621 \u0627\u0644\u062b\u0627\u0646\u064a \u0643\u0633 \u0627\u062e\u062a\u0643\u0648\u0627 \u0643\u0633 \u0627\u062e\u062a\u0643\u0648\u0627 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:29.000
+{{Audio Event 1}}
+Street
+
+00:00:06.349 --> 00:00:15.349
+{{Audio Event 2}}
+People talking
+
+00:00:18.349 --> 00:00:27.349
+{{Audio Event 2}}
+People talking"
+89,03:14.1,16:11.6,AdminUser,03:14.1,,file_name_stemmed,20241211_0848_aaddeb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0848_aaddeb_s3_sensor/input_video/20241211_0848_aaddeb_s3_sensor.mp4,video,15.04555556,1.35,Done,2822318.mp4,17:06.5,675955521319af107ae1,"""WEBVTT\n\n00:00:00.329 --> 00:00:13.468\n\u0643\u0627\u0646 \u0643\u0644\u064a\u0628 \u0639\u0632\u0646\u0627 \u064a\u0627 \u0643\u0644\u064a\u0628 \u0648\u062e\u0633\u0627\u0631\u062a\u0646\u0627 \u0628\u0647 \u0644\u0627 \u062a\u0639\u0648\u0636 \u062c\u0644\u064a\u0633 \u0645\u0644\u0648\u0643 \u0648\u0644\u064a\u062f \u062f\u0644\u0647\u0645 \u0644\u0627 \u064a\u0633\u0643\u062a \u0639\u0644\u0649 \u0638\u0647\u064a\u0647 \u062c\u0639\u0644 \u0644\u0646\u0627 \u0639\u064a\u0628\u0629 \u0628\u0639\u062f \u0627\u0646\u062a\u0635\u0627\u0631\u0646\u0627 \u0645\u0639\u0647 \u0639\u0644\u0649 \u0627\u0644\u062c\u0646\u0648\u0628.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.000
+{{Audio Event 1}}
+Music
+
+00:00:00.349 --> 00:00:15.046
+{{Audio Event 2}}
+People talking"
+90,06:15.4,44:00.7,AdminUser,06:15.4,,file_name_stemmed,20241211_0857_3f98b0_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0857_3f98b0_s3_sensor/input_video/20241211_0857_3f98b0_s3_sensor.mp4,video,72.576,7.06,Done,2822521.mp4,44:05.5,675956075b0359cde025,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:01:12.575
+{{Audio Event 1}}
+Music
+
+00:00:06.349 --> 00:00:07.349
+{{Audio Event 2}}
+Gunshots"
+91,09:06.0,19:46.7,AdminUser,09:06.0,,file_name_stemmed,20241211_0857_1ca8ed_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0857_1ca8ed_s3_sensor/input_video/20241211_0857_1ca8ed_s3_sensor.mp4,video,35.56666667,4.24,Done,2823095.mp4,20:02.9,675956b201c106c1d65d,"""WEBVTT\n\n00:00:00.009 --> 00:00:01.028\n\u0648\u0627\u0641\u0631\u062d\u064a \u0641\u0627\u0646\u0627 \u0627\u0644\u0634\u0647\u064a\u062f.\n\n00:00:01.048 --> 00:00:04.251\n\u0648\u0627\u062f\u0639\u064a \u0635\u0644 \u0639\u0644\u0649 \u0627\u0644\u0646\u0628\u064a \u0641\u064a \u0633\u0628\u064a\u0644 \u0627\u0644\u0644\u0647 \u0639\u064a\u0646.\n\n00:00:24.208 --> 00:00:29.797\n\u0627\u0647\u0644\u0627 \u0648\u0633\u0647\u0644\u0627 \u0628\u0643\u0645 \u0639\u0628\u0631 \u0627\u0630\u0627\u0639\u0629 \u0635\u0648\u062a \u0627\u0644\u0627\u0633\u0631\u0649 \u0627\u0647\u0644\u0627 \u0648\u0633\u0647\u0644\u0627 \u0628\u0643\u0645 \u0639\u0628\u0631 \u0627\u0630\u0627\u0639\u0629 \u0635\u0648\u062a \u0627\u0644\u0627\u0633\u0631\u0649 \u0627\u0647\u0644\u0627 \u0648\u0633\u0647\u0644\u0627 \u0628\u0643\u0645 \u0639\u0628\u0631 \u0627\u0630\u0627\u0639\u0629 \u0635\u0648\u062a \u0627\u0644\u0627\u0633\u0631\u0649.\n\n00:00:29.937 --> 00:00:34.463\n\u064a\u0627 \u0627\u062d\u0627\u0643 \u062a\u0644\u0645 \u064a\u0627 \u0627\u0632\u0645\u0631\u064a \u0641\u064a \u063a\u0631\u0628\u062a\u064a \u0648\u0627\u0633\u062a\u0641\u0634\u0644\u064a \u0628\u062f\u0645\u064a \u0627\u0644\u0633\u0644\u0627\u0645.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:35.566
+{{Audio Event 1}}
+Music"
+92,12:01.8,52:45.4,AdminUser,12:01.8,,file_name_stemmed,20241211_0857_770517_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0857_770517_s3_sensor/input_video/20241211_0857_770517_s3_sensor.mp4,video,24.28777778,21.36,Done,2823586.mp4,51:31.5,67595761c126afd306f5,"""WEBVTT\n\n00:00:00.089 --> 00:00:13.702\n\u0642\u0627\u0644\u0648\u0627 \u0628\u0627\u0646\u0643 \u0642\u062f \u0631\u062d\u0644\u062a \u0648\u0644\u0646 \u062a\u0639\u0648\u0627 \u0641\u0641\u0632\u0639\u062a \u0644\u0645\u0627 \u0627\u062e\u0628\u0631\u0648\u0644\u064a \u064a\u0627 \u0634\u0647\u064a\u062f.\n\n00:00:13.782 --> 00:00:24.172\n\u062d\u0642\u0627 \u0645\u0636\u064a\u062a \u0641\u0644\u0633\u062a \u062a\u0631\u062c\u0639 \u0645\u0631\u0629 \u0627\u062e\u0631\u0649 \u0627\u0632\u0648\u0631\u062a\u0643 \u062c\u0646\u0627\u0629 \u0627\u0644\u062e\u0644\u0648\u062f.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:24.000
+{{Audio Event 1}}
+Music"
+93,14:56.4,13:58.2,AdminUser,14:56.4,,file_name_stemmed,20241211_0906_da72be_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0906_da72be_s3_sensor/input_video/20241211_0906_da72be_s3_sensor.mp4,video,15.047,1.78,Done,2823733.mp4,13:56.1,67595810596805a650b2,"""WEBVTT\n\n00:00:00.149 --> 00:00:07.716\n\u0643\u0641\u0643\u064a\u0633 \u0627\u0644\u062f\u0645\u0639\u0629 \u0635\u0631\u062a \u0641\u064a \u0636\u0631\u0628 \u0648\u0642\u062a\u0646\u064a \u0648\u062c\u0639\u0627 .\n\n00:00:08.217 --> 00:00:14.903\n\u0627\u0635\u0628\u0631\u064a \u0627\u062d\u062a\u0633\u0628\u064a \u0643\u0641\u0643\u064a\u0633 \u0627\u0644\u062f\u0645\u0639\u0629 \u0635\u0631\u062a \u0641\u064a \u0636\u0631\u0628 \u0648\u0642\u062a\u0646\u064a.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.000
+{{Audio Event 1}}
+Music"
+94,18:07.5,50:20.9,AdminUser,18:07.5,,file_name_stemmed,20241211_0906_265dbb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0906_265dbb_s3_sensor/input_video/20241211_0906_265dbb_s3_sensor.mp4,video,26.70222222,2.35,Done,2824382.mp4,50:16.5,675958cf7b327b522543,"""WEBVTT\n\n00:00:00.029 --> 00:00:12.973\n\u0627\u0628\u0637\u0627\u0644\u0643 \u064a\u0627 \u0641\u0644\u0633\u0637\u064a\u0646 \u0631\u0641\u0639\u0648\u0627 \u0631\u0627\u0633\u0643 \u0628\u0627\u0644\u0639\u0627\u0644\u0629 \u0634\u0647\u064a\u062f \u064a\u0648\u062f\u0639 \u0634\u0647\u064a\u062f \u0644\u0639\u064a\u0648\u0646 \u0627\u0644\u0627\u0642\u0635\u0649 \u0627\u0644\u063a\u0627\u0644\u064a \u0627\u0628\u0637\u0627\u0644\u0643 \u064a\u0627 \u0641\u0644\u0633\u0637\u064a\u0646 \u0631\u0641\u0639\u0648\u0627 \u0631\u0627\u0633\u0643 \u0628\u0627\u0644\u0639\u0627\u0644\u0629.\n\n00:00:13.212 --> 00:00:26.038\n\u0634\u0647\u064a\u062f \u064a\u0648\u062f\u0639 \u0634\u0647\u064a\u062f \u0644\u0639\u064a\u0648\u0646 \u0627\u0644\u0627\u0642\u0635\u0649 \u0627\u0644\u063a\u0627\u0644\u064a \u062c\u064a\u0644 \u064a\u0633\u0644\u0645 \u0628\u0639\u062f\u0647 \u062c\u064a\u0644 \u0644\u0633\u0627\u062d\u0627\u062a \u0627\u0644\u0646\u0636\u0627\u0644 \u0648\u0627\u0644\u0628\u0631\u0648\u062f\u0629 \u0645\u0627 \u0628\u062a\u0645\u0644 \u0639\u0646 \u0631\u0627\u0633 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:26.170
+{{Audio Event 1}}
+Music"
+95,21:14.2,32:36.2,AdminUser,21:14.2,,file_name_stemmed,20241211_0906_8fc935_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0906_8fc935_s3_sensor/input_video/20241211_0906_8fc935_s3_sensor.mp4,video,76.48666667,218.24,Done,2825785.mp4,29:49.6,6759598a3725f90602e9,"""WEBVTT\n\n00:00:00.503 --> 00:00:07.892\n\u0627\u0644\u0631\u0633\u0627\u0644\u0629 \u0627\u0644\u0644\u064a \u0628\u062a\u062a\u0628\u0639\u0647\u0627 \u0645\u0646 \u0627\u0648\u0644 \u0627\u0644\u0633\u0646\u0629 \u0644\u062c\u064a\u0634 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0627\u0646\u0647 \u0627\u062d\u0646\u0627 \u062b\u0627\u0628\u062a\u064a\u0646 \u0648\u0627\u062d\u0646\u0627 \u0627\u0642\u0648\u0649 \u0645\u0646 \u0645\u0627 \u0647\u0645 \u0628\u064a\u062a\u0637\u0644\u0639\u0648\u0627 .\n\n00:00:41.246 --> 00:00:48.654\n\u0643\u0635\u0627\u062d\u0628 \u0627\u0644\u0631\u062f \u0627\u0644\u0633\u0644\u0645\u064a \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636.\n\n00:00:48.673 --> 00:00:56.060\n\u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627.\n\n00:00:56.121 --> 00:01:03.228\n\u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627 \u0639\u0644\u0645\u0646\u0627 \u0627\u0628\u0646 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631 \u0627\u0644\u0627\u0631\u0636 \u062a\u062d\u0631\u064a\u0631\u0647\u0627 \u0648\u0627\u062c\u0628\u0627\u0631\u0647\u0627.\n\n00:01:08.478 --> 00:01:14.995\n\u0631\u0627\u0648\u062a\u0631 \u0646\u064a\u062a\u064a \u0644\u0645 \u0635\u0627\u062d\u0628 \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0633\u0631\u064a\u0639 \u0631\u0627\u0648\u062a\u0631 \u0646\u064a\u062a\u064a \u0644\u0645 \u0635\u0627\u062d\u0628 \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0633\u0631\u064a\u0639.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:01:16.486
+{{Audio Event 1}}
+Music
+
+00:00:01.349 --> 00:00:08.349
+{{Audio Event 2}}
+People talking
+
+00:00:18.349 --> 00:00:29.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:37.349 --> 00:00:44.349
+{{Audio Event 3}}
+Gunshots
+
+00:00:51.349 --> 00:00:53.349
+{{Audio Event 3}}
+Gunshots
+
+00:01:04.349 --> 00:01:06.349
+{{Audio Event 3}}
+Gunshots
+
+00:01:14.349 --> 00:01:16.486
+{{Audio Event 3}}
+Gunshots"
+96,24:23.8,31:27.6,AdminUser,24:23.8,,file_name_stemmed,20241211_0914_d07e35_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0914_d07e35_s3_sensor/input_video/20241211_0914_d07e35_s3_sensor.mp4,video,38.68222222,6.13,Done,2829188.mp4,31:56.6,67595a47c20068cf0339,"""WEBVTT\n\n00:00:00.189 --> 00:00:05.831\n\u0648\u064a\u0646 \u0628\u0627\u0642\u064a \u0627\u0648\u0644\u0627\u062f\u064a \u0648\u064a\u0646 \u0628\u0627\u0642\u064a \u0627\u0648\u0644\u0627\u062f\u064a .\u0628\u0627\u0646\u0632\u0639 \u0648\u064a\u0646 .\u0645\u0627 \u0638\u0644\u0634 \u062d\u062f\u0627 \u0639\u0646\u062f\u064a .\u0628\u0627\u0646\u0632\u0639 \u0648\u064a\u0646 \u0645\u0627 \u0638\u0644\u0634 .\n\n00:00:05.892 --> 00:00:08.352\n\u0647\u0646\u0627\u0643 \u0647\u0646\u0627\u0643 \u0647\u0646\u0627\u0643 .\u0645\u0627 \u0638\u0644\u0634 \u062d\u062f\u0627 \u0639\u0646\u062f\u064a .\n\n00:00:08.452 --> 00:00:08.692\n\u0637\u064a\u0628 .\n\n00:00:28.303 --> 00:00:35.493\n\u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 \u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0639\u0648\u0636\u0643 .\u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 \u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:29.170
+{{Audio Event 1}}
+Crowd
+
+00:00:02.349 --> 00:00:09.349
+{{Audio Event 2}}
+People talking
+
+00:00:09.349 --> 00:00:11.349
+{{Audio Event 4}}
+Shouting
+
+00:00:10.349 --> 00:00:28.349
+{{Audio Event 3}}
+Crying
+
+00:00:24.349 --> 00:00:28.349
+{{Audio Event 4}}
+Shouting
+
+00:00:27.349 --> 00:00:38.684
+{{Audio Event 1}}
+Crowd
+
+00:00:35.349 --> 00:00:38.684
+{{Audio Event 4}}
+Shouting"
+97,27:18.6,32:24.1,AdminUser,27:18.6,,file_name_stemmed,20241211_0914_b8a0d6_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0914_b8a0d6_s3_sensor/input_video/20241211_0914_b8a0d6_s3_sensor.mp4,video,25.33333333,5.01,Done,2829536.mp4,40:06.2,67595af68d57250ab679,"""WEBVTT\n\n00:00:00.109 --> 00:00:07.216\n\u0627\u0648\u0644\u0627\u062f \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a \u0627\u0628\u0648 \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a .\u0627\u0628\u0648 \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a .\u0627\u0628\u0648 \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a .\u0627\u0628\u0648 \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a .\u0627\u0628\u0648 \u0627\u0644\u0639\u0627\u0628\u062f \u0639\u0644\u064a.\n\n00:00:07.235 --> 00:00:11.679\n\u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646.\n\n00:00:11.699 --> 00:00:25.312\n\u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0648\u0645\u0647\u0627\u0645\u064a \u0644\u0627 \u064a\u062c\u062f\u0627\u0646 .\u0644\u0627 \u064a\u062c\u062f\u0627\u0646 .\u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0643\u0644 \u0627\u0644\u062b\u0648\u0627\u0631 .\u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0643\u0644 \u0627\u0644\u062b\u0648\u0627\u0631 .\u0648\u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0643\u0644 \u0627\u0644\u062b\u0648\u0627\u0631 .\u0644\u0627 \u064a\u062c\u062f\u0627\u0646 \u0627\u0644\u062b\u0648\u0627\u0631 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:25.000
+{{Audio Event 1}}
+Crowd
+
+00:00:02.349 --> 00:00:04.349
+{{Audio Event 2}}
+Shouting
+
+00:00:06.349 --> 00:00:07.349
+{{Audio Event 2}}
+Shouting
+
+00:00:10.349 --> 00:00:12.349
+{{Audio Event 2}}
+Shouting
+
+00:00:13.349 --> 00:00:15.349
+{{Audio Event 2}}
+Shouting
+
+00:00:17.349 --> 00:00:19.349
+{{Audio Event 2}}
+Shouting
+
+00:00:21.349 --> 00:00:23.349
+{{Audio Event 2}}
+Shouting"
+98,30:35.0,27:53.4,AdminUser,30:34.9,,file_name_stemmed,20241211_0914_ff3a62_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0914_ff3a62_s3_sensor/input_video/20241211_0914_ff3a62_s3_sensor.mp4,video,19.3705,3.31,Done,2829764.mp4,27:40.7,67595bbae87be766dd3d,"""WEBVTT\n\n00:00:00.911 --> 00:00:11.926\n\u0627\u062c\u062a \u0627\u0644- \u0633\u062a\u0629 \u0639\u0634\u0631 \u0633\u0646\u0629 \u0636\u0628\u0637\u062a \u0627\u0644\u0636\u0627\u0628\u0637\u0629 .\u0648\u0627\u0644- \u0627\u0633\u062a\u0634\u0647\u062f \u0648\u0647\u064a \u0627\u0644\u0644\u0647 \u0627\u0639\u0644\u0645 \u0628\u062d\u0627\u0644\u0647\u0627 \u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0639\u0643\u0644 \u062d\u0627\u0644 \u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0641\u064a \u062f- \u0641\u064a \u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0642\u0627\u0648\u0645\u0629 \u0648\u0641\u064a \u062f\u0627\u062e\u0644 \u0641\u0644\u0633\u0637\u064a\u0646 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 .\u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 .\u0627\u0644\u0644\u0647 \u064a\u0641\u0631\u062c\u0647\u0627 \u064a\u0627 \u0631\u0628 .\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647.\n\n00:00:11.946 --> 00:00:19.257\n\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0631\u062d\u0645\u0647 .\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u062a\u0643\u0648\u0646\u0648\u0627 \u0634\u0627\u064a\u0641\u064a\u0646 \u0639\u0646\u062f \u0627\u0644- \u0639\u0646\u062f \u0627\u0644\u0645\u062c\u0644\u0633 \u0627\u0644\u0648\u0627\u0635\u0644 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:19.000
+{{Audio Event 1}}
+People talking
+
+00:00:00.349 --> 00:00:19.370
+{{Audio Event 2}}
+Crowd
+
+00:00:00.349 --> 00:00:08.349
+{{Audio Event 3}}
+Siren
+
+00:00:04.349 --> 00:00:06.349
+{{Audio Event 4}}
+Shouting"
+99,33:40.7,21:28.6,AdminUser,33:40.7,,file_name_stemmed,20241211_0924_70e9f4_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0924_70e9f4_s3_sensor/input_video/20241211_0924_70e9f4_s3_sensor.mp4,video,21.73333333,2.4,Done,2830736.mp4,51:06.7,67595c74a68c4b30f58d,"""WEBVTT\n\n00:00:00.009 --> 00:00:04.173\n\u0627\u0644\u0644\u064a\u0644\u0629 \u0645\u0627 \u0648\u0639\u062f\u0646\u0627 \u0645\u0639\u0647\u0645 \u0625\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0642\u062a\u0644\u0627\u0646\u0627 \u0641\u064a \u0627\u0644\u062c\u0646\u0629 \u0648\u0642\u062a\u0644\u0627\u0646\u0627 \u0641\u064a \u0627\u0644\u0646\u0627\u0631 .\n\n00:00:04.293 --> 00:00:16.667\n\u0633\u0623\u0628\u0643 \u0639\u0644\u064a \u0627\u0646\u062a \u0627\u0644\u0622\u0646 \u064a\u0634\u0627\u0631 \u0625\u0644\u064a \u0633\u0623\u062d\u0646 \u0625\u0644\u064a .\n\n00:00:16.766 --> 00:00:21.711\n\u0633\u0623\u062d\u0646 \u0644\u0646\u0638\u0631\u0643 \u0645\u0646 \u0639\u064a\u0646\u064a .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:04.733
+{{Audio Event 1}}
+People talking
+
+00:00:05.349 --> 00:00:21.733
+{{Audio Event 2}}
+Music"
+100,36:36.5,16:05.5,AdminUser,36:36.5,,file_name_stemmed,20241211_0924_a7a8dd_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0924_a7a8dd_s3_sensor/input_video/20241211_0924_a7a8dd_s3_sensor.mp4,video,41.2,13.54,Done,2834053.mp4,15:40.4,67595d247b7e5a839eae,"""WEBVTT\n\n00:00:00.549 --> 00:00:05.133\n\u0648\u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629.\n\n00:00:05.152 --> 00:00:11.076\n\u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629 \u0627\u0641\u062a\u062d \u0636\u0631\u064a\u0628\u0629.\n\n00:00:25.434 --> 00:00:29.637\n\u0627\u064a\u0647 \u0627\u064a\u0647 \u0627\u064a\u0647 \u0627\u064a\u0647 \u0627\u064a\u0647 .\u0627\u0648\u0633\u062e \u0627\u0648\u0633\u062e \u064a\u0627 \u0627\u0628\u0648 \u0627\u0644\u0632\u0645\u064a\u0644 \u0627\u0648\u0633\u062e \u0627\u0648\u0633\u062e \u0627\u0648\u0633\u062e .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:10.170
+{{Audio Event 5}}
+Siren
+
+00:00:02.349 --> 00:00:05.349
+{{Audio Event 4}}
+Traffic
+
+00:00:04.349 --> 00:00:41.200
+{{Audio Event 3}}
+Crowd
+
+00:00:14.349 --> 00:00:18.349
+{{Audio Event 5}}
+Siren
+
+00:00:23.349 --> 00:00:31.349
+{{Audio Event 6}}
+Shouting
+
+00:00:23.349 --> 00:00:25.349
+{{Audio Event 2}}
+Crying"
+101,39:31.6,08:20.9,AdminUser,39:31.5,,file_name_stemmed,20241211_0924_ec9cad_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0924_ec9cad_s3_sensor/input_video/20241211_0924_ec9cad_s3_sensor.mp4,video,15.41777778,2.84,Done,2834900.mp4,07:53.0,67595dd3873491ef5881,"""WEBVTT\n\n00:00:04.751 --> 00:00:04.992\n\u0646\u0639\u0645 .\n\n00:00:05.051 --> 00:00:05.272\n\u0627\u064a\u0647 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 3}}
+Explosion
+
+00:00:00.349 --> 00:00:15.349
+{{Audio Event 1}}
+Crowd
+
+00:00:04.349 --> 00:00:15.349
+{{Audio Event 2}}
+Shouting"
+102,42:21.7,05:55.8,AdminUser,42:21.7,,file_name_stemmed,20241211_0933_45903a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0933_45903a_s3_sensor/input_video/20241211_0933_45903a_s3_sensor.mp4,video,7.43,1.43,Done,2836212.mp4,05:38.8,67595e7da85a83f2bc30,"""WEBVTT\n\n00:00:03.624 --> 00:00:03.765\nBeep!\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.000
+{{Audio Event 1}}
+Traffic
+
+00:00:03.349 --> 00:00:05.349
+{{Audio Event 3}}
+Siren
+
+00:00:04.349 --> 00:00:07.349
+{{Audio Event 2}}
+Street"
+103,45:32.8,57:41.7,AdminUser,45:32.8,,file_name_stemmed,20241211_0933_2c86d0_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0933_2c86d0_s3_sensor/input_video/20241211_0933_2c86d0_s3_sensor.mp4,video,42.7,3.74,Done,2837186.mp4,56:25.2,67595f3cbb3bbf635327,"""WEBVTT\n\n00:00:08.553 --> 00:00:12.255\n\u0647\u0630\u0647 \u0645\u062d\u0627\u0648\u0644\u0627\u062a \u062f\u0647\u0633 \u0645\u0646 \u0642\u0628\u0644 \u0627\u0644\u0627\u0644\u064a\u0627\u062a \u0627\u0644\u0639\u0633\u0643\u0631\u064a\u0629.\n\n00:00:14.396 --> 00:00:25.881\n\u062c\u0628\u0647\u062a\u0647\u0627 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0648\u062e\u0644\u0627- \u0648\u062e\u0644\u0627\u0644 \u0639\u0645\u0644\u064a\u0627\u062a \u062a\u0646\u0642\u0644\u0647\u0627 \u0639\u0644\u0649 \u0627\u0645\u062a\u062f\u0627\u062f \u0647\u0630\u0627 \u0627\u0644\u0634\u0627\u0631\u0639 \u0627\u0644\u0631\u0626\u064a\u0633\u064a \u0627\u0644\u0645\u062d\u0627\u0630\u064a \u0644\u0644\u0645\u062f\u062e\u0644 \u0627\u0644\u0631\u0626\u064a\u0633\u064a \u0644\u0645\u062e\u064a\u0645 \u062c\u0646\u064a\u0646 \u0643\u0627\u0646\u062a \u062a\u062d\u0627\u0648\u0644 \u062f\u0647\u0633 \u0627\u0644\u0632\u0645\u0644\u0627\u0621 \u0627\u0644\u0635\u062d\u0641\u064a\u064a\u0646.\n\n00:00:28.166 --> 00:00:29.728\n\u0627\u0644\u0633\u0644\u0627\u0645 \u0639\u0644\u064a\u0643\u0645 \u0648\u0631\u062d\u0645\u0629 \u0627\u0644\u0644\u0647 \u0648\u0628\u0631\u0643\u0627\u062a\u0647 \u0645\u0633\u062a\u0645\u0639\u064a\u0646\u0646\u0627 \u0627\u0644\u0643\u0631\u0627\u0645 \u0641\u064a \u0638\u0644 .\n\n00:00:29.867 --> 00:00:40.738\n\u0647\u0630\u0647 \u0627\u0644\u062a\u062d\u0631\u0643\u0627\u062a \u0627\u0644\u0645\u0633\u062a\u0645\u0631\u0629 \u0639\u0644\u0649 \u0645\u062f\u0627\u0631 \u0627\u0644\u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0645\u0627\u0636\u064a\u0629 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0627\u062c\u062a\u064a\u0627\u062d \u0627\u0644\u0630\u064a \u064a\u0639\u0646\u064a \u064a\u0637\u0627\u0644\u0628 \u062e\u064a\u0645 \u0646\u0648\u0631 \u0634\u0627\u0645\u0633 \u0645\u0646\u0630 \u0645\u0633\u0627\u0621 \u0627\u0644\u062e\u0645\u064a\u0633 \u0627\u064a \u0645\u0648- \u0627\u064a \u0645\u0646\u0630 \u062b\u0644\u0627\u062b\u0629 \u0627\u064a\u0627\u0645.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:42.170
+{{Audio Event 1}}
+Street
+
+00:00:00.349 --> 00:00:03.349
+{{Audio Event 2}}
+Explosion
+
+00:00:01.349 --> 00:00:18.349
+{{Audio Event 3}}
+Traffic
+
+00:00:09.349 --> 00:00:42.700
+{{Audio Event 4}}
+People talking"
+104,48:38.0,52:16.6,AdminUser,48:38.0,,file_name_stemmed,20241211_0933_235afc_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0933_235afc_s3_sensor/input_video/20241211_0933_235afc_s3_sensor.mp4,video,14.83333333,1.64,Done,2837752.mp4,52:03.2,67595ff5e900e1bf5074,"""WEBVTT\n\n00:00:00.109 --> 00:00:06.221\n\u0627\u0628\u0648 \u0634\u062c\u0627 \u0642\u0627\u0626\u062f \u0627\u0644\u0644\u0647 \u064a\u0644\u062d\u0646 \u0627\u0644\u0649 \u064a\u0646\u0643\u0633\u0631 \u0635\u062f\u0641 \u063a\u0637\u064a\u0635\u0627.\n\n00:00:06.522 --> 00:00:14.397\n\u0648\u0643\u0627\u0646 \u0635\u0627\u0631 \u0627\u0644\u0645\u0633\u0644\u0645 \u0627\u0628\u0648 \u0634\u062c\u0627 \u0642\u0627\u0626\u062f \u0627\u0644\u0644\u0647 \u064a\u0644\u062d\u0646 \u0627\u0644\u0649 \u064a\u0646\u0643\u0633\u0631 \u0635\u062f\u0641 \u063a\u0637\u064a\u0635\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:14.000
+{{Audio Event 1}}
+Music"
+105,51:28.9,51:33.8,AdminUser,51:28.9,,file_name_stemmed,20241211_0942_d79f5c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0942_d79f5c_s3_sensor/input_video/20241211_0942_d79f5c_s3_sensor.mp4,video,28.16666667,5.62,Done,2838806.mp4,49:28.4,675960a0e7c4bc8973b8,"""WEBVTT\n\n00:00:00.009 --> 00:00:04.690\n\u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644.\n\n00:00:04.710 --> 00:00:06.610\n\u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644.\n\n00:00:06.629 --> 00:00:08.730\n\u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644.\n\n00:00:08.750 --> 00:00:10.430\n\u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644.\n\n00:00:10.451 --> 00:00:16.132\n\u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644 \u0627\u0644\u0644\u064a \u0639\u0627\u062f \u064a\u0646\u0627\u0648\u0644.\n\n00:00:16.211 --> 00:00:22.993\n\u0627\u0644\u0645\u0627\u0644 \u0627\u0644\u062d\u0643\u064a \u0627\u0644\u0644\u064a \u0634\u0627\u0644\u0647 \u0633\u0648\u0644\u0641\u0646\u0627 \u0627\u062f\u0648\u0627\u0626\u0639 \u0635\u0627\u0631 .\u0646\u0635\u0641 \u0645\u0643\u0647\u0645\u0646\u0627 \u0634\u062f\u0629 \u0648\u062c\u0631\u0627\u062d \u0646\u0635\u0641 \u0645\u0643\u0647\u0645\u0646\u0627 \u0634\u062f\u0629 \u0648\u062c\u0631\u0627\u062d.\n\n00:00:23.013 --> 00:00:24.393\n\u0646\u0635\u0641 \u0645\u0643\u0647\u0645\u0646\u0627 \u0634\u062f\u0629 \u0648\u062c\u0631\u0627\u062d \u0646\u0635\u0641 \u0645\u0643\u0647\u0645\u0646\u0627 \u0634\u062f\u0629 \u0648\u062c\u0631\u0627\u062d.\n\n00:00:24.434 --> 00:00:27.414\n\u0646\u0635\u0641 \u0645\u0643\u0627\u0644\u0645\u0627\u062a \u0627\u0644\u0627\u0631\u0648\u0627\u062d \u0644\u0627 \u0645\u0627 \u0646\u0631\u0645\u064a \u0647\u0627\u0644\u0633\u0644\u0627\u062d \u0627\u0644\u0646\u0627\u0631 \u0645\u062e\u0628\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:28.166
+{{Audio Event 1}}
+Music"
+106,54:24.1,48:55.3,AdminUser,54:24.1,,file_name_stemmed,20241211_0942_702048_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0942_702048_s3_sensor/input_video/20241211_0942_702048_s3_sensor.mp4,video,27.167,8.01,Done,2859476.mp4,48:11.6,67596150225ce6e25303,"""WEBVTT\n\n00:00:00.269 --> 00:00:15.773\n\u0631\u0648\u062d \u0627\u0644\u0631\u0648\u062d \u064a\u0639\u0646\u064a \u0631\u0648\u062d \u0627\u0644\u0631\u0648\u062d \u0644\u0627 \u062d\u0648\u0644 \u0648\u0644\u0627 \u0642\u0648\u0629 \u0627\u0644\u0627 \u0628\u0627\u0644\u0644\u0647 \u064a\u0627 \u0633\u064a\u062f\u064a \u0631\u0648\u062d \u0627\u0644\u0631\u0648\u062d .\u0627\u0644\u0644\u0647 \u064a\u0631\u0636\u0649 \u0639\u0644\u064a\u0643 .\n\n00:00:15.874 --> 00:00:22.477\n\u0647\u064a \u0647\u064a \u0648\u0627\u0644\u0644\u0647 \u0647\u064a \u0648\u0627\u0646\u0627 \u0628\u0627\u0639\u0631\u0641\u0647\u0627 \u0648\u0627\u0646\u062a \u0639\u0627\u0631\u0641\u0647\u0627 \u0647\u064a \u0644\u064a\u0634 \u0627\u0631\u0641\u0647 \u062e\u0633\u0631 \u0627\u0630\u0646\u0643 \u0648\u0627\u0646\u062a \u062e\u0633\u0631 \u0627\u0630\u0646\u0643 \u062b\u0644\u0627\u062b \u062e\u0644\u0627\u0641\u0627\u062a \u0648\u0627\u0646\u062a\u0648\u0627 \u0643\u0644 \u064a\u0648\u0645 \u0628\u064a\u0646\u0627\u0645\u0648\u0627 \u0644\u0639\u0628\u0627\u0633 \u0648\u0647\u0630\u0648\u0644 \u0628\u0627\u064a\u0639\u062b\u0644\u0647.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+{{Audio Event 1}}
+Music
+
+00:00:15.349 --> 00:00:27.213
+{{Audio Event 2}}
+Crowd
+
+00:00:15.349 --> 00:00:27.213
+{{Audio Event 3}}
+Crying
+
+00:00:22.349 --> 00:00:27.213
+{{Audio Event 4}}
+Shouting"
+107,57:19.5,46:14.7,AdminUser,57:19.5,,file_name_stemmed,20241211_0942_b6203d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0942_b6203d_s3_sensor/input_video/20241211_0942_b6203d_s3_sensor.mp4,video,15.555,1.13,Done,2860264.mp4,45:53.0,675961ff7dac333427ff,"""WEBVTT\n\n00:00:00.009 --> 00:00:08.272\n\u0631\u0627\u062d \u062a\u0637\u0644\u0639 \u0641\u0648\u0642 \u0631\u0627\u062d \u062a\u0637\u0644\u0639 \u0641\u0648\u0642 .\u0627\u0648\u0647 \u062e\u0630\u064a\u0646\u064a.\n\n00:00:09.792 --> 00:00:15.515\n\u0644\u062d\u0638\u0627\u062a \u0627\u0644\u0631\u0627\u0628\u0639 \u0627\u0644\u0645\u0648\u062c\u0648\u062f\u0629 \u0641\u064a \u0627\u0644\u0641\u064a\u062f\u064a\u0648 \u0643\u0644 \u0645\u0648\u0627\u0637\u0646 \u0639\u0627\u0626\u0634 \u0641\u064a \u063a\u0632\u0629 \u0639\u0627\u0634\u0647\u0627 \u0639\u0627\u0634\u0647\u0627 \u0628\u0643\u0644 \u062a\u0641\u0627\u0635\u064a\u0644\u0647\u0627 \u062a\u0641\u0627\u0635\u064a\u0644\u0647\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.349
+{{Audio Event 1}}
+People talking
+
+00:00:02.000 --> 00:00:27.170
+{{Audio Event 2}}
+Explosion"
+108,00:30.4,44:17.3,AdminUser,00:30.3,,file_name_stemmed,20241211_0951_0e62f1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0951_0e62f1_s3_sensor/input_video/20241211_0951_0e62f1_s3_sensor.mp4,video,26.63333333,3.48,Done,2860328.mp4,43:56.5,675962be55d541ab84a0,"""WEBVTT\n\n00:00:00.473 --> 00:00:11.599\n\u0645\u0642\u0628\u0644 \u0646\u062d\u0648 \u0627\u0644\u0645\u0627\u0644\u0648\u0646 \u0645\u0635\u0631\u0639 \u0646\u062d\u0648 \u0627\u0644\u062c\u0646\u0627\u0646 \u064a\u0627 \u0641\u0644\u0633\u0637\u064a\u0646 \u0627\u0633\u0645\u0627\u0639\u064a\u0644.\n\n00:00:11.699 --> 00:00:22.807\n\u0641\u0644\u0642\u0627\u0621 \u0627\u0644\u0644\u0647 \u062d\u0627\u062f \u0637\u0628\u0642 \u0642\u0644\u0628\u064a \u062d\u0646\u064a\u0646 \u0644\u0644\u0641\u0631\u0627\u062f \u0648\u0627\u0644\u0648\u0637\u0646.\n\n00:00:22.987 --> 00:00:26.449\n\u0641\u0648\u0642 \u0646\u0639\u0627\u0634 \u0627\u0647\u0645\u0644\u0648\u0646\u064a.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:26.170
+{{Audio Event 1}}
+Music"
+109,03:35.9,42:22.4,AdminUser,03:35.9,,file_name_stemmed,20241211_0951_bac54a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0951_bac54a_s3_sensor/input_video/20241211_0951_bac54a_s3_sensor.mp4,video,24.3,4.82,Done,2860504.mp4,39:44.7,67596377defb303e9448,"""WEBVTT\n\n00:00:00.409 --> 00:00:11.759\n\u0648\u0646\u062d\u0646 \u0641\u064a \u0645\u062c\u0645\u0639 \u0646\u0627\u0635\u0631 \u0627\u0644\u0637\u0628\u064a \u0644\u0627 \u0627\u062d\u062f \u064a\u0645\u0643\u0646 \u0627\u0646 \u064a\u062a\u062e\u064a\u0644 \u0645\u0627 \u0646\u0634\u0627\u0647\u062f\u0647 \u0627\u0644\u0627\u0646 \u0645\u0642\u0627\u0628\u0631 \u062c\u0645\u0627\u0639\u064a\u0629 \u0644\u0627\u0639\u062f\u0627\u062f \u0644\u0627\u0639\u062a\u0642\u0635\u0627\u0646 \u0645\u0626\u0627\u062a \u0627\u0644\u0634\u0647\u062f\u0627\u0621 \u062f\u0641\u0639\u062a\u0647\u0645 \u0641\u064a \u0627\u0644\u0637\u0639\u064a\u062f \u0647\u0646\u0627\u0643.\n\n00:00:12.039 --> 00:00:23.710\n\u0643\u0644 \u0647\u0624\u0644\u0627\u0621 \u0627\u0644\u0646\u0627\u0633 \u064a\u0643\u0648\u0646\u0648\u0627 \u062a\u0639\u0631\u064a\u0641\u064a\u0646 \u0639\u0644\u0649 \u062c\u062b\u0627\u0645\u064a\u0646 \u0627\u0628\u0646\u0627\u0626\u0647\u0645 \u0648\u0647\u0630\u0647 \u0631\u0628\u0645\u0627 \u062d\u0627\u0644 \u0627\u0644\u0645\u0627\u0633\u0629 \u0627\u0644\u0630\u064a\u0646 \u064a\u0643\u0634\u0641\u0648\u0646 \u0627\u0628\u0646\u0627\u0626\u0647\u0645 \u0628\u0639\u062f \u0627\u0634\u0647\u0631 \u063a\u064a\u0628 \u062a\u0637\u0644\u0639 \u0639\u0646\u0647\u0645 \u0648\u062a\u0645 \u0647\u0630\u0647 \u0627\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0645\u0633\u0627\u062d\u0629.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:24.000
+{{Audio Event 1}}
+Crowd
+
+00:00:00.000 --> 00:00:24.334
+{{Audio Event 4}}
+People talking
+
+00:00:14.349 --> 00:00:24.334
+{{Audio Event 3}}
+Crying
+
+00:00:14.349 --> 00:00:24.334
+{{Audio Event 2}}
+Shouting"
+110,06:31.3,36:56.0,AdminUser,06:31.3,,file_name_stemmed,20241211_0951_9a7085_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_0951_9a7085_s3_sensor/input_video/20241211_0951_9a7085_s3_sensor.mp4,video,14.26666667,2.86,Done,2862535.mp4,36:39.8,67596427554678b5c084,"""WEBVTT\n\n00:00:06.503 --> 00:00:07.399\nWhat's your plan?\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:14.000
+{{Audio Event 1}}
+Shouting
+
+00:00:00.349 --> 00:00:14.266
+{{Audio Event 2}}
+Crowd"
+111,09:21.6,59:19.8,AdminUser,09:21.6,,file_name_stemmed,20241211_1000_1f7fae_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1000_1f7fae_s3_sensor/input_video/20241211_1000_1f7fae_s3_sensor.mp4,video,13.534,3.75,Done,2866283.mp4,59:14.0,675964d19398ec27047e,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:13.000
+{{Audio Event 2}}
+Crowd
+
+00:00:02.349 --> 00:00:13.349
+{{Audio Event 1}}
+Shouting"
+112,12:07.2,59:28.8,AdminUser,12:07.2,,file_name_stemmed,20241211_1000_8e1673_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1000_8e1673_s3_sensor/input_video/20241211_1000_8e1673_s3_sensor.mp4,video,17.06666667,3.35,Done,2867796.mp4,54:57.2,6759657739d16b575242,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:17.000
+{{Audio Event 1}}
+Crowd
+
+00:00:00.349 --> 00:00:07.349
+{{Audio Event 2}}
+Shouting"
+113,14:52.4,31:29.0,AdminUser,14:52.4,,file_name_stemmed,20241211_1000_07d95b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1000_07d95b_s3_sensor/input_video/20241211_1000_07d95b_s3_sensor.mp4,video,9.102222222,2.04,Done,2__Merged.mp4,30:57.7,6759661c5badb4765f59,"""WEBVTT\n\n00:00:00.029 --> 00:00:00.350\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.102
+{{Audio Event 1}}
+Crowd
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 2}}
+Shouting
+
+00:00:04.349 --> 00:00:05.349
+{{Audio Event 1}}
+Crowd
+
+00:00:06.349 --> 00:00:07.102
+{{Audio Event 2}}
+New Audio Event
+
+00:00:08.349 --> 00:00:09.000
+{{Audio Event 1}}
+Crowd"
+114,18:03.4,54:45.0,AdminUser,18:03.4,,file_name_stemmed,20241211_1009_7a0ccb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1009_7a0ccb_s3_sensor/input_video/20241211_1009_7a0ccb_s3_sensor.mp4,video,15.14,4.99,Done,437970999_438889355299998_4490932841687462207_n.mp4,54:41.5,675966db5f44664f478a,"""WEBVTT\n\n00:00:00.589 --> 00:00:05.772\n\u0627\u0631\u062c\u0639 \u0627\u0644\u064a\u0647\u0645 \u0641\u0644\u0646\u0629 \u064a\u0645\u0646\u0647\u0645 \u0628\u062c\u0646\u0648\u062f \u0627\u0644\u0644\u0647 \u0642\u0628\u0644 \u0644\u0647\u0645 \u0628\u0647\u0627 .\n\n00:00:05.952 --> 00:00:08.753\n\u0627\u0631\u062c\u0639 \u0627\u0644\u064a\u0647\u0645 \u0641\u0644\u0646\u0629 \u064a\u0645\u0646\u0647\u0645 \u0628\u062c\u0646\u0648\u062f \u0627\u0644\u0644\u0647 \u0642\u0628\u0644\u0647\u0645 \u0628\u0647\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:02.349 --> 00:00:05.140
+{{Audio Event 1}}
+People talking
+
+00:00:00.349 --> 00:00:02.349
+{{Audio Event 3}}
+Shouting
+
+00:00:06.349 --> 00:00:15.232
+{{Audio Event 2}}
+Music"
+115,21:03.9,54:32.9,AdminUser,21:03.9,,file_name_stemmed,20241211_1009_cbd105_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1009_cbd105_s3_sensor/input_video/20241211_1009_cbd105_s3_sensor.mp4,video,29.834,4.67,Done,44444444444444444444.mp4,48:42.1,6759678fdfaf7a122de7,"""WEBVTT\n\n00:00:02.005 --> 00:00:07.315\n\u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 \u062f\u062e\u0648\u0644 \u0627\u0644\u0627\u062e\u0648\u0629 \u0627\u0644\u0627\u0642\u062a\u062d\u0627\u0645\u064a\u064a\u0646 \u0627\u0644\u0644\u0647 \u0627\u0643\u0628\u0631 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.170
+{{Audio Event 1}}
+Explosion
+
+00:00:00.349 --> 00:00:29.000
+{{Audio Event 11}}
+Music
+
+00:00:01.349 --> 00:00:04.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:04.349 --> 00:00:04.349
+{{Audio Event 3}}
+Explosion
+
+00:00:04.349 --> 00:00:07.349
+{{Audio Event 4}}
+People Talking
+
+00:00:07.349 --> 00:00:08.349
+{{Audio Event 5}}
+Explosion
+
+00:00:10.349 --> 00:00:11.349
+{{Audio Event 6}}
+Explosion
+
+00:00:24.349 --> 00:00:25.349
+{{Audio Event 7}}
+Explosion
+
+00:00:25.349 --> 00:00:26.349
+{{Audio Event 8}}
+Explosion
+
+00:00:27.349 --> 00:00:28.349
+{{Audio Event 9}}
+Explosion
+
+00:00:28.349 --> 00:00:29.837
+{{Audio Event 10}}
+Explosion"
+116,23:59.0,20:44.8,AdminUser,23:59.0,,file_name_stemmed,20241211_1009_b449c5_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1009_b449c5_s3_sensor/input_video/20241211_1009_b449c5_s3_sensor.mp4,video,31.633,14.59,Done,86_cut.mp4,19:32.5,6759683f096e7d0a1b28,"""WEBVTT\n\n00:00:15.102 --> 00:00:23.725\n\u0645\u0639 \u0627\u0644\u0644\u0647 \u0627\u0648\u0644\u0627 \u062b\u0645 \u0639\u0647\u062f\u0646\u0627 \u0645\u0639 \u0634\u0639\u0628\u0646\u0627 \u0648\u0639\u0647\u062f\u0646\u0627 \u0645\u0639 \u0627\u0645\u062a\u0646\u0627.\n\n00:00:23.846 --> 00:00:30.829\n\u0627\u0646 \u0646\u0645\u0636\u064a \u0641\u064a \u063a\u0627\u0628 \u0627\u0644\u0637\u0631\u064a\u0642 \u062d\u062a\u0649 \u064a\u0643\u062a\u0628 \u0627\u0644\u0644\u0647 \u0644\u0646\u0627 \u0627\u062d\u062f\u0649 \u0627\u0644\u062d\u0633\u0646\u064a\u064a\u0646.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:31.170
+{{Audio Event 1}}
+Music
+
+00:00:01.349 --> 00:00:04.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:14.349 --> 00:00:26.349
+{{Audio Event 3}}
+Shouting
+
+00:00:27.349 --> 00:00:31.349
+{{Audio Event 4}}
+People Talking"
+117,26:49.5,35:46.7,AdminUser,26:49.5,,file_name_stemmed,20241211_1017_023e9e_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1017_023e9e_s3_sensor/input_video/20241211_1017_023e9e_s3_sensor.mp4,video,19.519,1.16,Done,AQNLsGiuX2YKHisCQrdhGEWnk8dO7OiwmIzmFOno43TmZAO3hdP7pgd5MOfLO12sFIZA-qgLwBBSjKqVvgpWnewx.mp4,35:34.1,675968e9734ad2024d6e,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.000
+{{Audio Event 1}}
+Siren
+
+00:00:04.349 --> 00:00:14.349
+{{Audio Event 2}}
+Street"
+118,29:35.1,28:57.5,AdminUser,29:35.1,,file_name_stemmed,20241211_1017_b06c24_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1017_b06c24_s3_sensor/input_video/20241211_1017_b06c24_s3_sensor.mp4,video,24.776,3.27,Done,ATF shows how a Glock Switch works.mp4,28:39.6,6759698f2422612438f6,"""WEBVTT\n\n00:00:00.322 --> 00:00:10.711\nSo this is semi-automatic, a single pull of the trigger, and I'll do three shots as fast as I can.\n\n00:00:12.692 --> 00:00:16.236\nSo that's a pull of the trigger each time.\n\n00:00:16.917 --> 00:00:19.839\nAnd then this, again, is turning it on fully auto.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.170
+{{Audio Event 1}}
+People talking
+
+00:00:08.349 --> 00:00:09.349
+{{Audio Event 2}}
+Gunshot
+
+00:00:12.349 --> 00:00:20.349
+{{Audio Event 1}}
+People talking
+
+00:00:21.349 --> 00:00:24.775
+{{Audio Event 2}}
+Gunshot"
+119,32:55.3,11:53.6,AdminUser,32:55.3,,file_name_stemmed,20241211_1017_5b2384_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1017_5b2384_s3_sensor/input_video/20241211_1017_5b2384_s3_sensor.mp4,video,30.08,1.84,Done,Air_raid_siren_ blare_in_Ukraine_cut.mp4,11:50.8,67596a5741aeb903361e,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:04.349 --> 00:00:28.170
+{{Audio Event 1}}
+Siren
+
+00:00:29.349 --> 00:00:30.039
+{{Audio Event 2}}
+Siren"
+120,35:56.1,09:36.2,AdminUser,35:56.1,,file_name_stemmed,20241211_1026_378064_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1026_378064_s3_sensor/input_video/20241211_1026_378064_s3_sensor.mp4,video,12.08,2.71,Done,Air_raid_siren_ blare_in_Ukraine_cut_1.mp4,09:34.0,67596b0c1e22b925c033,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:12.000
+{{Audio Event 1}}
+Siren"
+121,38:41.5,08:25.7,AdminUser,38:41.5,,file_name_stemmed,20241211_1026_7f2076_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1026_7f2076_s3_sensor/input_video/20241211_1026_7f2076_s3_sensor.mp4,video,15.08,2.74,Done,Air_raid_siren_ blare_in_Ukraine_cut_2.mp4,08:23.4,67596bb17c7cc10d00c9,"""WEBVTT\n\n00:00:00.623 --> 00:00:00.663\noh\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.000
+{{Audio Event 1}}
+Siren"
+122,41:31.7,06:49.3,AdminUser,41:31.7,,file_name_stemmed,20241211_1026_8cfb14_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1026_8cfb14_s3_sensor/input_video/20241211_1026_8cfb14_s3_sensor.mp4,video,5.04,2.07,Done,Air_raid_siren_ blare_in_Ukraine_cut_3.mp4,06:38.4,67596c5ba26aedc5a53a,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:04.000
+{{Audio Event 1}}
+Alarm"
+123,44:22.1,23:04.1,AdminUser,44:22.1,,file_name_stemmed,20241211_1035_10bb8f_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1035_10bb8f_s3_sensor/input_video/20241211_1035_10bb8f_s3_sensor.mp4,video,30.04,1.66,Done,Aleppo   Syria daily war_cut.mp4,22:57.8,67596d061ea1a44c1047,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.039
+{{Audio Event 1}}
+Engine
+
+00:00:03.349 --> 00:00:07.349
+{{Audio Event 2}}
+Talking people
+
+00:00:09.349 --> 00:00:15.349
+{{Audio Event 2}}
+Talking people
+
+00:00:17.349 --> 00:00:22.349
+{{Audio Event 2}}
+Talking people
+
+00:00:24.039 --> 00:00:24.039
+{{Audio Event 3}}
+Explosion
+
+00:00:28.039 --> 00:00:29.039
+{{Audio Event 4}}
+Gunshot
+
+00:00:28.039 --> 00:00:30.039
+{{Audio Event 2}}
+Talking people"
+124,47:32.8,24:40.3,AdminUser,47:32.8,,file_name_stemmed,20241211_1035_ae747c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1035_ae747c_s3_sensor/input_video/20241211_1035_ae747c_s3_sensor.mp4,video,6.897,2.94,Done,Angry dog barking #viral #dog #rottweiler #ytshorts #trending.mp4,24:38.0,67596dc4cf0526815405,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.000
+{{Audio Event 1}}
+Barking
+
+00:00:03.349 --> 00:00:06.896
+{{Audio Event 2}}
+Barking"
+126,53:19.1,40:05.0,AdminUser,53:19.1,,file_name_stemmed,20241211_1044_3aebdc_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1044_3aebdc_s3_sensor/input_video/20241211_1044_3aebdc_s3_sensor.mp4,video,38.522,2.72,Done,Armed anti-regime groups take Hama city center from Syrian regime forces.mp4,39:47.6,67596f1f1ccc4ce6e6d5,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+{{Audio Event 1}}
+Gunshots
+
+00:00:10.349 --> 00:00:38.521
+{{Audio Event 2}}
+Traffic
+
+00:00:13.349 --> 00:00:19.349
+{{Audio Event 3}}
+Shouting"
+127,56:04.6,23:45.0,AdminUser,56:04.6,,file_name_stemmed,20241211_1044_26b0d0_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1044_26b0d0_s3_sensor/input_video/20241211_1044_26b0d0_s3_sensor.mp4,video,8.894,2.38,Done,Ayalon Highway Heavy Traffic in Tel Aviv Israel near Azriali Center #israel #telaviv #highway.mp4,23:43.4,67596fc48ed3540c7aa0,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:08.000
+{{Audio Event 1}}
+Traffic"
+128,58:49.5,22:18.0,AdminUser,58:49.5,,file_name_stemmed,20241211_1044_bf452e_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1044_bf452e_s3_sensor/input_video/20241211_1044_bf452e_s3_sensor.mp4,video,5.736,0.44,Done,Baby dog#cute puppy barking#4kviral#shorts.mp4,22:16.1,67597069794e5f8930e9,"""WEBVTT\n\n00:00:03.007 --> 00:00:04.152\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.000
+{{Audio Event 1}}
+Barking
+
+00:00:02.349 --> 00:00:05.349
+{{Audio Event 2}}
+Barking"
+130,05:07.1,03:30.1,AdminUser,05:07.1,,file_name_stemmed,20241211_1053_939668_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1053_939668_s3_sensor/input_video/20241211_1053_939668_s3_sensor.mp4,video,25.04,14.36,Done,Belfast_rioters_blasted_with_water_cut.mp4,03:16.2,675971e312587a9d9548,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:23.000
+{{Audio Event 1}}
+Alarm
+
+00:00:24.349 --> 00:00:26.006
+{{Audio Event 2}}
+Street"
+131,07:57.0,06:50.7,AdminUser,07:57.0,,file_name_stemmed,20241211_1053_5e3492_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1053_5e3492_s3_sensor/input_video/20241211_1053_5e3492_s3_sensor.mp4,video,17.09,7.26,Done,Belgian shepherd malinois don_t back up when attacked Malinois attacked by stray dogs #dog #malinois.mp4,06:48.4,6759728d0300620c96eb,"""WEBVTT\n\n00:00:00.289 --> 00:00:00.490\noh\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.000
+{{Audio Event 1}}
+Barking
+
+00:00:01.349 --> 00:00:08.349
+{{Audio Event 2}}
+Barking
+
+00:00:09.349 --> 00:00:17.089
+{{Audio Event 3}}
+Barking"
+132,10:47.5,08:11.3,AdminUser,10:47.5,,file_name_stemmed,20241211_1102_d72815_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1102_d72815_s3_sensor/input_video/20241211_1102_d72815_s3_sensor.mp4,video,12.191,5.3,Done,Campus Fire Alarm Speakers.mp4,08:10.0,675973377ace097782e1,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:12.000
+{{Audio Event 1}}
+Alarm"
+133,13:33.3,14:16.6,AdminUser,13:33.3,,file_name_stemmed,20241211_1102_ffd41b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1102_ffd41b_s3_sensor/input_video/20241211_1102_ffd41b_s3_sensor.mp4,video,9.126,32.6,Done,Canaan Dog Video.mp4,14:14.0,675973dd47b7544bea2e,"""WEBVTT\n\n00:00:06.230 --> 00:00:08.089\nWoof woof.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:03.349 --> 00:00:04.000
+{{Audio Event 1}}
+Barking
+
+00:00:05.349 --> 00:00:06.349
+{{Audio Event 2}}
+Barking
+
+00:00:07.349 --> 00:00:09.000
+{{Audio Event 3}}
+Braking"
+134,16:59.1,18:41.9,AdminUser,16:59.1,,file_name_stemmed,20241211_1102_5b0f5a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1102_5b0f5a_s3_sensor/input_video/20241211_1102_5b0f5a_s3_sensor.mp4,video,56.425,33.65,Done,Cane Corso’s try to attack bear!.mp4,18:39.4,675974ab1a6c83aecd76,"""WEBVTT\n\n00:00:03.487 --> 00:00:04.387\nin my backyard.\n\n00:00:33.469 --> 00:00:34.331\noh oh\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.170
+{{Audio Event 1}}
+People Talking
+
+00:00:03.349 --> 00:00:04.349
+{{Audio Event 2}}
+People Talking
+
+00:00:10.349 --> 00:00:40.349
+{{Audio Event 3}}
+Barking
+
+00:00:47.349 --> 00:00:50.349
+{{Audio Event 4}}
+Barking
+
+00:00:51.349 --> 00:00:56.349
+{{Audio Event 5}}
+Barking"
+135,20:09.9,19:50.2,AdminUser,20:09.9,,file_name_stemmed,20241211_1110_6acba9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1110_6acba9_s3_sensor/input_video/20241211_1110_6acba9_s3_sensor.mp4,video,30.347,14.03,Done,Capsule_Video_103_cut.mp4,19:47.9,67597569e4d46fae9b99,"""WEBVTT\n\n00:00:00.049 --> 00:00:10.715\n\u0641\u064a \u0627\u0644\u0645\u0648\u0627\u0642\u0641 \u064a\u0646\u0634\u062f \u062d\u0631\u0628\u0627 \u0641\u064a \u0627\u0644\u0648\u0628\u0627\u0633\u0644 \u0644\u0647\u0627 \u0644\u0643\u064a\u0627\u0646\u0643 .\u062a\u0633\u062f\u064a\u062f .\u062c\u062d\u064a\u0645\u0646\u0627 \u0645\u0646 \u0627\u0644\u0645\u0628\u0627\u062f\u0626.\n\n00:00:10.836 --> 00:00:24.224\n\u0627\u0630\u0643\u0631 \u0628\u0635\u0645\u062a\u0643 \u0627\u0644\u0645\u0635\u0627\u0631\u0639\u0629 \u0644\u0644\u0628\u0642\u0627\u064a\u0627 \u062d\u0631\u0628\u0627 \u0641\u064a \u0627\u0644\u0645\u0648\u0627\u0642\u0641 \u064a\u0646\u0634\u062f \u062d\u0631\u0628\u0627 \u0641\u064a \u0627\u0644\u0645\u0628\u0627\u0633\u0644 \u0644\u0647\u0627.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.170
+{{Audio Event 1}}
+Music"
+136,23:04.7,24:28.8,AdminUser,23:04.7,,file_name_stemmed,20241211_1110_5befff_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1110_5befff_s3_sensor/input_video/20241211_1110_5befff_s3_sensor.mp4,video,23.57,12.28,Done,Capsule_Video_105_cut.mp4,24:24.7,67597618a945ff3e1b54,"""WEBVTT\n\n00:00:02.061 --> 00:00:11.047\n\u0648\u0627\u0644\u0634\u0647\u064a\u062f \u062d\u0628\u064a\u0628 \u0627\u0644\u0644\u0647 .\u0627\u0644\u0644\u0647 \u064a\u0628\u0627\u0631\u0643 \u0641\u064a\u0643 .\u0627\u0644\u0644\u0647 \u064a\u0628\u0627\u0631\u0643 \u0641\u064a\u0643 .\u0627\u0644\u0644\u0647 \u064a\u0628\u0627\u0631\u0643 \u0641\u064a\u0643 .\n\n00:00:11.167 --> 00:00:23.274\n\u0627\u0644\u0645\u062f\u0631\u0633\u0629 \u064a\u0627 \u062d\u0628\u0627\u0628 \u062c\u0628\u0646\u0627\u0644\u0643 \u0634\u064a\u062e \u0627\u0644\u0634\u0628\u0627\u0628 \u062c\u0628\u0646\u0627\u0644\u0643 \u0634\u064a\u062e \u0627\u0644\u0634\u0628\u0627\u0628 \u0627\u0644\u0645\u062f\u0631\u0633\u0629 \u064a\u0627 \u062d\u0628\u0627\u0628 \u0627\u0644\u0645\u062f\u0631\u0633\u0629 \u064a\u0627 \u062d\u0628\u0627\u0628 \u062c\u0628\u0646\u0627\u0644\u0643 \u0634\u064a\u062e \u0627\u0644\u0634\u0628\u0627-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.533
+{{Audio Event 1}}
+Shouting
+
+00:00:02.349 --> 00:00:04.349
+{{Audio Event 2}}
+Crowd
+
+00:00:04.349 --> 00:00:04.349
+{{Audio Event 3}}
+Shouting
+
+00:00:04.349 --> 00:00:08.349
+{{Audio Event 4}}
+Crowd
+
+00:00:08.349 --> 00:00:10.349
+{{Audio Event 5}}
+People Talking
+
+00:00:10.349 --> 00:00:13.349
+{{Audio Event 6}}
+Crowd
+
+00:00:14.349 --> 00:00:15.349
+{{Audio Event 7}}
+Shouting
+
+00:00:15.349 --> 00:00:17.349
+{{Audio Event 8}}
+Crowd
+
+00:00:17.349 --> 00:00:19.349
+{{Audio Event 9}}
+Shouting
+
+00:00:19.349 --> 00:00:21.349
+{{Audio Event 10}}
+Crowd
+
+00:00:21.349 --> 00:00:23.349
+{{Audio Event 11}}
+Shouting"
+137,26:00.2,26:24.9,AdminUser,26:00.2,,file_name_stemmed,20241211_1110_cb7e60_s3_sensor.MP4,http://data-audio-event-v1:8000/assets/20241211_1110_cb7e60_s3_sensor/input_video/20241211_1110_cb7e60_s3_sensor.MP4,video,5.851678005,0.54,Done,Capsule_Video_111.MP4,26:15.2,675976c825e4bbddd86f,"""WEBVTT\n\n00:00:01.020 --> 00:00:02.850\n\u0648\u0635\u0644 \u0648\u0635\u0644 \u0627\u0644\u0628\u0646\u0632\u064a\u0646 \u0648\u0635\u0644 \u0627\u0644\u062f\u0639\u0645 \u0641\u064a\u0647 \u0643\u0645\u0627\u0646 \u0642\u0637\u0639.\n\n00:00:02.870 --> 00:00:05.623\n\u0648\u0635\u0644 \u0648\u0635\u0644 \u0627\u0644\u0628\u0646\u0632\u064a\u0646 \u0648\u0635\u0644 \u0627\u0644\u062f\u0639\u0645 \u0641\u064a\u0647 \u0643\u0645\u0627\u0646 \u0642\u0637\u0639.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.000
+{{Audio Event 1}}
+Street
+
+00:00:00.349 --> 00:00:04.349
+{{Audio Event 2}}
+Traffic
+
+00:00:01.349 --> 00:00:05.349
+{{Audio Event 3}}
+People Talking"
+138,28:50.5,34:36.3,AdminUser,28:50.5,,file_name_stemmed,20241211_1120_074e33_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1120_074e33_s3_sensor/input_video/20241211_1120_074e33_s3_sensor.mp4,video,21.31555556,5.9,Done,Capsule_Video_113.mp4,34:32.7,675977727d2dada24f4e,"""WEBVTT\n\n00:00:00.089 --> 00:00:04.831\n\u0645\u0627 \u0634\u0628\u0639\u0634 \u062e\u0644\u0635\u0646\u0627 .\u0645\u0627 \u0647\u0648 \u0643\u0644 \u0634\u063a\u0644\u0647 .\u0628\u0627\u0644\u0645\u062f\u0646\u064a\u064a\u0646 .\n\n00:00:04.892 --> 00:00:11.256\n\u0628\u064a\u0642\u062a\u0644 \u0627\u0644\u0645\u062f\u0646\u064a\u064a\u0646 \u0627\u0648\u0644\u0627\u062f\u0646\u0627 \u0627\u0644\u0635\u063a\u0627\u0631 \u0648\u0643\u0644\u0647\u0645 \u0628\u064a\u062a\u0642\u0627\u062a\u0644\u0648\u0627 \u0644\u064a\u0634 \u0644\u064a\u0634 \u0628\u064a\u0639\u0645\u0644\u0648\u0627 \u0641\u064a\u0646\u0627 \u0647\u064a\u0643 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.315
+{{Audio Event 1}}
+Shouting
+
+00:00:00.349 --> 00:00:21.315
+{{Audio Event 4}}
+People Talking"
+139,32:12.2,00:32.7,AdminUser,32:12.2,,file_name_stemmed,20241211_1120_7eba2a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1120_7eba2a_s3_sensor/input_video/20241211_1120_7eba2a_s3_sensor.mp4,video,28.83888889,5.19,Done,Capsule_Video_117.mp4,00:20.9,6759783c302c7339d455,"""WEBVTT\n\n00:00:00.089 --> 00:00:16.679\n\u0627\u0644\u0633\u0644\u0627\u0645 \u0639\u0644\u064a\u0643\u0645 \u0639\u0644\u0649 \u0627\u0633\u0645 \u0644\u0624\u064a \u0627\u0644\u062e\u0627\u0644\u062f\u064a \u0628\u0627\u0643\u0648\u0646 \u0627\u0628\u0646 \u062e\u0644\u064a\u0644 \u0627\u0644\u062e\u0627\u0644\u062f\u064a \u0645\u062a\u0648\u0644\u064a \u0648\u0627\u0642\u0641 \u0627\u0644\u062e\u0627\u0644\u062f\u064a \u0647\u0627\u064a \u0627\u0644\u062f\u0648\u0631\u0629 \u0643\u0644\u0647\u0627 \u0648\u0644\u0643\u0646 \u0627\u0644\u062e\u0627\u0644\u062f\u064a \u0627\u0644\u0644\u064a \u0634\u0627\u064a\u0641\u064a\u0646\u0647\u0627 \u0628\u0628\u0627\u0628 \u0627\u0644\u0633\u0646\u0633\u0644\u0629 \u0644\u0627 \u0628\u062a\u0646\u0628\u0627\u0639 \u0648\u0644\u0627 \u0628\u062a\u0646\u0634\u0631\u0649 \u0647\u0627\u064a \u0643\u0644\u0647\u0627 \u0648\u0627\u0642\u0641\u0629 \u0648\u0642\u0641\u0629 \u0627\u0633\u0644\u0627\u0645\u064a \u0647\u0627\u064a \u0627\u0644\u062f\u0648\u0631\u0629 \u0627\u0644\u0644\u064a \u0634\u0627\u064a\u0641\u064a\u0646\u0647\u0627 \u0639\u0645\u0627\u0644\u0647\u0645 \u0628\u064a\u062f\u062e\u0644\u0648\u0627 \u0639\u0644\u064a\u0647\u0627 \u0647\u0627\u064a \u0644\u0627 \u0628\u062a\u0646\u0628\u0627\u0639 \u0648\u0644\u0627 \u0628\u062a\u0646\u0634\u0631\u0649.\n\n00:00:16.760 --> 00:00:28.448\n\u0643\u0644\u0647 \u0627\u0644\u0644\u064a \u0628\u064a\u0635\u064a\u0631 \u063a\u0644\u0637 \u0628\u063a\u0644\u0637 \u0627\u0644\u0645\u062d\u0627\u0645\u064a\u0629 \u0647\u064a\u0647\u0627 \u0634\u0627\u064a \u0648\u0631\u0627- \u0631\u0627\u062d \u064a\u0646\u0628\u0639\u062b\u0648\u0627 \u0639\u0644\u0649 \u062a\u0644\u064a\u0641\u0648\u0646 \u0627\u0628\u0648\u064a \u0631\u0627\u062d \u0627\u0644\u0636\u0627\u0628\u0637 \u0647\u0644\u0642 \u0643\u0644 \u0627\u0644\u0644\u064a \u0628\u064a\u0635\u064a\u0631 \u063a\u0644\u0637 \u0628\u063a\u0644\u0637 \u0647\u0645 \u062f\u062e\u0644\u0648\u0627 \u0639\u0631\u0636\u0647 \u0627\u062d\u0646\u0627 \u0631\u0627\u062d \u0646\u0637\u0644\u0639\u0647\u0645 \u0628\u0633 \u0645\u0634 \u0627\u0643\u062b\u0631 .\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u062e\u064a\u0631 .\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u064a\u0627 \u0631\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:28.170
+{{Audio Event 1}}
+People Talking"
+140,35:22.1,03:28.8,AdminUser,35:22.1,,file_name_stemmed,20241211_1120_ca4aca_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1120_ca4aca_s3_sensor/input_video/20241211_1120_ca4aca_s3_sensor.mp4,video,29.808,15.35,Done,Capsule_Video_120_cut.mp4,03:15.5,675978fa2360ebc1e945,"""WEBVTT\n\n00:00:00.246 --> 00:00:05.429\n\u0648\u0637\u0644\u0639\u0646\u0627 \u0628\u062f\u0646\u0627 \u0646\u0642\u0639\u062f \u0628\u0627\u0644\u0633\u0644\u0627\u0645\u0629 \u0647\u0627\u064a \u0647\u064a \u0648\u064a\u0627 \u0627\u0628\u0648 \u0639\u0627\u0645\u0631 .\n\n00:00:05.488 --> 00:00:13.634\n\u0647\u0627\u064a \u0647\u064a \u0648\u0627\u0644\u0627\u0647\u0644 \u0648\u0627\u0644\u0627\u0647\u0644 \u062c\u0627\u064a \u0648\u0628\u064a\u062d\u0628\u0648\u0643\u064a \u0647\u0627\u064a \u0647\u064a \u0628\u064a\u0637\u0644\u0639\u0646\u0627 \u0639\u0627\u0626\u0644 \u0628\u0627\u0644\u0633\u0644\u0627\u0645\u0629 \u0647\u0627\u064a \u0647\u064a \u064a\u0627 \u0631\u0628 \u064a\u062a\u0645 \u0639\u0644\u064a\u0643 .\n\n00:00:13.673 --> 00:00:14.755\n\u0627\u064a\u0647 \u0648\u0645\u0627 \u0641\u064a\u0647 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:29.170
+{{Audio Event 1}}
+Crowd
+
+00:00:00.349 --> 00:00:29.349
+{{Audio Event 3}}
+People Talking
+
+00:00:02.349 --> 00:00:20.349
+{{Audio Event 2}}
+Shouting"
+141,38:17.2,05:20.7,AdminUser,38:17.2,,file_name_stemmed,20241211_1128_ec6f15_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1128_ec6f15_s3_sensor/input_video/20241211_1128_ec6f15_s3_sensor.mp4,video,14.34888889,4.58,Done,Capsule_Video_135.mp4,05:17.6,675979a92ca4156d23fa,"""WEBVTT\n\n00:00:01.790 --> 00:00:13.182\n\u062a\u062e\u0631\u062c\u0648\u0627 \u0647\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0634\u0627\u0631\u0639 \u0643\u0644\u0647 \u0645\u062d\u0644\u0627\u062a \u0643\u0644\u0647 \u0645\u062d\u0644\u0627\u062a \u062a\u062c\u0627\u0631\u064a\u0629 \u0645\u0646 \u0634\u0631\u0643\u0627\u062a \u0645\u0646 \u0645\u062d\u0644\u0627\u062a \u0645\u0646 \u0645\u0637\u0627\u0639\u0645 \u0645\u0646 \u0627\u0628\u0631\u0627\u062c \u0634\u0648\u0641 \u0643\u064a\u0641 \u0635\u0627\u0631 \u0627\u0635\u0628\u062d \u0642\u0648\u0645\u0629 \u0631\u0643\u0627\u0628.\n\n00:00:13.262 --> 00:00:13.641\n\u0645\u0627 \u0628\u0642\u0627\u0634 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:14.349
+{{Audio Event 1}}
+Street
+
+00:00:00.349 --> 00:00:14.349
+{{Audio Event 2}}
+People Talking"
+142,41:07.7,14:31.6,AdminUser,41:07.7,,file_name_stemmed,20241211_1128_8d5928_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1128_8d5928_s3_sensor/input_video/20241211_1128_8d5928_s3_sensor.mp4,video,32.48444444,6.74,Done,Capsule_Video_173.mp4,14:17.6,67597a53b0cbb145aabf,"""WEBVTT\n\n00:00:00.049 --> 00:00:12.432\n\u0643\u0646\u0627 \u0646\u0634\u062a\u063a\u0644 \u0641\u064a \u0645\u062f\u0631\u0633\u0629 \u0639\u0632\u0648\u0646 \u0639\u062a\u0645\u0629 \u0627\u0644\u062b\u0627\u0646\u0648\u064a\u0629 \u0641\u064a \u0627\u0644\u062a\u0648\u062c\u064a\u0647\u064a \u0641\u064a \u0627\u0644\u0645\u0631\u0627\u0642\u0628\u0629 \u0641\u0633\u0643\u0631\u0648\u0627 \u0639\u0644\u064a\u0646\u0627 \u0645\u0646 \u0639\u0646\u062f \u062d\u0628 \u0627\u0644\u0644\u064a \u0645\u0627 \u0639\u0631\u0641\u0646\u0627\u0634 \u0646\u0645\u0631\u0642 \u0648\u0644\u0641\u064a\u0646\u0627 \u0627\u0644\u0644\u0641\u0629 \u0648\u0631\u062d\u0646\u0627 \u0639\u0646\u062f \u0639\u0632\u0648\u0646 \u0648\u0627\u0633\u062a\u0646\u064a\u0646\u0627 \u062a\u0642\u0631\u064a\u0628\u0627 \u0633\u0627\u0639\u0629 \u0633\u0627\u0639\u0629 \u0648\u0646\u0635\u0641 \u0644\u0641\u062a\u062d\u062a \u0627\u0644\u0627\u0645\u0648\u0631.\n\n00:00:12.532 --> 00:00:26.094\n\u0641\u0645\u0627 \u0642\u062f\u0631\u0646\u0627\u0634 \u0646\u062f\u062e\u0644 \u0647\u0627\u0646 \u0643\u0627\u0646\u062a \u0645\u0633\u0643\u0631\u0629 \u0639\u062f\u062f \u0627\u0644\u062f\u0627\u062e\u0644 \u0641\u0628\u0639\u062f\u0647\u0627 \u0641\u062a\u062d\u0648\u0647\u0627 \u0628\u0633 \u0644\u0644\u062f\u0627\u062e\u0644 \u0648\u0627\u0644\u0644\u064a \u0637\u0627\u0644\u0639 \u0648\u0645\u0645\u0646\u0648\u0639 \u064a\u0637\u0644\u0639 .\u0643\u064a\u0641 \u062f\u062e\u0644\u062a\u0648\u0627 \u0647\u0627\u0646 \u0627\u0636\u0637\u0631\u064a\u062a\u0648\u0627 \u0627\u0646\u0643\u0645 \u062a\u0645\u0634\u0648\u0627 \u0645\u0634\u064a .\u0648\u0627\u0644\u0644\u0647 \u0641\u064a\u0647 \u0627\u0644\u0627\u0633\u062a\u0627\u0630 \u0627\u0644\u0644\u064a \u0643\u0627\u0646 \u0631\u0626\u064a\u0633 \u0627\u0644\u0642\u0627\u0639\u0629 \u0647\u0648 \u0627\u0644\u0644\u064a \u0627\u062a\u0635\u0644\u0646\u0627 \u0639\u0646\u062f \u0627\u0648\u0644 \u0627\u0644\u0628\u0644\u062f \u0648\u0646\u0632\u0644\u0646\u0627 \u0627\u062d\u0646\u0627 \u0645\u0634\u064a.\n\n00:00:26.876 --> 00:00:29.629\n\u064a\u0639\u0646\u064a \u0645\u0627 \u0632\u0627\u0644 \u0627\u0644\u0637\u0631\u064a\u0642 \u0645\u063a\u0644\u0642\u0629 \u0644\u0644\u064a \u062e\u0627\u0631\u062c \u0648\u0644\u0627 \u0644\u0644\u064a \u062f\u0627\u062e\u0644 .\u0644\u0644\u064a \u062e\u0627\u0631\u062c \u0645\u063a\u0644\u0642\u0629 \u0648\u0627\u0644\u0644\u064a \u062f\u0627\u062e\u0644 \u0645\u062d\u0643\u0648\u0645 \u0627\u064a\u0647.\n\n00:00:29.670 --> 00:00:32.463\n\u064a\u0639\u0646\u064a \u0645\u0627 \u0632\u0627\u0644 \u0627\u0644\u0637\u0631\u064a\u0642 \u0645\u063a\u0644\u0642\u0629 \u0644\u0644\u064a \u062e\u0627\u0631\u062c \u0648\u0644\u0627 \u0644\u0644\u064a \u062f\u0627\u062e\u0644 .\u0644\u0644\u064a \u062e\u0627\u0631\u062c \u0645\u063a\u0644\u0642\u0629 \u0648\u0627\u0644\u0644\u064a \u062f\u0627\u062e\u0644 \u0645\u062d\u0643\u0648\u0645 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:32.170
+{{Audio Event 1}}
+People Talking
+
+00:00:00.349 --> 00:00:19.349
+{{Audio Event 2}}
+Traffic"
+143,44:03.1,09:34.0,AdminUser,44:03.1,,file_name_stemmed,20241211_1128_693c68_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1128_693c68_s3_sensor/input_video/20241211_1128_693c68_s3_sensor.mp4,video,9.67,4.78,Done,Capsule_Video_178_cut.mp4,09:30.7,67597b0317f770a506ea,"""WEBVTT\n\n00:00:00.169 --> 00:00:09.606\n\u0643\u0627\u0646 \u0645\u0646\u064a\u062d \u064a\u0639\u0646\u064a \u0633\u0647\u0644 \u0645\u0627 \u062c\u0627\u0628\u0648\u0627 \u0627\u0633\u0626\u0644\u0629 \u0635\u0639\u0628\u0629 \u0648\u0643\u0644\u0647 \u0645\u0628\u0627\u0634\u0631 \u0648\u0627\u0644\u0627\u064a\u0627\u062a \u064a\u0639\u0646\u064a \u0643\u0627\u0646\u062a \u0633\u0647\u0644\u0629 \u0648\u0643\u0644\u0647 \u0645\u0646 \u0627\u0644\u0643\u062a\u0627\u0628 \u064a\u0639\u0646\u064a \u0641\u064a\u0634 \u0627\u0634\u064a \u0635\u0639\u0628.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.000
+{{Audio Event 1}}
+People Talking
+
+00:00:00.349 --> 00:00:09.349
+{{Audio Event 2}}
+Siren"
+144,47:14.0,12:08.0,AdminUser,47:14.0,,file_name_stemmed,20241211_1138_f3047a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1138_f3047a_s3_sensor/input_video/20241211_1138_f3047a_s3_sensor.mp4,video,5.304,2.43,Done,Capsule_Video_215_cut.mp4,12:05.9,67597bc1ee503afd3258,"""WEBVTT\n\n00:00:00.009 --> 00:00:00.069\nyou\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.000
+{{Audio Event 1}}
+Buzzing
+
+00:00:00.349 --> 00:00:05.349
+{{Audio Event 2}}
+Street"
+145,50:14.6,15:47.9,AdminUser,50:14.6,,file_name_stemmed,20241211_1138_ffb2b1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1138_ffb2b1_s3_sensor/input_video/20241211_1138_ffb2b1_s3_sensor.mp4,video,30.58,15.13,Done,Capsule_Video_229_cut.mp4,15:34.9,67597c769a8212170835,"""WEBVTT\n\n00:00:02.633 --> 00:00:05.980\n\u0639\u0644\u0649 \u0644\u0628\u0646\u0627\u0646 \u0641\u0627\u0646 \u0627\u0644\u0645\u0642\u0627\u0648\u0645\u0629 \u0633\u062a\u0642\u0627\u062a\u0644 \u0628\u0644\u0627 \u0636\u0648\u0627\u0628\u0637 \u0648\u0628\u0644\u0627 \u0642\u0648\u0627\u0639\u062f.\n\n00:00:06.019 --> 00:00:08.364\n\u0644\u0628\u0646\u0627\u0646 \u0641\u0627\u0646 \u0627\u0644\u0645\u0642\u0627\u0648\u0645\u0629 \u0633\u062a\u0642\u0627\u062a\u0644 \u0628\u0644\u0627 \u0636\u0648\u0627\u0628\u0637 \u0648\u0628\u0644\u0627 \u0642\u0648\u0627\u0639\u062f.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:30.170
+{{Audio Event 1}}
+Music"
+146,53:10.1,17:59.0,AdminUser,53:10.1,,file_name_stemmed,20241211_1138_01354e_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1138_01354e_s3_sensor/input_video/20241211_1138_01354e_s3_sensor.mp4,video,28.598,14.51,Done,Capsule_Video_241_cut.mp4,17:56.9,67597d2621cef79ece5f,"""WEBVTT\n\n00:00:00.169 --> 00:00:10.537\n\u0643\u0646\u0627 \u0642\u0627\u0639\u062f\u064a\u0646 \u0639\u0627\u062f\u064a \u064a\u0639\u0646\u064a \u0641\u064a\u0634 \u0627\u0634\u064a \u0644\u0648 \u0627\u0646\u0647 \u0635\u0627\u0631 \u062d\u0632\u0627\u0645 \u0646\u0627\u0631\u064a \u0642\u0631\u064a\u0628 \u0645\u0646 \u0627\u0644\u0633\u0642\u0648\u0637 \u0628- \u0642\u0631\u0628 \u0627\u0644\u062d\u0632\u0627\u0645 \u0627\u0644\u0646\u0627\u0631\u064a \u0642\u0631\u0628 \u0642\u0631\u0628 \u0644\u0639\u0646\u062f \u0627\u0644\u0633\u0642\u0648\u0637.\n\n00:00:10.577 --> 00:00:21.065\n\u0641\u062c\u0627\u0629 \u0627\u0644\u0646\u0627\u0633 \u0635\u0627\u0631\u062a \u062a\u0632\u0639\u0642 \u0648\u0627\u0635\u0627\u0628\u0627\u062a \u0639\u0627\u0644\u0634\u0627\u0631\u0639 \u0648\u0641\u064a\u0647 \u062a\u0644\u0627\u0643 \u0632\u0628\u0627\u0628\u0627\u062a \u0628\u0633 \u0645\u0646 \u0627\u0644\u0634\u0627\u0631\u0639 .\u0648\u0627\u0644\u0646\u0627\u0633 \u0643\u0644\u0627\u064a\u062a\u0647\u0627 \u0637\u0644\u0639\u062a \u0648\u0635\u0627\u0628\u062a \u0627\u062c\u0631\u0627\u0636.\n\n00:00:21.146 --> 00:00:28.472\n\u0643\u0646\u0627 \u0641\u064a \u062d\u0641\u0644\u062a\u0646\u0627 \u0637\u0644\u0639\u062a \u0627\u0646\u0627 \u0648\u0627\u062e\u0648\u0627\u062a\u064a \u0648- \u0639\u0645\u064a \u0648\u0627\u0628\u0648\u064a \u0627\u062c\u0631\u0627\u0636\u0647\u0645 \u0632\u064a \u0645\u0627 \u0639\u0646\u0627 \u0632\u064a \u0645\u0627 \u0639-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:28.170
+{{Audio Event 1}}
+People Talking
+
+00:00:00.349 --> 00:00:28.583
+{{Audio Event 2}}
+Street
+
+00:00:00.349 --> 00:00:28.349
+{{Audio Event 3}}
+Traffic
+
+00:00:02.349 --> 00:00:06.349
+{{Audio Event 4}}
+Siren"
+147,56:05.2,19:11.1,AdminUser,56:05.2,,file_name_stemmed,20241211_1147_b94861_s3_sensor.MOV,http://data-audio-event-v1:8000/assets/20241211_1147_b94861_s3_sensor/input_video/20241211_1147_b94861_s3_sensor.MOV,video,37.17333333,3.29,Done,Capsule_Video_244.MOV,19:09.5,67597dd53939aea385c6,"""WEBVTT\n\n00:00:00.310 --> 00:00:15.561\n\u062d\u0646\u0645\u0648\u062a \u0647\u0627\u0646 \u062d\u0646\u0645\u0648\u062a \u0647\u0627\u0646 \u0648\u0628\u0643\u0644 \u062a\u0627\u0643\u064a\u062f \u0628\u0627\u0630\u0646 \u0627\u0644\u0644\u0647 \u062d\u0646\u0645\u0648\u062a \u0647\u0627\u0646 \u0627\u0646\u0642\u0635\u0641 \u0627\u0644\u0628\u064a\u062a \u0648\u062a\u062f\u0645\u0631 \u0627\u0644\u0628\u064a\u062a \u0639\u0645\u0644\u062a \u0631\u062e\u064a\u0645\u0629 \u0627\u0644\u0639\u0631\u064a\u0634\u0629 \u0647\u0630\u0647 \u0643\u064a\u0648\u0627\u0646\u0629 \u0628\u062f\u0647\u0627 \u062a\u0646\u062d\u062a \u0639\u0644\u064a \u0628\u062f\u064a \u0627\u0645\u0648\u062a \u0647\u0627\u0646 \u0641\u064a \u0628\u0644\u062f\u064a.\n\n00:00:15.680 --> 00:00:27.228\n\u0641\u064a\u0634 \u0627\u0644\u064a \u0628\u0644\u062f \u063a\u064a\u0631 \u063a\u0632\u0629 \u063a\u064a\u0631 \u0641\u0644\u0633\u0637\u064a\u0646 \u0627\u0631\u0636 \u0627\u0644\u0631\u0628\u0627\u0637 \u0645\u0627 \u0627\u0644\u064a \u0645\u0643\u0627\u0646 \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645 \u0627\u0644\u0627 \u0647\u0627\u0646 \u0628\u062f\u064a \u0627\u0646\u062f\u0641\u0646 \u0641\u064a \u0628\u0644\u062f\u064a \u0641\u064a \u0627\u0642\u0648\u0644\u0644\u0643 \u0641\u064a \u062d\u0627\u0631\u062a\u064a.\n\n00:00:28.893 --> 00:00:34.408\n\ufffd\u064a\u0631 \u0647\u064a\u0643 \u0644\u0627 \u0644\u0627\u064a\u0634 \u062a\u062e\u0633\u0649\u0621 \u0627\u0633\u0631\u0627\u0626\u064a\u0644 \u0645\u0644\u064a\u0648\u0646 \u0627\u0644\u0641 \u0645\u0631\u0629 \u0627\u0646\u0646\u0627 \u0646\u062a\u0647\u062c\u0631.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:37.170
+{{Audio Event 1}}
+People Talking"
+148,59:00.9,39:35.0,AdminUser,59:00.9,,file_name_stemmed,20241211_1147_1d5e4d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1147_1d5e4d_s3_sensor/input_video/20241211_1147_1d5e4d_s3_sensor.mp4,video,27.666,13.79,Done,Capsule_Video_259_cut.mp4,39:26.6,67597e84d7d0213a1497,"""WEBVTT\n\n00:00:02.145 --> 00:00:12.167\n\u0627\u0639\u062f\u0627\u062f \u0643\u0628\u064a\u0631\u0629 \u0645\u0646 \u0627\u0644\u0646\u0627\u0632\u062d\u064a\u0646 \u062e\u0631\u062c\u0648\u0627 \u0645\u0646 \u062d\u064a \u0627\u0644\u0634\u062c\u0627\u0639\u064a\u0629 \u0634\u0631\u0642 \u0645\u062f\u064a\u0646\u0629 \u063a\u0632\u0629 \u0628\u0639\u062f \u0627\u0644\u0642\u0635\u0641 \u0628\u0646\u062f\u0641\u0639 \u0627\u0644\u0639\u0646\u064a\u0641 \u0645\u0646 \u0627\u0644\u0637\u064a\u0631\u0627\u0646.\n\n00:00:12.247 --> 00:00:13.868\n\u0648\u0627\u0644\u0642\u0635\u0641 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+{{Audio Event 1}}
+Music
+
+00:00:02.349 --> 00:00:13.349
+{{Audio Event 2}}
+People Talking
+
+00:00:14.349 --> 00:00:16.349
+{{Audio Event 3}}
+Shouting
+
+00:00:17.349 --> 00:00:18.349
+{{Audio Event 4}}
+Engine
+
+00:00:19.349 --> 00:00:27.349
+{{Audio Event 5}}
+Street
+
+00:00:20.349 --> 00:00:25.349
+{{Audio Event 6}}
+Traffic"
+149,02:31.8,21:51.0,AdminUser,02:31.8,,file_name_stemmed,20241211_1147_54a507_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1147_54a507_s3_sensor/input_video/20241211_1147_54a507_s3_sensor.mp4,video,21.947,10.93,Done,Capsule_Video_262_cut.mp4,09:50.8,67597f57cda74865de95,"""WEBVTT\n\n00:00:00.009 --> 00:00:05.432\n\u0627\u0630\u0627 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0645\u0643\u0627\u0646 \u0628\u0627\u0644\u062a\u062d\u062f\u064a\u062f \u0642\u0627\u0645\u062a \u0642\u0648\u0627\u062a \u062e\u0627\u0635\u0629 \u0627\u0633\u0631\u0627\u0626\u064a\u0644\u064a\u0629 \u0645\u0646 \u062c\u064a\u0634 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644.\n\n00:00:05.593 --> 00:00:20.102\n\u0628\u0627\u063a\u062a\u064a\u0627\u0644 \u062b\u0644\u0627\u062b\u0629 \u0645\u0642\u0627\u0648\u0645\u064a\u0646 \u0627\u0630\u0627 \u064a\u0639\u0646\u064a \u0642\u0648\u0627\u062a \u062e\u0627\u0635\u0629 \u0627\u0633\u0631\u0627\u0626\u064a\u0644\u064a\u0629 \u0645\u0646 \u062c\u064a\u0634 \u0627\u0644\u0627\u062d\u062a\u0644\u0627\u0644 \u0627\u0642\u062a\u062d\u0645\u062a \u0645\u0646\u0637\u0642\u0629 \u0627\u0644\u0633\u0648\u0642 \u0648\u0633\u0637 \u0645\u062f\u064a\u0646\u0629 \u0642\u0644\u0642\u064a\u0644\u064a\u0629 \u0648\u0642\u0627\u0645\u062a \u0628\u0627\u063a\u062a\u064a\u0627\u0644 \u0639\u062f\u062f \u0645\u0646 \u0627\u0644\u0634\u0628\u0627\u0646 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0645\u0643\u0627\u0646 \u0628\u0627\u0644\u062a\u062d\u062f\u064a-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.000
+{{Audio Event 1}}
+People talking
+
+00:00:00.349 --> 00:00:21.349
+{{Audio Event 2}}
+Street
+
+00:00:02.349 --> 00:00:05.349
+{{Audio Event 4}}
+Engine
+
+00:00:08.349 --> 00:00:21.349
+{{Audio Event 3}}
+Traffic"
+150,05:27.2,27:56.2,AdminUser,05:27.2,,file_name_stemmed,20241211_1156_1b114b_s3_sensor.MP4,http://data-audio-event-v1:8000/assets/20241211_1156_1b114b_s3_sensor/input_video/20241211_1156_1b114b_s3_sensor.MP4,video,37.7,3.2,Done,Capsule_Video_278.MP4,27:32.1,67598007387a6ddb0d0a,"""WEBVTT\n\n00:00:00.009 --> 00:00:18.115\n\u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u0627\u064a\u0647 \u0645\u0633\u062a\u0645\u0631 \u0628\u0627\u0646\u062a\u062e\u0627\u0628\u0627\u062a \u0628\u062f\u0648\u0646 \u0627\u0646\u062a\u062e\u0627\u0628\u0627\u062a \u0627\u064a\u0647 \u0633\u064a\u0628\u0642\u0649 \u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u062d\u0627\u0641\u0631 \u062d\u0631\u064a\u062a\u0647 \u0628\u0627\u0638\u0627\u0641\u0631\u0647 \u0645\u0646 \u0633\u0646\u0648\u0627\u062a.\n\n00:00:18.155 --> 00:00:24.539\n\u0627\u0646\u0627 \u064a\u0639\u0646\u064a \u0628\u0627\u0642\u064a \u0628\u0647\u0630\u0627 \u0627\u0644\u0628\u0644\u062f \u0627\u0646\u0627 \u0648\u0627\u0648\u0644\u0627\u062f\u064a \u0645\u0634 \u0645\u0642\u0631\u0631\u064a\u0646 \u0646\u0647\u0627\u062c\u0631 \u0648- \u0639\u0634\u0627\u0646 \u0647\u064a\u0643 \u0628\u062f\u064a \u0645\u0633\u0627\u062d\u0629.\n\n00:00:25.542 --> 00:00:37.051\n\u064a\u0639\u0646\u064a \u0645\u0646 \u0627\u0644\u062d\u0631\u064a\u0629 \u0627\u0646\u0647 \u0627\u0628\u0646\u064a \u0645\u0627 \u064a\u0643\u0631\u0647\u0634 \u0627\u0644\u0628\u0644\u062f \u0648\u0645\u0627 \u064a\u0641\u0643\u0631 \u0628\u0627\u0644\u0647\u062c\u0631\u0629 .\u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u0627\u064a\u0647 \u0645\u0633\u062a\u0645\u0631 \u0628\u0627\u0646\u062a\u062e\u0627\u0628\u0627\u062a \u0628\u062f\u0648\u0646 \u0627\u0646\u062a\u062e\u0627\u0628\u0627\u062a \u0627\u064a\u0647 \u0633\u064a\u0628\u0642\u0649 \u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u0646\u0632\u0627\u0631 \u0628\u0646\u0627\u062a \u062d\u0627\u0641\u0631 \u062d\u0631\u064a\u062a\u0647 \u0628\u0627\u0638\u0627\u0641\u0631\u0647 \u0645\u0646 \u0633\u0646\u0648\u0627\u062a.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.170
+{{Audio Event 1}}
+Music
+
+00:00:00.349 --> 00:00:08.349
+{{Audio Event 3}}
+People talking
+
+00:00:09.349 --> 00:00:37.349
+{{Audio Event 2}}
+Music
+
+00:00:18.349 --> 00:00:36.349
+{{Audio Event 4}}
+People talking"
+151,08:22.9,29:29.3,AdminUser,08:22.9,,file_name_stemmed,20241211_1156_1f5ffc_s3_sensor.MP4,http://data-audio-event-v1:8000/assets/20241211_1156_1f5ffc_s3_sensor/input_video/20241211_1156_1f5ffc_s3_sensor.MP4,video,25.4,5.02,Done,Capsule_Video_280.MP4,29:19.4,675980b6e0441a8c1405,"""WEBVTT\n\n00:00:00.009 --> 00:00:06.952\n\u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629.\n\n00:00:06.992 --> 00:00:18.217\n\u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629.\n\n00:00:18.257 --> 00:00:23.900\n\u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629 \u0646\u062d\u0646 \u0641\u064a \u0627\u0644\u0634\u0645\u0627\u0644 \u0641\u064a \u0645\u062c\u0627\u0639\u0629.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:25.000
+{{Audio Event 1}}
+Crowd"
+152,11:18.4,32:37.5,AdminUser,11:18.4,,file_name_stemmed,20241211_1156_9b5ae4_s3_sensor.MP4,http://data-audio-event-v1:8000/assets/20241211_1156_9b5ae4_s3_sensor/input_video/20241211_1156_9b5ae4_s3_sensor.MP4,video,29.03333333,5.58,Done,Capsule_Video_281.MP4,32:29.2,67598166661989dfd715,"""WEBVTT\n\n00:00:01.197 --> 00:00:12.304\n\u0648\u0646\u0627\u0634 \u0644\u0627\u0644\u0644\u0647 .\u0627\u064a\u0647 \u0648\u0627\u0644\u0644\u0647 .\u0645\u0627 \u064a\u0637\u0644\u0639\u0644\u0643\u0645 \u0639\u0627\u0644\u0645\u062e\u064a\u0645 \u0645\u0646 \u0628\u0639\u062f\u0646\u0627 .\u0648\u0646\u0627\u0634 \u0644\u0644\u0647 \u064a\u0627 \u0635\u0627\u062d\u0628\u064a .\u0634\u0627\u064a\u0641\u064a\u0646 \u0648\u0646\u0627\u0634 \u0644\u0644\u0647.\n\n00:00:12.586 --> 00:00:14.326\n\u0627\u064a\u0647 \u0648\u0627\u0644\u0644\u0647 \u0648\u0646\u0627\u0634 \u0644\u0644\u0647 \u064a\u0627 \u0635\u0627\u062d\u0628\u064a .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:01.349 --> 00:00:06.170
+{{Audio Event 1}}
+People talking
+
+00:00:09.349 --> 00:00:13.349
+{{Audio Event 2}}
+People talking
+
+00:00:14.349 --> 00:00:29.033
+{{Audio Event 3}}
+Music"
+153,14:14.1,41:54.8,AdminUser,14:14.0,,file_name_stemmed,20241211_1205_0b0238_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1205_0b0238_s3_sensor/input_video/20241211_1205_0b0238_s3_sensor.mp4,video,29.88,13.22,Done,Capsule_Video_282_cut.mp4,41:47.1,675982160d0979931560,"""WEBVTT\n\n00:00:00.009 --> 00:00:06.134\n\u0634\u0643\u0631\u0627 \u062c\u0632\u064a\u0644\u0627 \u0644\u0643 \u0639\u0644\u0649 \u0647\u0630\u0647 \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644 \u0648\u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a \u062d\u062a\u0649 \u0646\u0635\u0644 \u0644\u0645\u0631\u062d\u0644\u0629 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u062a\u0639\u0627\u0644\u0649 \u0646\u0635\u0644 \u0644\u0645\u0631\u062d\u0644\u0629 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u062a\u0639\u0627\u0644\u0649 \u0646\u0635\u0644 \u0644\u0645\u0631\u062d\u0644\u0629 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u062a\u0639\u0627\u0644\u0649.\n\n00:00:06.174 --> 00:00:09.695\n\u0646\u062a\u062d\u062f\u062b \u0647\u0644 \u062f\u062e\u0644\u062a\u0645 \u0641\u064a \u0641\u064a \u0627\u0644\u0648\u0642\u062a .\u0627\u0630\u0627 \u0627\u0644\u062d\u0642 \u0646\u0647\u062f\u0627 \u0641\u0646\u062d\u0646 \u0627\u0644\u0631\u062c\u0627\u0644 \u0639\u0644\u0649 \u0627\u0644\u062d\u0642.\n\n00:00:09.817 --> 00:00:20.984\n\u0646\u062b\u0628\u062a \u0645\u062b\u0644 \u0627\u0644\u062c\u0628\u0627\u0644 \u0648\u0645\u0647\u0645\u0627 \u0627\u0633\u062a\u0628\u062f\u0639 \u062f\u064a\u0646 \u0627\u0644\u0637\u063a\u0627 \u0635\u0628\u0631\u0646\u0627 \u0648\u0628\u0627\u0644\u0635\u0628\u0631 \u0643\u0627\u0646.\n\n00:00:21.105 --> 00:00:29.751\n\u063a\u0627\u062f \u0643\u062a\u0645\u0646\u0627 \u0645\u0639 \u0627\u0644\u0635\u0628\u0631 \u0646\u0627\u0631 \u0627\u0644\u062c\u0631\u0627\u062d \u0648\u0644\u0645 \u0646\u062f\u0639\u0648 \u064a\u0648\u0645\u0627 \u0644\u062d\u0645\u0644.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:29.170
+{{Audio Event 1}}
+Music"
+154,17:30.2,02:24.4,AdminUser,17:30.2,,file_name_stemmed,20241211_1205_fc6563_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1205_fc6563_s3_sensor/input_video/20241211_1205_fc6563_s3_sensor.mp4,video,9.947,5,Done,Capsule_Video_283_cut.mp4,02:22.0,675982da2652333ff2aa,"""WEBVTT\n\n00:00:00.350 --> 00:00:09.836\n\u0645\u062a\u0646\u0627 \u0645\u0646 \u0627\u0644\u062c\u0648\u0639 \u064a\u0627 \u0639\u0645\u064a \u0627\u062d\u0646\u0627 \u0646\u0627\u0633 \u0646\u0627\u0632\u062d\u064a\u0646 \u0641\u064a \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0645\u062a\u0646\u0627 \u0645\u0646 \u0627\u0644\u062c\u0648\u0639 \u0627\u0648\u0644\u0627\u062f\u0646\u0627 \u0627\u0633\u062a\u0634\u0647\u062f\u0648\u0627 \u0641\u064a \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0648\u0644\u0627 \u0645\u0635\u0627\u0648\u0628 \u0627\u0644\u064a \u0648\u0644\u062f \u0645\u0635\u0627\u0648\u0628 \u0648\u0627\u062b\u0646\u064a\u0646 \u0634\u0647\u062f\u0627\u0621 \u0645\u062a\u0646\u0627 \u0645\u0646 \u0627\u0644\u062c\u0648\u0639.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.938
+{{Audio Event 1}}
+Crowd
+
+00:00:00.349 --> 00:00:09.938
+{{Audio Event 2}}
+People talking
+
+00:00:00.000 --> 00:00:09.349
+{{Audio Event 4}}
+Street
+
+00:00:03.349 --> 00:00:09.349
+{{Audio Event 3}}
+Shouting"
+155,20:35.7,50:43.2,AdminUser,20:35.7,,file_name_stemmed,20241211_1205_dfd974_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1205_dfd974_s3_sensor/input_video/20241211_1205_dfd974_s3_sensor.mp4,video,48.747,25.19,Done,Capsule_Video_285_cut.mp4,50:17.9,67598393b006558cc07c,"""WEBVTT\n\n00:00:00.309 --> 00:00:16.457\n\u0627\u0644\u062d\u0645\u062f \u0644\u0644\u0647 \u0639\u0633\u0644\u0627\u0645\u062a\u0643 \u064a\u0627 \u062d\u0628\u064a\u0628\u064a \u0627\u064a\u0634 \u0627\u0644\u0645\u0634\u064a\u0643\u0629 \u0647\u0630\u0647 .\u0633\u0643\u062a \u0645\u0648\u063a\u0631\u062f \u0643\u0645\u0627\u0646 .\u0644\u0645\u0648\u0646\u064a \u062c\u0628\u062a \u0647\u064a .\u0634\u0646\u0627\u0637\u0629 .\u0627\u0644- \u0641\u064a \u0627\u0644\u0631\u0636\u0645 \u0627\u0644\u0644\u064a \u0645\u0643\u0627\u0646 \u0627\u0644\u0642\u0635\u0641 .\u0627\u064a\u0647 \u0645\u0633\u0643\u0646\u0627\u0647 .\u0627\u0644\u062d\u062c\u0627\u0631 \u0627\u0644\u0644\u064a \u0643\u0627\u0646\u062a \u0647\u0646\u0627 \u0648\u0627\u0644\u0644\u0647 .\u0627\u064a\u0647.\n\n00:00:16.516 --> 00:00:26.202\n\u0647\u0630\u0627 \u0633\u0627\u0645\u0639\u0647 .\u0628\u062f\u064a \u0627\u0633\u0627\u0644\u0643 \u0633\u0624\u0627\u0644 \u0627\u0630\u0627 \u0628\u062a\u062c\u0627\u0648\u0628\u064a \u0635\u062d \u0627\u0644\u0643 \u062c\u0627\u0647\u0632\u0629 \u0627\u0633\u0645 \u0627\u0644\u0631\u0633\u0648\u0644 .\u0645\u062d\u0645\u062f .\u0645\u062d\u0645\u062f \u0635\u062d \u0647\u0627.\n\n00:00:28.041 --> 00:00:33.505\n\u062a\u0641\u0636\u0644 .\u0647\u0630\u0647 \u062c\u0627\u064a\u0629 \u0633\u0627\u0644\u0646\u064a .\u0628\u062f\u064a \u0627\u0634\u0648\u0641 \u0627\u0634\u0648\u0641 \u0627\u0634\u0648\u0641 \u0637\u0648\u064a\u0644 \u0642\u062f\u064a\u0634 \u0637\u0648\u064a\u0644 .\n\n00:00:33.545 --> 00:00:35.045\n\u0627\u064a\u0647 \u0627\u064a\u0647 \u0628\u0639\u062b\u062a\u0644\u0643 \u0643\u0645\u0627\u0646 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.170
+{{Audio Event 1}}
+People talking
+
+00:00:00.349 --> 00:00:26.349
+{{Audio Event 4}}
+Street
+
+00:00:04.349 --> 00:00:07.349
+{{Audio Event 2}}
+People talking
+
+00:00:07.349 --> 00:00:26.349
+{{Audio Event 5}}
+Traffic
+
+00:00:08.349 --> 00:00:27.349
+{{Audio Event 3}}
+People talking
+
+00:00:24.349 --> 00:00:31.349
+{{Audio Event 7}}
+Engine
+
+00:00:24.349 --> 00:00:27.349
+{{Audio Event 6}}
+Music"
+156,23:36.0,56:33.7,AdminUser,23:36.0,,file_name_stemmed,20241211_1214_b390d3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1214_b390d3_s3_sensor/input_video/20241211_1214_b390d3_s3_sensor.mp4,video,25.237,12.91,Done,Capsule_Video_286_cut.mp4,56:25.9,67598447eba4d725da65,"""WEBVTT\n\n00:00:00.089 --> 00:00:10.246\n\u0628\u062f\u064a \u0627\u0645\u0648\u062a \u0647\u0648\u0646 \u0645\u0634 \u0631\u0627\u062d \u0627\u062a\u0631\u0643 \u0627\u0644\u0645\u0633\u062c\u062f \u0627\u0644\u0627\u0642\u0635\u0649 \u0628\u0633 \u062d\u062f \u0628\u064a\u0642\u062f\u0631 \u064a\u0645\u0646\u0639\u0646\u064a \u0639\u0627\u0644\u0645\u0633\u062c\u062f \u0627\u0644\u0627\u0642\u0635\u0649 \u0627\u0644\u0628\u0633\u0637\u0629 \u0627\u0644\u0627\u0642\u0635\u0649 \u0627\u0644\u064a \u0627\u0646\u0627 \u0635\u0627\u062d\u0628 \u0627\u0644\u0645\u0633\u062c\u062f \u0627\u0644\u0627\u0642\u0635\u0649 \u0628\u0633.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:11.000
+{{Audio Event 1}}
+Shouting
+
+00:00:00.349 --> 00:00:25.199
+{{Audio Event 2}}
+Music"
+157,26:26.5,00:42.9,AdminUser,26:26.5,,file_name_stemmed,20241211_1214_349d0a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1214_349d0a_s3_sensor/input_video/20241211_1214_349d0a_s3_sensor.mp4,video,26.98,13.56,Done,Capsule_Video_287_cut.mp4,00:23.5,675984f280ab50da4714,"""WEBVTT\n\n00:00:00.009 --> 00:00:12.917\n\u064a\u0639\u0637\u064a\u0643\u0645 \u0627\u0644\u0639\u0627\u0641\u064a\u0629 \u064a\u0627 \u0627\u062e\u0648\u0627\u0646 \u0643\u0644 \u0627\u0644\u0645\u062d\u0628\u0629 \u0648\u0627\u0644\u0627\u062d\u062a\u0631\u0627\u0645 \u0644\u0644\u062c\u0645\u064a\u0639 \u0627\u0644\u0627\u062e\u0648\u0627\u0646 \u0645\u0646 \u0627\u0644\u0627\u0634\u0643\u0627\u0644 \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0627\u062e\u0648\u0627\u0646 \u0627\u0644\u0644\u064a \u0632\u0627\u0631\u062a \u0628\u0627\u0630\u0646\u062c\u0627\u0646 \u0645\u062c\u0645\u0648\u0639 \u0627\u0644\u0641\u0631\u062f\u0627\u0646 \u0639\u0628\u062f \u0627\u0644\u0644\u0647 \u0627\u0644\u0633\u0639\u062f\u064a \u0627\u0644\u0627\u062e\u0648\u0627\u0646 \u0627\u0644\u0645\u062a\u0637\u0648\u0639\u064a\u0646 \u0627\u0644\u0644\u064a \u0628\u064a\u0633\u0627\u0646\u062f\u0648\u0646\u0627 \u0648\u0628\u064a\u0633\u0627\u0639\u062f\u0648\u0646\u0627 \u0627\u062e \u0641\u0631\u0627\u0633 \u0627\u0644\u062d\u0642\u0631.\n\n00:00:12.977 --> 00:00:26.768\n\u0643\u0644 \u0627\u0644\u0627\u062d\u062a\u0631\u0627\u0645 \u0644\u0644\u062c\u0645\u064a\u0639 \u0648\u0627\u062d\u0646\u0627 \u064a\u062f \u0628\u064a\u062f \u0645\u0639 \u0628\u0639\u0636 \u0648\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0643\u0644\u0627\u064a\u062a\u0647\u0627 \u0628\u062a\u062f\u062e\u0644 \u0627\u0644\u0639\u064a\u062f \u0639\u0644\u0649 \u0627\u0647\u0627\u0644\u064a\u0646\u0627 \u0648\u0628\u062a\u0643\u0648\u0646 \u0627\u0644\u0637\u0631\u0642 \u0646\u0638\u064a\u0641\u0629 \u0648\u062c\u0627\u0647\u0632\u0629 \u0628\u0647\u0645\u0629 \u062c\u0645\u064a\u0639 \u0627\u0644\u0634\u0628\u0627\u0628 \u0627\u0644\u0627\u0648\u0641\u064a\u0627\u0621 \u0643\u0644\u0647 \u0628\u0627\u0633\u0645\u0647 \u0648\u0628\u062a\u0643\u0648\u0646 \u0643\u0644 \u0627\u0634\u064a \u0632\u064a \u0645\u0627 \u0628\u062f\u0647 \u0627\u0644\u0634\u0639\u0628 \u0643\u0644 \u0627\u0644\u0627\u062d\u062a\u0631\u0627\u0645.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:26.170
+{{Audio Event 1}}
+Street
+
+00:00:00.349 --> 00:00:26.958
+{{Audio Event 2}}
+People talking
+
+00:00:00.349 --> 00:00:26.349
+{{Audio Event 3}}
+Traffic
+
+00:00:11.349 --> 00:00:13.349
+{{Audio Event 4}}
+Engine"
+159,32:37.3,10:49.5,AdminUser,32:37.3,,file_name_stemmed,20241211_1223_84e1a7_s3_sensor.MOV,http://data-audio-event-v1:8000/assets/20241211_1223_84e1a7_s3_sensor/input_video/20241211_1223_84e1a7_s3_sensor.MOV,video,12.8,1.51,Done,Capsule_Video_290.MOV,10:45.7,6759866547bc26bda0e1,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:12.000
+{{Audio Event 1}}
+Music"
+160,35:33.5,06:01.1,AdminUser,35:33.5,,file_name_stemmed,20241211_1223_8c553a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1223_8c553a_s3_sensor/input_video/20241211_1223_8c553a_s3_sensor.mp4,video,30.58,15.32,Done,Capsule_Video_291_cut.mp4,05:57.4,675987157b1ae6a4ac9d,"""WEBVTT\n\n00:00:00.289 --> 00:00:01.970\n\u0639\u0644\u064a\u0647 \u0627\u0644\u0635\u0644\u0627\u0629 \u0648\u0627\u0644\u0633\u0644\u0627\u0645 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.170
+{{Audio Event 1}}
+Crowd
+
+00:00:07.349 --> 00:00:09.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:10.349 --> 00:00:30.349
+{{Audio Event 3}}
+Crowd
+
+00:00:22.349 --> 00:00:30.349
+{{Audio Event 4}}
+Traffic
+
+00:00:26.349 --> 00:00:27.349
+{{Audio Event 5}}
+Engine"
+163,44:14.6,51:44.9,AdminUser,44:14.6,,file_name_stemmed,20241211_1232_d573c8_s3_sensor.MP4,http://data-audio-event-v1:8000/assets/20241211_1232_d573c8_s3_sensor/input_video/20241211_1232_d573c8_s3_sensor.MP4,video,15.63333333,3.09,Done,Capsule_Video_305.MP4,51:14.5,6759891e94ea25cfae93,"""WEBVTT\n\n00:00:00.249 --> 00:00:07.535\n\u0627\u0646 \u062a\u0624\u062f\u064a \u0627\u0628\u0646\u0647\u0627 \u0633\u0645\u0627\u0639\u0629 \u0627\u0644\u0645\u0635\u0627\u0628 \u0628\u0645\u0631\u0636 \u0627\u0644\u0633\u0631\u0637\u0627\u0646 \u0648\u0627\u0644\u062e\u0631\u0648\u062c \u0648\u0627\u0644\u0639\u0644\u0627\u062c \u0633\u0645\u0627\u0639\u0629 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:09.000
+{{Audio Event 1}}
+People talking
+
+00:00:00.000 --> 00:00:15.633
+{{Audio Event 2}}
+Traffic
+
+00:00:00.000 --> 00:00:15.633
+{{Audio Event 3}}
+Street"
+165,50:26.0,31:08.6,AdminUser,50:26.0,,file_name_stemmed,20241211_1241_c61777_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1241_c61777_s3_sensor/input_video/20241211_1241_c61777_s3_sensor.mp4,video,18.247,9.07,Done,Capsule_Video_319_cut.mp4,31:04.3,67598a91ec880a75ac0c,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:18.000
+{{Audio Event 1}}
+Traffic
+
+00:00:03.349 --> 00:00:08.349
+{{Audio Event 2}}
+Engine"
+166,53:16.2,29:17.2,AdminUser,53:16.2,,file_name_stemmed,20241211_1241_83a8d4_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1241_83a8d4_s3_sensor/input_video/20241211_1241_83a8d4_s3_sensor.mp4,video,25.727,2.43,Done,Capsule_Video_322.mp4,29:14.2,67598b3c3b68a6ce9ac4,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:25.000
+{{Audio Event 1}}
+Traffic"
+167,56:01.6,27:38.5,AdminUser,56:01.6,,file_name_stemmed,20241211_1241_8a792b_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1241_8a792b_s3_sensor/input_video/20241211_1241_8a792b_s3_sensor.mp4,video,15.38,6.19,Done,Capsule_Video_324_cut.mp4,27:26.5,67598be18ea183d93ddf,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:15.000
+{{Audio Event 1}}
+Music"
+168,58:47.4,35:38.3,AdminUser,58:47.4,,file_name_stemmed,20241211_1250_0e5041_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1250_0e5041_s3_sensor/input_video/20241211_1250_0e5041_s3_sensor.mp4,video,20.847,5.83,Done,Capsule_Video_325_cut.mp4,35:35.9,67598c875bf639864b5b,"""WEBVTT\n\n00:00:02.882 --> 00:00:03.415\nBye.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:20.000
+{{Audio Event 1}}
+Music"
+169,01:58.1,40:28.0,AdminUser,01:58.1,,file_name_stemmed,20241211_1250_b0cca6_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1250_b0cca6_s3_sensor/input_video/20241211_1250_b0cca6_s3_sensor.mp4,video,25.931,12.97,Done,Capsule_Video_32_cut.mp4,40:25.1,67598d4610f0738bc832,"""WEBVTT\n\n00:00:09.502 --> 00:00:18.626\n\u0627\u0645\u0627 \u0639\u0646\u0627 \u0634\u0648\u0642 \u0644\u0630\u0644\u0643 \u0634\u0648\u0642 \u0644- \u064a\u0643\u0648\u0646 \u0627\u0644\u0641\u0624\u0627\u0629 \u0644\u0644\u0628\u0633\u0627-.\n\n00:00:18.705 --> 00:00:25.210\n\u0627\u0644\u062d\u0632\u064a\u0646\u0629 \u0644\u0644\u0637\u0641\u0648\u0644\u0629 \u064a\u0627 \u0639\u0628\u0627 \u0637\u064a\u0628\u0646\u0627 \u0627\u062c-.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:25.000
+{{Audio Event 1}}
+Music"
+171,07:53.6,05:12.0,AdminUser,07:53.6,,file_name_stemmed,20241211_1258_6ecb03_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1258_6ecb03_s3_sensor/input_video/20241211_1258_6ecb03_s3_sensor.mp4,video,16.578,2.75,Done,Capsule_Video_335.mp4,05:08.6,67598ea989560da1a65d,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:16.532
+{{Audio Event 1}}
+Siren
+
+00:00:12.349 --> 00:00:15.532
+{{Audio Event 2}}
+Engine"
+172,10:39.2,58:16.5,AdminUser,10:39.2,,file_name_stemmed,20241211_1258_2f4574_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1258_2f4574_s3_sensor/input_video/20241211_1258_2f4574_s3_sensor.mp4,video,27.074,3.95,Done,Capsule_Video_336.mp4,58:11.9,67598f4f311e804e7c28,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:21.170
+{{Audio Event 1}}
+Traffic
+
+00:00:11.349 --> 00:00:13.349
+{{Audio Event 2}}
+Engine
+
+00:00:22.349 --> 00:00:25.349
+{{Audio Event 3}}
+Music"
+173,13:24.3,29:56.3,AdminUser,13:24.3,,file_name_stemmed,20241211_1258_387ae3_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1258_387ae3_s3_sensor/input_video/20241211_1258_387ae3_s3_sensor.mp4,video,10.448,0.69,Done,Capsule_Video_338.mp4,29:16.8,67598ff44034b8e82e9e,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:10.402
+{{Audio Event 2}}
+Street
+
+00:00:00.349 --> 00:00:10.402
+{{Audio Event 1}}
+Traffic
+
+00:00:02.349 --> 00:00:03.349
+{{Audio Event 3}}
+Shouting"
+174,16:30.6,40:49.8,AdminUser,16:30.6,,file_name_stemmed,20241211_1308_2b1c7c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1308_2b1c7c_s3_sensor/input_video/20241211_1308_2b1c7c_s3_sensor.mp4,video,24.635,3.18,Done,Capsule_Video_346.mp4,40:31.0,675990ae88c8c6fc88aa,"""WEBVTT\n\n00:00:00.409 --> 00:00:05.714\n\u0627\u0644\u0644\u064a \u0634\u0627\u0641\u0643 \u0639\u0644\u0649 \u0627\u0644\u0627\u0631\u0636 .\u0627\u0644\u0644\u064a \u0634\u0627\u0641\u0643 \u0628\u064a\u0638\u0644 \u0645\u0627\u0634\u064a \u064a\u0627\u0644\u0644\u0647 .\u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0627\u0646 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 .\n\n00:00:05.775 --> 00:00:10.398\n\u0645\u0627\u0634\u064a \u0645\u0627\u0634\u064a .\u0627\u064a\u0647 \u0639\u0634\u0627\u0646 \u0634\u0648 .\u0644\u064a\u0647 \u0639\u0634\u0627\u0646 .\u0637\u064a\u0628 \u0634\u0648\u064a .\u0639\u0634\u0627\u0646 .\u0647\u0630\u0627 \u0627\u0644\u0634\u0647\u064a\u062f \u0628\u064a\u062a\u0639\u0644\u0642\u0634 \u0639\u0644\u064a\u0647 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:24.472
+{{Audio Event 1}}
+People talking
+
+00:00:00.349 --> 00:00:24.349
+{{Audio Event 2}}
+Crowd
+
+00:00:01.349 --> 00:00:05.349
+{{Audio Event 3}}
+Shouting"
+175,19:36.1,43:05.5,AdminUser,19:36.1,,file_name_stemmed,20241211_1308_b6b576_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1308_b6b576_s3_sensor/input_video/20241211_1308_b6b576_s3_sensor.mp4,video,29.581,0.74,Done,Capsule_Video_349.mp4,41:11.9,67599168191c4e917499,"""WEBVTT\n\n00:00:10.811 --> 00:00:12.493\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:29.170
+{{Audio Event 1}}
+Music"
+176,22:26.7,47:20.3,AdminUser,22:26.7,,file_name_stemmed,20241211_1308_e8322a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1308_e8322a_s3_sensor/input_video/20241211_1308_e8322a_s3_sensor.mp4,video,18.436,1.48,Done,Capsule_Video_352.mp4,46:25.4,67599212a2dd870fc7fb,"""WEBVTT\n\n00:00:05.333 --> 00:00:17.057\n\u0633\u0648\u0627\u0642\u0629 \u0648\u0646\u0631\u0648\u062d \u064a\u0627 \u0631\u0648\u062d \u0627\u0644\u0631\u0648\u062d \u0644\u0642\u0627\u0643 \u0645\u0634\u062a\u0627\u0642\u0629 \u0648\u0646\u0631\u0648\u062d \u064a\u0627 \u0631\u0648\u062d \u0627\u0644\u0631\u0648\u062d \u0644\u0642\u0627\u0643 \u0645\u0634\u062a\u0627\u0642\u0629.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:18.300
+{{Audio Event 1}}
+Music"
+177,25:17.2,57:57.1,AdminUser,25:17.2,,file_name_stemmed,20241211_1316_88dc10_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1316_88dc10_s3_sensor/input_video/20241211_1316_88dc10_s3_sensor.mp4,video,12.259,1.41,Done,Capsule_Video_353.mp4,54:06.5,675992bd3a0bfb4f1fa4,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:12.000
+{{Audio Event 1}}
+Music"
+194,15:56.9,58:26.1,AdminUser,15:56.9,,file_name_stemmed,20241211_1401_3b9a22_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1401_3b9a22_s3_sensor/input_video/20241211_1401_3b9a22_s3_sensor.mp4,video,16.996,2.23,Done,Capsule_Video_395.mp4,58:25.2,67599e9ce5cf9fc545ea,"""WEBVTT\n\n00:00:00.009 --> 00:00:12.580\n\u0627\u0639\u0644\u0646 \u0648\u0644\u0627\u0626\u0647 \u0645\u0646 \u0630\u0648\u0642 \u0648\u0646\u062a\u0633\u0644\u0649 \u0627\u0639\u0644\u0646 \u0628\u0642\u0627\u0626\u0647 \u0627\u0633\u0645\u0639 \u064a\u0627 \u0648\u0637\u0646 \u0647\u0630\u0627 \u0646\u0636\u0627\u0626\u064a \u0627\u0633\u0645\u0639 \u064a\u0627 \u0648\u0637\u0646 \u0647\u0630\u0627 \u0646\u0636\u0627\u0626\u064a.\n\n00:00:12.980 --> 00:00:15.763\n\u0627\u0639\u0644\u0646 \u0645\u0646\u0647\u062c\u0643 \u0627\u0648\u0644 \u0632\u0636\u0627\u0626\u064a .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:16.950
+{{Audio Event 1}}
+Music"
+214,15:08.2,15:06.9,AdminUser,15:08.2,,file_name_stemmed,20241211_1503_4e4829_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1503_4e4829_s3_sensor/input_video/20241211_1503_4e4829_s3_sensor.mp4,video,34.034,13.37,Done,Civilians_scramble_ for_shelter_cut_1.mp4,15:05.0,6759ac7c38bec280e864,"""WEBVTT\n\n00:00:06.567 --> 00:00:07.128\n\u0634\u0648 \u062f\u0627\u0631\u0633\u0629 .\n\n00:00:07.227 --> 00:00:10.871\n\u0628\u064a\u0643\u0648\u0646 \u0645\u0646 \u0645\u062d\u0637\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a .\n\n00:00:10.992 --> 00:00:13.534\n\u0628\u0627\u0643\u062b\u0631 \u0635\u0641\u0648\u0641 \u0645\u0631\u0627\u0631 \u0645\u0631\u0627\u0631\u064a\u0629 \u0639\u0644\u0649 .\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:02.349 --> 00:00:05.170
+{{Audio Event 1}}
+Explosion
+
+00:00:04.349 --> 00:00:20.349
+{{Audio Event 2}}
+Alarm
+
+00:00:18.349 --> 00:00:34.992
+{{Audio Event 3}}
+People talking"
+216,21:29.0,23:39.4,AdminUser,21:29.0,,file_name_stemmed,20241211_1512_9408d8_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1512_9408d8_s3_sensor/input_video/20241211_1512_9408d8_s3_sensor.mp4,video,17.017,6.5,Done,Civilians_scramble_ for_shelter_cut_3.mp4,24:05.2,6759adf90b586af24ca1,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:03.016
+{{Audio Event 1}}
+People talking
+
+00:00:03.349 --> 00:00:05.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:05.349 --> 00:00:07.349
+{{Audio Event 3}}
+Explosion
+
+00:00:11.349 --> 00:00:17.995
+{{Audio Event 1}}
+People talking"
+217,24:19.8,19:15.3,AdminUser,24:19.8,,file_name_stemmed,20241211_1512_6259b9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1512_6259b9_s3_sensor/input_video/20241211_1512_6259b9_s3_sensor.mp4,video,8.034,7.44,Done,Corrupt_cop_vs_Sheriff.mp4_cut.mp4,19:09.5,6759aea3c7dd032694f6,"""WEBVTT\n\n00:00:06.613 --> 00:00:07.605\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:04.000
+{{Audio Event 1}}
+Siren"
+218,27:10.0,21:18.6,AdminUser,27:10.0,,file_name_stemmed,20241211_1518_7d661c_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1518_7d661c_s3_sensor/input_video/20241211_1518_7d661c_s3_sensor.mp4,video,17.555,3.34,Done,Crazy traffic in Israel.mp4,21:12.7,6759af4def6f44327f41,"""WEBVTT\n\n00:00:00.289 --> 00:00:03.412\nYeah, the traffic here is crazy.\n\n00:00:03.532 --> 00:00:08.157\nI know why Dean Dirksen- Doesn't wanna drive.\n\n00:00:08.178 --> 00:00:08.919\nDoesn't wanna drive.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:17.554
+{{Audio Event 1}}
+People talking
+
+00:00:04.349 --> 00:00:06.349
+{{Audio Event 2}}
+Traffic"
+219,30:00.5,31:01.4,AdminUser,30:00.5,,file_name_stemmed,20241211_1518_09946d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1518_09946d_s3_sensor/input_video/20241211_1518_09946d_s3_sensor.mp4,video,13.097,7.14,Done,DOGS BARKING!! Angry Dogs  Real Guard Dogs  Defending You! #youtubeshorts #youtubefairy.mp4,30:56.3,6759aff87a92816da450,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.000
+{{Audio Event 1}}
+Barking
+
+00:00:03.349 --> 00:00:13.096
+{{Audio Event 1}}
+Barking"
+220,33:06.8,35:10.3,AdminUser,33:06.8,,file_name_stemmed,20241211_1518_6ec9e9_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1518_6ec9e9_s3_sensor/input_video/20241211_1518_6ec9e9_s3_sensor.mp4,video,25.04,5.59,Done,Demonstrators_clash_with_police_in_Tunisia_cut.mp4,38:58.5,6759b0b2ba644a98d16d,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:02.349 --> 00:00:08.000
+{{Audio Event 1}}
+Alarm
+
+00:00:09.349 --> 00:00:10.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:13.349 --> 00:00:14.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:15.349 --> 00:00:16.349
+{{Audio Event 2}}
+Gunshots
+
+00:00:19.349 --> 00:00:26.006
+{{Audio Event 3}}
+Traffic"
+221,36:07.5,48:11.0,AdminUser,36:07.4,,file_name_stemmed,20241211_1527_21a7e1_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1527_21a7e1_s3_sensor/input_video/20241211_1527_21a7e1_s3_sensor.mp4,video,5.109,1.36,Done,Dog Barking #home #garden #plants #shorts #dog #outdoor.mp4,49:33.8,6759b1676e59539e4ff2,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.108
+{{Audio Event 1}}
+Barking"
+222,38:52.5,21:04.5,AdminUser,38:52.5,,file_name_stemmed,20241211_1527_de356d_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1527_de356d_s3_sensor/input_video/20241211_1527_de356d_s3_sensor.mp4,video,9.405,1.18,Done,Dog Barking Outside.mp4,22:52.9,6759b20c8240b0a82327,"""WEBVTT\n\n00:00:00.453 --> 00:00:01.274\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:02.404
+{{Audio Event 1}}
+Barking
+
+00:00:04.349 --> 00:00:07.404
+{{Audio Event 1}}
+Barking"
+223,41:43.0,24:00.5,AdminUser,41:43.0,,file_name_stemmed,20241211_1527_4aacd4_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1527_4aacd4_s3_sensor/input_video/20241211_1527_4aacd4_s3_sensor.mp4,video,4.714,0.92,Done,Dog barking videos#4kviral#status#ytshorts.mp4,24:15.8,6759b2b70273c142d9e1,"""WEBVTT\n\n00:00:00.578 --> 00:00:01.903\nFUN FUN FUN FUN FUN\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:04.713
+{{Audio Event 1}}
+Barking"
+224,44:33.2,25:03.1,AdminUser,44:33.2,,file_name_stemmed,20241211_1535_2e1d57_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1535_2e1d57_s3_sensor/input_video/20241211_1535_2e1d57_s3_sensor.mp4,video,5.318,1.42,Done,Dog puppies barking#trending#viralshorts.mp4,25:39.1,6759b36135b98e4175a9,"""WEBVTT\n\n00:00:03.855 --> 00:00:04.727\nRuff, ruff, ruff.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:01.317
+{{Audio Event 1}}
+Barking
+
+00:00:03.349 --> 00:00:05.349
+{{Audio Event 1}}
+Barking"
+225,47:43.9,26:39.6,AdminUser,47:43.9,,file_name_stemmed,20241211_1536_671337_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1536_671337_s3_sensor/input_video/20241211_1536_671337_s3_sensor.mp4,video,5.829,1.23,Done,Dog puppy#cute barking#viralshorts.mp4,26:59.3,6759b41fdb52479b9a74,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.828
+{{Audio Event 1}}
+Barking"
+226,50:40.0,27:34.2,AdminUser,50:40.0,,file_name_stemmed,20241211_1536_80c1de_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1536_80c1de_s3_sensor/input_video/20241211_1536_80c1de_s3_sensor.mp4,video,5.527,0.74,Done,Dog running and 🐕 barking sound effect#6kviral#shorts.mp4,27:55.3,6759b4cfeb9a61c1b392,"""WEBVTT\n\n00:00:00.981 --> 00:00:01.784\nThank you.\n\n00:00:02.104 --> 00:00:02.467\nThank you.\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:05.526
+{{Audio Event 1}}
+Barking"
+227,53:30.5,31:40.8,AdminUser,53:30.5,,file_name_stemmed,20241211_1544_eba1eb_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1544_eba1eb_s3_sensor/input_video/20241211_1544_eba1eb_s3_sensor.mp4,video,13.236,3.58,Not started,Dogs Barking at Night.mp4,31:36.3,6759b57a76db812440e3,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:00.349 --> 00:00:07.235
+{{Audio Event 1}}
+Barking
+
+00:00:10.349 --> 00:00:12.349
+{{Audio Event 1}}
+Barking"
+228,56:16.3,32:17.6,AdminUser,56:16.3,,file_name_stemmed,20241211_1544_4e263a_s3_sensor.mp4,http://data-audio-event-v1:8000/assets/20241211_1544_4e263a_s3_sensor/input_video/20241211_1544_4e263a_s3_sensor.mp4,video,24.799,10.81,ongoing,Door Sensor Alarm.mp4,34:43.9,6759b62043d3dfbd76b0,"""WEBVTT\n\n""","WEBVTT
+
+00:00:00.349 --> 00:00:27.170
+Fake line
+
+",,"WEBVTT
+
+00:00:08.349 --> 00:00:12.000
+{{Audio Event 1}}
+Alarm"

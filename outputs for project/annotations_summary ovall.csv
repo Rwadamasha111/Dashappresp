@@ -1,0 +1,10 @@
+﻿attribute,count
+Sum of blurry,17858
+Sum of undecided,11516
+Sum of acceptable,508822
+Sum of occluded,43986
+Sum of not_occluded,460726
+Sum of partially_occluded,33484
+Sum of partially_turned,403836
+Sum of turned,54984
+Sum of frontal,79376
