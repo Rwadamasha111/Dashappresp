@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 import dash_leaflet as dl
 import dash.exceptions
 import numpy as np
-
+import calendar
 import plotly.express as px
 import plotly.graph_objects as go
 from googleapiclient.discovery import build
@@ -34,11 +34,18 @@ sheet = service.spreadsheets()
 # Convert 'Duration' column from mm:ss to float (minutes)
 def convert_to_minutes(duration):
     try:
-        minutes, seconds = map(int, duration.split(':'))
-        total_seconds = minutes * 60 + seconds
+        parts = list(map(int, duration.split(':')))
+        if len(parts) == 2:  # mm:ss format
+            minutes, seconds = parts
+            total_seconds = minutes * 60 + seconds
+        elif len(parts) == 3:  # h:mm:ss format
+            hours, minutes, seconds = parts
+            total_seconds = hours * 3600 + minutes * 60 + seconds
+        else:
+            return None  # Invalid format
         return total_seconds  # Convert total seconds to minutes
     except (ValueError, AttributeError):
-        return None  # handle rows where duration is NaN or invalid format
+        return None  # Handle invalid inputs
     
 def calculate_duration(row):
     try:
@@ -199,16 +206,16 @@ def apply_all_filters3(
     pie_clickData,
     pie_2_clickData,
     bar_2_clickData,
-    budapest_polygon_active
-
+    budapest_polygon_active,
+    heatmap_clickData  # NEW PARAMETER for calendar heatmap clicks
 ):
-    # Apply the range filter
+    # Apply the duration range filter
     if duration_range:
         df = df[
             (df['Duration'] >= duration_range[0]) &
             (df['Duration'] <= duration_range[1])
         ]
-    # Then each dropdown
+    # Apply each dropdown filter
     if selected_terrain != 'All':
         df = df[df['Terrain'].notna() & (df['Terrain'] == selected_terrain)]
     if selected_occluded != 'All':
@@ -220,7 +227,7 @@ def apply_all_filters3(
     if selected_distance != 'All':
         df = df[df['Distance from building'].notna() & (df['Distance from building'] == selected_distance)]
 
-    # Now apply bar_clickData / pie_clickData filters
+    # Apply the bar and pie click filters
     if bar_weather_clickData:
         clicked_weather = bar_weather_clickData['points'][0]['y']
         df = df[df['Weather'] == clicked_weather]
@@ -237,6 +244,25 @@ def apply_all_filters3(
         clicked_logos = bar_2_clickData['points'][0]['x']
         df = df[df['Logos and text'] == clicked_logos]
 
+    # ----------------- NEW: Calendar Heatmap Filtering -----------------
+    if heatmap_clickData:
+        try:
+            clicked_year = int(heatmap_clickData['points'][0]['y'])
+            clicked_x = heatmap_clickData['points'][0]['x']
+            # Check if clicked_x is a number; if so, use it directly
+            if isinstance(clicked_x, (int, float)):
+                clicked_month = int(round(clicked_x))
+            else:
+                month_map = {calendar.month_abbr[i]: i for i in range(1, 13)}
+                clicked_month = month_map.get(clicked_x)
+            if clicked_month is not None:
+                df['Video upload date'] = pd.to_datetime(df['Video upload date'], errors='coerce', dayfirst=True)
+                df = df[df['Video upload date'].dt.year == clicked_year]
+                df = df[df['Video upload date'].dt.month == clicked_month]
+        except Exception as e:
+            print("Error in heatmap filtering:", e)
+
+    # ---------------------------------------------------------------------
     return df
 
 def create_map_markers(df):
@@ -4503,8 +4529,25 @@ def load_milan_data():
     else:
         print("No data found for Milan.")
         df_milan = pd.DataFrame()
+        
+    SHEET_ID_Naples = '1NdmXJluL5VrDj28d6iHV58LvkK5Gvly3_MYH1eBJeIQ'
+    RANGE_Naples = 'Naples!A1:S150'
 
-    return df_milan
+    # Access the Google Sheet for Naples
+    result_nap = sheet.values().get(spreadsheetId=SHEET_ID_Naples, range=RANGE_Naples).execute()
+    values_nap = result_nap.get('values', [])
+
+    # Convert the data to a pandas DataFrame
+    if values_nap:
+        headers_n = values_nap[0]  # Assuming the first row is the header
+        data_n = values_nap[1:]    # Rest is the data
+        df_Naples = pd.DataFrame(data_n, columns=headers_n)
+    else:
+        print("No data found for Naples.")
+        df_Naples = pd.DataFrame()        
+    
+    df_italy = pd.concat([df_milan,df_Naples],ignore_index=True)
+    return df_italy
 
 # Load the full DataFrame
 df_milan_full = load_milan_data()
@@ -4520,8 +4563,10 @@ if not df_milan.empty:
         lambda x: f"[{x}]({x})" if pd.notnull(x) else x
     )
 
+    df_milan['Comments'] = df_milan['Comments'].fillna("No Comment")  # Replace NaN with "No Comment"
 
-
+    # Step 2: Drop NaN values from all other columns
+    df_milan = df_milan.dropna(subset=[col for col in df_milan.columns if col != 'Comments'])
     # Convert 'Duration' column
     df_milan['Duration'] = df_milan.apply(calculate_duration, axis=1)
 
@@ -4621,7 +4666,25 @@ if not df_milan.empty:
         if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
     )
 
-    pre_out_milan = round(((len(df_milan)-count_within_milan)/len(df_milan) *100),2)   
+    global naples_polygon
+    global polygon_naples
+    
+    file_path_pm= 'naples_coord.txt'
+    
+    naples_polygon =[]
+    with open (file_path_pm, "r") as file:
+        for line in file:
+            match = re.findall(r"[-+]?\d*\.\d+", line)  # Extract floating point numbers
+            if match:
+                naples_polygon.append([float(match[0]), float(match[1])]) 
+    polygon_naples = Polygon(naples_polygon)
+    count_within_naples = sum(
+        polygon_naples.contains(Point(row['Latitude'], row['Longitude']))
+        for _, row in df_milan.iterrows()
+        if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
+    )
+
+    pre_out_milan = round(((len(df_milan)-count_within_milan-count_within_naples)/len(df_milan) *100),2)   
      
     def generate_interactive_bar_plot_2_milan(df):
             source_counts = df['Logos and text'].value_counts().reset_index()
@@ -4851,6 +4914,17 @@ def tab5_layout():
                                                     positions=milan_polygon,
                                                     color="blue",
                                                     fillColor="cyan",
+                                                    fillOpacity=0.6,
+                                                )
+                                            ]
+                                        ),
+                                        dl.LayerGroup(
+                                            id="polygon-layer_naples",
+                                            children=[
+                                                dl.Polygon(
+                                                    positions=naples_polygon,
+                                                    color="blue",
+                                                    fillColor="purple",
                                                     fillOpacity=0.6,
                                                 )
                                             ]
@@ -5442,7 +5516,7 @@ def handle_table_and_refresh_milan(
 def load_budapest_data():
     # Google Sheet ID and Range for Madrid
     SHEET_ID_budapest = '1_PklSnn0Bkc0Vdpi9B-9JVuDuEe8DZApnesxe3ehxD0'
-    RANGE_budapest = 'Budapest!A1:S350'
+    RANGE_budapest = 'Budapest!A1:T350'
 
     # Access the Google Sheet for Madrid
     result = sheet.values().get(spreadsheetId=SHEET_ID_budapest, range=RANGE_budapest).execute()
@@ -5524,7 +5598,7 @@ if not df_budapest.empty:
     background_style_budapest = {
         "background-size": "cover",
         "background-position": "center",
-        "height": "250vh",
+        "height": "350vh",
         "padding": "10px",
         "background-color": 'black',
     }
@@ -5638,10 +5712,10 @@ if not df_budapest.empty:
             title='Time of the day'
         )
 
-        depth_values = [0.05 + i * 0.01 for i in range(len(tod_counts))]
+   
         fig.update_traces(
             marker=dict(line=dict(color='white', width=2)),
-            pull=depth_values,
+
             textinfo='label',
             textfont=dict(color='yellow', size=22)  
         )
@@ -5734,10 +5808,10 @@ if not df_budapest.empty:
         )
 
         # Add depth to the slices
-        depth_values = [0.05 + i * 0.01 for i in range(len(source_counts))]
+
         fig.update_traces(
             marker=dict(line=dict(color='white', width=2)),
-            pull=depth_values,
+
             textinfo='label',
             textfont=dict(color='yellow', size=22)  
         )
@@ -5754,11 +5828,86 @@ if not df_budapest.empty:
 
         return fig
 
+    def plot_calendar_heatmap(df):
+        # Work on a copy to prevent modifying the original DataFrame
+        df = df.copy()
+        
+        # Convert the date column to datetime using explicit format
+        df['Video upload date'] = pd.to_datetime(df['Video upload date'], errors='coerce', dayfirst=True)
+
+
+        # Drop rows where parsing failed (NaT values)
+        df = df.dropna(subset=['Video upload date'])
+
+        # Extract year and month
+        df['year'] = df['Video upload date'].dt.year
+        df['month'] = df['Video upload date'].dt.month
+
+        # Filter to only include dates between 2000 and 2025
+        df = df[(df['year'] >= 2000) & (df['year'] <= 2025)]
+
+        # Group data by year and month
+        heatmap_data = df.groupby(['year', 'month']).size().reset_index(name='count')
+
+        # Create a complete grid for years 2000-2025 and months 1-12
+        years = list(range(2000, 2026))
+        months = list(range(1, 13))
+        grid = pd.MultiIndex.from_product([years, months], names=['year', 'month']).to_frame(index=False)
+
+        # Merge with aggregated data to ensure all year/month pairs exist
+        heatmap_data = grid.merge(heatmap_data, on=['year', 'month'], how='left')
+        heatmap_data['count'] = heatmap_data['count'].fillna(0)
+
+        # Convert month numbers to abbreviations
+        heatmap_data['month_name'] = heatmap_data['month'].apply(lambda x: calendar.month_abbr[x])
+
+        # Define month order for proper display
+        month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+        # Create density heatmap
+        fig = px.density_heatmap(
+            heatmap_data, 
+            x='month_name', 
+            y='year', 
+            z='count',
+            nbinsx=12,
+            nbinsy=len(years),
+            histfunc='sum',
+            text_auto=True, 
+            color_continuous_scale='Blues',
+            category_orders={'month_name': month_order},
+            title='Calendar Heatmap of Video Upload Dates'
+        )
+
+        # Update layout for better visualization
+        fig.update_layout(
+            yaxis=dict(
+                tickmode='linear',
+                range=[2010, 2026],
+                dtick=1,
+                title_font=dict(size=24, family="Arial", color="black", weight="bold"),
+                tickfont=dict(size=24, family="Arial", color="black", weight="bold")
+            ),
+            xaxis=dict(
+                title_font=dict(size=24, family="Arial", color="black", weight="bold"),
+                tickfont=dict(size=24, family="Arial", color="black", weight="bold")
+            ),
+            title=dict(
+                text='Calendar Heatmap of Video Upload Dates',
+                font=dict(size=42, family="Arial", color="black", weight="bold"),
+                x=0.5  # Centers the title
+            ),
+            coloraxis_showscale=False  # Remove the color legend if desired.
+        )
+
+        return fig
     # Generate Initial Figures
     pie_chart_initial = generate_interactive_pie_chart_budapest(df_budapest)
     bar_chart_weather_initial = generate_interactive_bar_chart_weather_budapest(df_budapest)
     bar_plot_logos_initial = generate_interactive_bar_plot_2_budapest(df_budapest)
-    source_pie_initial = generate_interactive_pie_chart_source(df_budapest)    
+    source_pie_initial = generate_interactive_pie_chart_source(df_budapest)
+    calender_heatmap_initial =  plot_calendar_heatmap(df_budapest)
     
 def tab6_layout():
     return html.Div(
@@ -5781,44 +5930,44 @@ def tab6_layout():
             ), 
             dcc.Store(id='budapest-data', data=df_budapest.to_dict('records')),
             dcc.Store(id='budapest-polygon-filter-active', data=False),
-            dcc.Store(id='budapest-filtered-data',data=None),
+            dcc.Store(id='budapest-filtered-data', data=None),
             dbc.Container(
                 style=container_style,
                 children=[
                     # Title
                     html.H1(
-                        "Airis-Labs: Geo-Location Analysis - budapest",
+                        "Airis-Labs: Geo-Location Analysis - Budapest",
                         className='mb-4',
                         style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}
                     ),
                     # Map and Filters Section
                     dbc.Row([
                         # Map on the left
-                            dbc.Col(
-                                dl.Map(
-                                    [
-                                        dl.TileLayer(),
-                                        # Layer group for markers
-                                        dl.LayerGroup(id="budapest-map-layer", children=markers_budapest),
-                                        # Separate layer group for polygon
-                                        dl.LayerGroup(
-                                            id="polygon-layer_budapest",
-                                            children=[
-                                                dl.Polygon(
-                                                    positions=budapest_polygon,
-                                                    color="blue",
-                                                    fillColor="cyan",
-                                                    fillOpacity=0.6,
-                                                )
-                                            ]
-                                        ),
-                                    ],
-                                    center=(47.4918275,19.052364),  # budapest coordinates
-                                    zoom=10,
-                                    style={"width": "100%", "height": "500px", "margin": "6px"}
-                                ),
-                                width=8
+                        dbc.Col(
+                            dl.Map(
+                                [
+                                    dl.TileLayer(),
+                                    # Layer group for markers
+                                    dl.LayerGroup(id="budapest-map-layer", children=markers_budapest),
+                                    # Separate layer group for polygon
+                                    dl.LayerGroup(
+                                        id="polygon-layer_budapest",
+                                        children=[
+                                            dl.Polygon(
+                                                positions=budapest_polygon,
+                                                color="blue",
+                                                fillColor="cyan",
+                                                fillOpacity=0.6,
+                                            )
+                                        ]
+                                    ),
+                                ],
+                                center=(47.4918275, 19.052364),  # budapest coordinates
+                                zoom=10,
+                                style={"width": "100%", "height": "500px", "margin": "6px"}
                             ),
+                            width=8
+                        ),
                         # Filters on the right
                         dbc.Col(
                             [
@@ -5901,7 +6050,13 @@ def tab6_layout():
                         children=f"Total Records: {len(df_budapest)}, {pre_out_budapest} % out of Polygon ",
                         style={'textAlign': 'left', 'fontWeight': 'bold', 'marginTop': '0', 'color': 'rgb(255,51,153)'}
                     ),
-                    dbc.Button("Show Which Ones",id='polygon_dropouts_budapest', color='primary',n_clicks=0,style=button_polygon),
+                    dbc.Button(
+                        "Show Which Ones",
+                        id='polygon_dropouts_budapest',
+                        color='primary',
+                        n_clicks=0,
+                        style=button_polygon
+                    ),
                     # Duration Slider Section (below the map)
                     html.Br(),
                     html.H4(
@@ -5955,35 +6110,46 @@ def tab6_layout():
                                     dcc.Graph(id='budapest-source-pie', figure=source_pie_initial),
                                     width=6,
                                     style={'marginTop': '30px'}
-                                ),                                
-                                
+                                ),
                             ]),
                         ],
                         style={'marginTop': '20px'}
                     ),
-                    # General Insights Section
-                    html.Div(
-                        id='budapest-general-insights',
-                        children=general_insights_initial,
-                        style={'padding': '10px'}
+                    # Calendar Heatmap Section in its own row
+                    dbc.Row(
+                        dbc.Col(
+                            dcc.Graph(
+                                id='calender_heatmap',
+                                figure=calender_heatmap_initial,
+                                style={'height': '850px'}
+                            ),
+                            width=12
+                        )
                     ),
                     # Full Details Section
                     html.Div(
                         [
-                            html.H1("Full Details:", className='mb-4', style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}),
+                            html.H1(
+                                "Full Details:",
+                                className='mb-4',
+                                style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}
+                            ),
                             html.Hr(),
                             dash_table.DataTable(
                                 id='budapest-table',
-                                columns=[
-                                    {"name": first_column_name_budapest, "id": first_column_name_budapest, "presentation": "markdown"}
-                                ] + [{"name": i, "id": i} for i in df_budapest.columns[1:]] if not df_budapest.empty else [],
+                                columns=(
+                                    [{"name": first_column_name_budapest, "id": first_column_name_budapest, "presentation": "markdown"}] +
+                                    [{"name": i, "id": i} for i in df_budapest.columns[1:]]
+                                ) if not df_budapest.empty else [],
                                 data=df_budapest.to_dict('records') if not df_budapest.empty else [],
                                 sort_action="native",
                                 filter_action="native",
                                 fixed_rows={'headers': True},
-                                style_table={'maxHeight': '500px',
-                                            'overflowX': 'auto',
-                                             'overflowY': 'auto'},
+                                style_table={
+                                    'maxHeight': '500px',
+                                    'overflowX': 'auto',
+                                    'overflowY': 'auto'
+                                },
                                 style_cell={
                                     'textAlign': 'center',
                                     'width': '100px',
@@ -6021,6 +6187,7 @@ def tab6_layout():
             )
         ]
     )
+
     
 
 @app.callback(
@@ -6040,13 +6207,14 @@ def tab6_layout():
         Output('budapest-bar-chart-weather', 'figure'),
         Output('budapest-bar-plot-logos', 'figure'),
         Output('budapest-source-pie','figure'),
-        Output('budapest-general-insights', 'children'),
+        Output('calender_heatmap', 'figure'),  # NEW OUTPUT for the heatmap figure
         Output('budapest-pie-chart', 'clickData'),
         Output('budapest-bar-chart-weather', 'clickData'),
         Output('budapest-bar-plot-logos', 'clickData'),
         Output('budapest-source-pie','clickData'),
+        Output('calender_heatmap', 'clickData'),
         Output('budapest-polygon-filter-active', 'data'),
-        Output('budapest-filtered-data','data'),   # <--- NEW OUTPUT to store the filtered df
+        Output('budapest-filtered-data','data'),
     ],
     [
         Input('budapest-pie-chart', 'clickData'),
@@ -6062,27 +6230,36 @@ def tab6_layout():
         Input('budapest-Camera_Tilt', 'value'),
         Input('budapest-Distance_Building', 'value'),
         Input('polygon_dropouts_budapest', "n_clicks"),
+        Input('calender_heatmap', 'clickData'),  # NEW INPUT for heatmap clicks
     ],
     [
         State('budapest-data','data'),
         State('budapest-polygon-filter-active', 'data'),
-        State('budapest-filtered-data', 'data'),  # <--- NEW STATE for the previously filtered df
-
-  # <--- NEW STATE for the previously filtered df
+        State('budapest-filtered-data', 'data'),
     ]
 )
 def handle_table_and_refresh_budapest(
-    pie_clickData, bar_weather_clickData,bar_clickData, pie2_clickData, 
+    pie_clickData, bar_weather_clickData, bar_clickData, pie2_clickData, 
     reset_clicks, update_clicks, duration_range,
     selected_terrain, selected_occluded, selected_VQ, selected_tilt, selected_distance,
-    budapest_polygon_button,
-    # States
-    original_data,budapest_polygon_active,stored_filtered_data
+    budapest_polygon_button, heatmap_clickData,  # NEW parameter
+    original_data, budapest_polygon_active, stored_filtered_data
 ):
 
     ctx = dash.callback_context
     triggered_id = ctx.triggered[0]['prop_id'] if ctx.triggered else None
 
+    if triggered_id != 'calender_heatmap.clickData':
+        heatmap_clickData = None
+    if triggered_id != 'budapest-bar-chart-weather.clickData':
+        bar_weather_clickData = None
+    if triggered_id != 'budapest-pie-chart.clickData':
+        pie_clickData = None    
+    if triggered_id != 'budapest-bar-plot-logos.clickData':
+        bar_clickData = None
+    if triggered_id != 'budapest-source-pie.clickData':
+        pie2_clickData = None    
+        
     if stored_filtered_data is not None and triggered_id != 'budapest-reset-btn.n_clicks':
         # Start from the previously filtered subset
         df_current = pd.DataFrame(stored_filtered_data)
@@ -6098,8 +6275,8 @@ def handle_table_and_refresh_budapest(
 
     # Compute or recompute Duration if needed
     if 'Duration' not in df_current.columns:
-        df_current['Duration'] = df_current['Finish Time'].apply(convert_to_minutes) - \
-                                 df_current['Start Time'].apply(convert_to_minutes)
+        df_current['Duration'] = df_current['Finish Time'].apply(calculate_duration) - \
+                                 df_current['Start Time'].apply(calculate_duration)
 
     markers_budapest = create_map_markers(df_current)
     
@@ -6111,17 +6288,12 @@ def handle_table_and_refresh_budapest(
     min_dur_budapest = df_current['Duration'].min()
     max_dur_budapest = df_current['Duration'].max()
 
-    # polygon_budapest should be globally defined or imported from somewhere
-    # for checking .contains(Point(row['Latitude'], row['Longitude']))
-
-    # ------------------------------------------------------------------------
-    # STEP 2: Handle each triggered event
-    # ------------------------------------------------------------------------
-
     # 2.1 "UPDATE" button - re-load from original source, but keep current filters
     if triggered_id == 'budapest-update.n_clicks' and update_clicks > 0:
         # Re-load data from your source
         df_updated = load_budapest_data()
+        df_updated['Comments'] = df_updated['Comments'].fillna("No Comment")  # Replace NaN with "No Comment"
+        df_updated = df_updated.dropna(subset=[col for col in df_updated.columns if col != 'Comments'])
         # Same prep steps (split coords, compute Duration, drop invalid coords, etc.)
         df_updated['Duration'] = df_updated['Finish Time'].apply(convert_to_minutes) - \
                                  df_updated['Start Time'].apply(convert_to_minutes)
@@ -6144,7 +6316,9 @@ def handle_table_and_refresh_budapest(
             pie_clickData=pie_clickData,
             pie_2_clickData=pie2_clickData,
             bar_2_clickData=bar_clickData,
-            budapest_polygon_active = budapest_polygon_active
+            budapest_polygon_active = budapest_polygon_active,
+            heatmap_clickData=heatmap_clickData  # pass the heatmap click data
+
         )
 
         # Create map markers
@@ -6154,11 +6328,12 @@ def handle_table_and_refresh_budapest(
             for _, row in filtered_df.iterrows()
             if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
         )
-
-        pre_out_budapest = round(((len(filtered_df)-count_within_budapest)/len(filtered_df) *100),2)   
-
-        record_count_text = f"Total Records: {len(filtered_df)},{pre_out_budapest} % out of polygon "
-
+        if count_within_budapest > 0:
+            pre_out_budapest = round(((len(filtered_df)-count_within_budapest)/len(filtered_df) *100),2)   
+            record_count_text = f"Total Records: {len(filtered_df)},{pre_out_budapest} % out of polygon "
+            
+        else:
+            record_count_text = f"Total Records: {len(filtered_df)}, 0.0 % out of polygon "
         original_data = filtered_df.copy()
     
         # Build / refresh graphs
@@ -6166,43 +6341,38 @@ def handle_table_and_refresh_budapest(
         updated_bar_weather = generate_interactive_bar_chart_weather_budapest(filtered_df)
         updated_bar_plot_logos = generate_interactive_bar_plot_2_budapest(filtered_df)
         updated_source_pie = generate_interactive_pie_chart_source(filtered_df)
+        updated_calendar_heatmap = plot_calendar_heatmap(filtered_df)  # NEW heatmap update
 
         # Build general insights
-        general_insights = build_general_insights_div(filtered_df)
 
         # Return and also store filtered data in 'budapest-filtered-data'
         return (
             filtered_df.to_dict('records'),
-            markers_budapest,  # map-layer - if you want the new markers, see below
+            markers_budapest,
             dash.no_update,  # Terrain
             dash.no_update,  # Occlusion
             dash.no_update,  # VQ
-            dash.no_update,  # Tilt
+            dash.no_update,  # Camera tilt
             dash.no_update,  # Distance building
             record_count_text,
             filtered_df['Duration'].min(),
             filtered_df['Duration'].max(),
-            duration_range,  # keep slider the same
+            duration_range,
             updated_pie,
             updated_bar_weather,
             updated_bar_plot_logos,
             updated_source_pie,
-            general_insights,
-            None, None, None, None,
+            updated_calendar_heatmap,  # NEW output: updated calendar heatmap
+            None, None, None, None,None,
             budapest_polygon_active,
-            filtered_df.to_dict('records'),  # <--- store updated data
+            filtered_df.to_dict('records')
         )
 
     elif triggered_id == 'polygon_dropouts_budapest.n_clicks' and budapest_polygon_button > 0:
         # Indicate that polygon filter is now active
         budapest_polygon_active = True
-
-        # Start from df_current and remove in-polygon points
         filtered_polygon = df_current.copy()
 
-        # Re-apply standard filters (duration, etc.) if needed
-        # (You can do it before or after removing in-polygon points, 
-        #  but typically you want them all together.)
         filtered_polygon = apply_all_filters3(
             df=filtered_polygon,
             duration_range=duration_range,
@@ -6215,7 +6385,9 @@ def handle_table_and_refresh_budapest(
             pie_clickData=pie_clickData,
             pie_2_clickData=pie2_clickData,
             bar_2_clickData=bar_clickData,
-            budapest_polygon_active = budapest_polygon_active # Because we'll remove them below
+            budapest_polygon_active = budapest_polygon_active,
+            heatmap_clickData=heatmap_clickData  # include heatmap click filter
+
         )
 
         # Now remove points *inside* the polygon
@@ -6234,9 +6406,9 @@ def handle_table_and_refresh_budapest(
         updated_bar_weather = generate_interactive_bar_chart_weather_budapest(filtered_polygon)
         updated_bar_plot_logos = generate_interactive_bar_plot_2_budapest(filtered_polygon)
         updated_source_pie = generate_interactive_pie_chart_source(filtered_polygon)  
+        updated_calendar_heatmap = plot_calendar_heatmap(filtered_polygon)  # update heatmap
 
         # Build general insights
-        general_insights = build_general_insights_div(filtered_polygon)
 
         record_count_text = f"Total Records: {len(filtered_polygon)}, 100% out of Polygon"
 
@@ -6256,18 +6428,22 @@ def handle_table_and_refresh_budapest(
             updated_bar_weather,
             updated_bar_plot_logos,
             updated_source_pie,
-            general_insights,
+            updated_calendar_heatmap,  # NEW output: calendar heatmap
             pie_clickData,
             bar_clickData,
             bar_weather_clickData,
             pie2_clickData,
+            heatmap_clickData,
             budapest_polygon_active,
-            filtered_polygon.to_dict('records'),  # <--- store the polygon-filtered df
+            filtered_polygon.to_dict('records')
         )
+        
     # 2.3 "RESET" button
     elif triggered_id == 'budapest-reset-btn.n_clicks':
         # Reset everything to the original data
         df_reset = load_budapest_data()
+        df_reset['Comments'] = df_reset['Comments'].fillna("No Comment")  # Replace NaN with "No Comment"
+        df_reset = df_reset.dropna(subset=[col for col in df_reset.columns if col != 'Comments'])
         # Same prep steps (split coords, compute Duration, drop invalid coords, etc.)
         df_reset['Duration'] = df_reset['Finish Time'].apply(convert_to_minutes) - \
                                  df_reset['Start Time'].apply(convert_to_minutes)
@@ -6286,20 +6462,22 @@ def handle_table_and_refresh_budapest(
             for _, row in df_reset.iterrows()
             if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
         )
+        if count_within_budapest > 0:
 
-        pre_out_budapest = round(((len(df_reset)-count_within_budapest)/len(df_reset) *100),2)   
+            pre_out_budapest = round(((len(df_reset)-count_within_budapest)/len(df_reset) *100),2)   
 
-        record_count_text = f"Total Records: {len(df_reset)},{pre_out_budapest} % out of polygon "
-
+            record_count_text = f"Total Records: {len(df_reset)},{pre_out_budapest} % out of polygon "
+        else:
+            record_count_text = f"Total Records: {len(df_reset)}, 0.0 % out of polygon "
 
         # Build graphs
         updated_pie = generate_interactive_pie_chart_budapest(df_reset)
         updated_bar_chart = generate_interactive_bar_chart_weather_budapest(df_reset)
         updated_bar_chart_2 = generate_interactive_bar_plot_2_budapest(df_reset)
         updated_pie_2 = generate_interactive_pie_chart_source(df_reset)
+        updated_calendar_heatmap = plot_calendar_heatmap(df_reset)  # update heatmap
 
         # General insights
-        general_insights = build_general_insights_div(df_reset)
 
         return (
             df_reset.to_dict('records'),
@@ -6317,10 +6495,10 @@ def handle_table_and_refresh_budapest(
             updated_bar_chart,
             updated_bar_chart_2,
             updated_pie_2,
-            general_insights,
-            None, None, None, None,
+            updated_calendar_heatmap,  # NEW output: calendar heatmap
+            None, None, None, None,None,
             budapest_polygon_active,
-            df_reset.to_dict('records')  ,  # <--- store data as None or the full df again, your choice
+            df_reset.to_dict('records')
         )
 
     # 2.4 DEFAULT branch: user changed dropdowns, slider, or clicked bar/pie but not polygon filter
@@ -6338,7 +6516,8 @@ def handle_table_and_refresh_budapest(
             pie_clickData=pie_clickData,
             pie_2_clickData=pie2_clickData,
             bar_2_clickData=bar_clickData,
-            budapest_polygon_active=budapest_polygon_active
+            budapest_polygon_active=budapest_polygon_active,
+            heatmap_clickData=heatmap_clickData  # include heatmap filtering
         )
 
 
@@ -6367,9 +6546,9 @@ def handle_table_and_refresh_budapest(
         updated_bar_weather = generate_interactive_bar_chart_weather_budapest(filtered_df)
         updated_bar_plot_logos = generate_interactive_bar_plot_2_budapest(filtered_df)
         updated_source_pie = generate_interactive_pie_chart_source(filtered_df)  
+        updated_calendar_heatmap = plot_calendar_heatmap(filtered_df)  # update heatmap
 
         # Insights
-        general_insights = build_general_insights_div(filtered_df)
 
         return (
             filtered_df.to_dict('records'),
@@ -6387,13 +6566,14 @@ def handle_table_and_refresh_budapest(
             updated_bar_weather,
             updated_bar_plot_logos,
             updated_source_pie,
-            general_insights,
+            updated_calendar_heatmap,  # NEW output: calendar heatmap
             pie_clickData,
             bar_clickData,
             bar_weather_clickData,
             pie2_clickData,
+            heatmap_clickData,
             budapest_polygon_active,
-            filtered_df.to_dict('records'),  # <--- store final filtered df
+            filtered_df.to_dict('records')
         )
            
 app.layout = html.Div(
