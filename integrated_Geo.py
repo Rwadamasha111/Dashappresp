@@ -5884,7 +5884,7 @@ if not df_budapest.empty:
         fig.update_layout(
             yaxis=dict(
                 tickmode='linear',
-                range=[2010, 2026],
+                range=[df['Video upload date'].dt.year.min() - 1, df['Video upload date'].dt.year.max() + 1],
                 dtick=1,
                 title_font=dict(size=24, family="Arial", color="black", weight="bold"),
                 tickfont=dict(size=24, family="Arial", color="black", weight="bold")
