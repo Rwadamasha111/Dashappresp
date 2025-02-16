@@ -4530,24 +4530,8 @@ def load_milan_data():
         print("No data found for Milan.")
         df_milan = pd.DataFrame()
         
-    SHEET_ID_Naples = '1NdmXJluL5VrDj28d6iHV58LvkK5Gvly3_MYH1eBJeIQ'
-    RANGE_Naples = 'Naples!A1:S150'
 
-    # Access the Google Sheet for Naples
-    result_nap = sheet.values().get(spreadsheetId=SHEET_ID_Naples, range=RANGE_Naples).execute()
-    values_nap = result_nap.get('values', [])
-
-    # Convert the data to a pandas DataFrame
-    if values_nap:
-        headers_n = values_nap[0]  # Assuming the first row is the header
-        data_n = values_nap[1:]    # Rest is the data
-        df_Naples = pd.DataFrame(data_n, columns=headers_n)
-    else:
-        print("No data found for Naples.")
-        df_Naples = pd.DataFrame()        
-    
-    df_italy = pd.concat([df_milan,df_Naples],ignore_index=True)
-    return df_italy
+    return df_milan
 
 # Load the full DataFrame
 df_milan_full = load_milan_data()
@@ -4666,25 +4650,9 @@ if not df_milan.empty:
         if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
     )
 
-    global naples_polygon
-    global polygon_naples
-    
-    file_path_pm= 'naples_coord.txt'
-    
-    naples_polygon =[]
-    with open (file_path_pm, "r") as file:
-        for line in file:
-            match = re.findall(r"[-+]?\d*\.\d+", line)  # Extract floating point numbers
-            if match:
-                naples_polygon.append([float(match[0]), float(match[1])]) 
-    polygon_naples = Polygon(naples_polygon)
-    count_within_naples = sum(
-        polygon_naples.contains(Point(row['Latitude'], row['Longitude']))
-        for _, row in df_milan.iterrows()
-        if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])
-    )
 
-    pre_out_milan = round(((len(df_milan)-count_within_milan-count_within_naples)/len(df_milan) *100),2)   
+
+    pre_out_milan = round(((len(df_milan)-count_within_milan)/len(df_milan) *100),2)   
      
     def generate_interactive_bar_plot_2_milan(df):
             source_counts = df['Logos and text'].value_counts().reset_index()
@@ -4914,17 +4882,6 @@ def tab5_layout():
                                                     positions=milan_polygon,
                                                     color="blue",
                                                     fillColor="cyan",
-                                                    fillOpacity=0.6,
-                                                )
-                                            ]
-                                        ),
-                                        dl.LayerGroup(
-                                            id="polygon-layer_naples",
-                                            children=[
-                                                dl.Polygon(
-                                                    positions=naples_polygon,
-                                                    color="blue",
-                                                    fillColor="purple",
                                                     fillOpacity=0.6,
                                                 )
                                             ]
@@ -6593,4 +6550,4 @@ app.layout = html.Div(
 )
 
 if __name__ == '__main__':
-    app.run_server(host='100.118.47.56', port=8050, debug=True)
+    app.run_server(host='100.118.47.56', port=8051, debug=True)
