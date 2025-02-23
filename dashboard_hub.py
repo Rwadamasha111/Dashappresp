@@ -50,9 +50,14 @@ drive_service = build('drive', 'v3', credentials=creds)
 # Define color maps
 color_map_city = {
     'Youtube': 'rgb(255,0,0)',
-    'tiktok': 'rgb(255,182,193)',
+    'TikTok': 'rgb(255,182,193)',
+    'Tik Tok': 'rgb(255,182,193)',
     'facebook': 'rgb(30,144,255)',
-    'other': 'rgb(112,128,144)'
+    'Facebook': 'rgb(30,144,255)',
+    'other': 'rgb(112,128,144)',
+    'Instegram': 'rgb(112,128,144)',
+    'Instagram': 'green',
+    
 }
 color_map2_city = {
     'Night Time': 'rgb(1, 1, 1)',      # Black
@@ -65,6 +70,13 @@ color_map3_city = {
     'Fog or Smoke': 'rgb(128,128,128)'
 }
 
+color_map4_city = {
+    'Prominent' : 'rgb(236, 255, 0)',
+    'None': 'rgb(255,250,250)',
+    'slight': 'rgb(135,206,235)'
+}
+
+
 # Define background style
 background_style_city = {
     "background-size": "cover",
@@ -73,6 +85,98 @@ background_style_city = {
     "padding": "10px",
     "background-color": 'black',
 }
+# Common styles
+container_style = {
+    "background-color": "black",
+    "border-radius": "50px",
+    "padding": "15px",
+    "box-shadow": "0px 8px 20px rgba(0, 0, 0, 0.3)",
+    "width": "100%",
+    "max-width": "1600px",
+    "margin": "0 auto",
+}
+background_style = {
+    "background-size": "cover",
+    "background-color": 'black',
+    "background-position": "center",
+    "height": "200vh",
+    "padding": "10px",
+}
+
+button_style_city = {
+    "width": "50%",
+    "height": "60px",
+    "margin": "30px",
+    "background-color": 'yellow',
+    "border": "2px solid white",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "black",
+    "borderRadius": "50px",
+}
+
+button_dropouts = {
+    "width": "50%",
+    "height": "60px",
+    "margin": "-50px 0px 0px 850px",
+    "background-color": 'black',
+    "border": "2px solid white",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "white",
+    "borderRadius": "50px",    
+}
+
+button_style15 = {
+    "width": "150%",
+    "height": "60px",
+    "margin": "30px",
+    "background-color": 'white',
+    "border": "2px solid white",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "rgb(255,51,153)",
+    "borderRadius": "50px",   
+}
+button_polygon = {
+    "width": "15%",
+    "height": "60px",
+    "margin": "-50px 0px 0px 850px",
+    "background-color": 'blue',
+    "border": "2px solid white",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "white",     
+    "borderRadius": "50px",  
+}
+font_style = {
+    "color": "white",
+    "size": "25px",
+    'font-weight': 'bold'
+}
+tab_style = {
+    'background-color': 'black',
+    'color': 'rgb(255,51,153)',
+    'font-size': '24px',
+}
+selected_tab_style = {
+    'background-color': 'gray',
+    'color': 'rgb(255,51,153)',
+    'font-size': '24px',
+    'padding': '10px',
+    'font-weight': 'bold'
+}
+# Function to load a city's data from Google Sheets
+def load_city(sheet_id, sheet_range):
+    result = sheet.values().get(spreadsheetId=sheet_id, range=sheet_range).execute()
+    values = result.get('values', [])
+    if values:
+        headers = values[0]
+        data = values[1:]
+        df_city = pd.DataFrame(data, columns=headers)
+    else:
+        df_city = pd.DataFrame()
+    return df_city
 
 def convert_to_minutes(duration):
     try:
@@ -112,6 +216,7 @@ def calculate_duration(row):
         print(f"Error parsing row: {e}")
         return None
 
+
 def apply_all_filters2(
     df,
     duration_range,
@@ -124,6 +229,7 @@ def apply_all_filters2(
     pie_clickData,
     pie_2_clickData,
     bar_2_clickData,
+    polygon_active
 ):
     # Ensure the Duration column exists
     if 'Duration' not in df.columns and 'Finish Time' in df.columns and 'Start Time' in df.columns:
@@ -189,7 +295,7 @@ def generate_interactive_bar_plot_2_city(df):
         x='Logos and text', 
         y='Count', 
         color='Logos and text', 
-        color_discrete_map=color_map2_city,
+        color_discrete_map=color_map4_city,
         title='Logos and text Distribution'
     )
     fig.update_traces(
@@ -331,76 +437,6 @@ def generate_interactive_pie_chart_source(df):
     )
     return fig
 
-# Common styles
-container_style = {
-    "background-color": "black",
-    "border-radius": "50px",
-    "padding": "15px",
-    "box-shadow": "0px 8px 20px rgba(0, 0, 0, 0.3)",
-    "width": "100%",
-    "max-width": "1600px",
-    "margin": "0 auto",
-}
-background_style = {
-    "background-size": "cover",
-    "background-color": 'black',
-    "background-position": "center",
-    "height": "200vh",
-    "padding": "10px",
-}
-
-button_style_city = {
-    "width": "50%",
-    "height": "60px",
-    "margin": "30px",
-    "background-color": 'yellow',
-    "border": "2px solid white",
-    "display": "block",
-    "font-weight": "bold",
-    "color": "black",
-    "borderRadius": "50px",
-}
-
-button_style15 = {
-    "width": "150%",
-    "height": "60px",
-    "margin": "30px",
-    "background-color": 'white',
-    "border": "2px solid white",
-    "display": "block",
-    "font-weight": "bold",
-    "color": "rgb(255,51,153)",
-    "borderRadius": "50px",   
-}
-button_polygon = {
-    "width": "15%",
-    "height": "60px",
-    "margin": "-50px 0px 0px 850px",
-    "background-color": 'blue',
-    "border": "2px solid white",
-    "display": "block",
-    "font-weight": "bold",
-    "color": "white",     
-    "borderRadius": "50px",  
-}
-font_style = {
-    "color": "white",
-    "size": "25px",
-    'font-weight': 'bold'
-}
-tab_style = {
-    'background-color': 'black',
-    'color': 'rgb(255,51,153)',
-    'font-size': '24px',
-}
-selected_tab_style = {
-    'background-color': 'gray',
-    'color': 'rgb(255,51,153)',
-    'font-size': '24px',
-    'padding': '10px',
-    'font-weight': 'bold'
-}
-
 def city_load_data():
     SHEET_ID = '1Svc-2iK5wvHFicmBZHoOxqf5iajdg57ntilgR_cM3ZE'
     RANGE = 'Cities!A1:E300'
@@ -451,7 +487,8 @@ def tab_layout():
             ), 
             dcc.Store(id='data', data=None),
             dcc.Store(id='current-city-data', data=None),
-            dcc.Store(id='filtered-city-data', data=None),
+            dcc.Store('polygon_drop_active',data=False),
+            dcc.Store(id='polygon-coords-store', data=None),
             dcc.Store(id='reset_button_clicked', data=False),
             dbc.Container(
                 style=container_style,
@@ -535,6 +572,16 @@ def tab_layout():
                         children="Total Records: 0",
                         style={'textAlign': 'left', 'fontWeight': 'bold', 'marginTop': '0', 'color': 'rgb(255,51,153)'}
                     ),
+                    dbc.Col(
+                        dbc.Button(
+                            "Show Dropouts",
+                            id='dropouts',
+                            color='primary',
+                            n_clicks=0,
+                            style=button_dropouts
+                        ),
+                        width=4
+                    ),                      
                     html.Br(),
                     html.H4("Filter by Video Duration (seconds):", className='mb-1', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),
                     dbc.Row([
@@ -552,13 +599,20 @@ def tab_layout():
                         )
                     ], justify="left"),
                     html.Div([
-                        html.H4("Graphical Analysis", className='mb-3', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),
-                        dbc.Row([
-                            dbc.Col(dcc.Graph(id='pie-chart', figure={}), width=6),
-                            dbc.Col(dcc.Graph(id='bar-chart-weather', figure={}), width=6),
-                            dbc.Col(dcc.Graph(id='bar-plot-logos', figure={}), width=6),
-                            dbc.Col(dcc.Graph(id='source-pie', figure={}), width=6),
-                        ]),
+                        html.H4("Graphical Analysis", className='mb-3', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),      
+                        html.Div(
+                            id="graphs-container",
+                            style={"display": "none"},  # Hides the container initially
+                            children=[
+                                dbc.Row([
+                                    dbc.Col(dcc.Graph(id='pie-chart', figure={}), width=6),
+                                    dbc.Col(dcc.Graph(id='bar-chart-weather', figure={}), width=6),
+                                    dbc.Col(dcc.Graph(id='bar-plot-logos', figure={}), width=6),
+                                    dbc.Col(dcc.Graph(id='source-pie', figure={}), width=6),
+                                ]),
+                            ],
+                            # You can also give it extra styling as needed
+                        ),
                     ], style={'marginTop': '20px'}),
                     html.Div([
                         html.H1("Full Details:", className='mb-4', style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}),
@@ -592,41 +646,8 @@ def tab_layout():
         ]
     )
 
-# Function to load a city's data from Google Sheets
-def load_city(sheet_id, sheet_range):
-    result = sheet.values().get(spreadsheetId=sheet_id, range=sheet_range).execute()
-    values = result.get('values', [])
-    if values:
-        headers = values[0]
-        data = values[1:]
-        df_city = pd.DataFrame(data, columns=headers)
-    else:
-        df_city = pd.DataFrame()
-    return df_city
 
-def load_polygon_df ():
-    SHEET_ID_barcelona = '1FZ9i73t915Q3W73QMaQNG7Qn6xa-YahLvV9xMXyLQMw'
-    RANGE_barcelona = 'Polygons!A1:B10000'
 
-    try:
-        # Access the Google Sheet for Barcelona
-        result = sheet.values().get(spreadsheetId=SHEET_ID_barcelona, range=RANGE_barcelona).execute()
-        values = result.get('values', [])
-
-        # Convert the data to a pandas DataFrame
-        if values:
-            headers = values[0]  # Assuming the first row is the header
-            data = values[1:]    # Rest is the data
-            df_pol = pd.DataFrame(data, columns=headers)
-        else:
-            print("No data found for Barcelona.")
-            df_pol = pd.DataFrame()
-
-        return df_pol
-    
-    except Exception as e:
-        print(f"Error loading data: {e}")
-        return pd.DataFrame()
     
 @app.callback(
     [Output('map', 'center'),
@@ -658,7 +679,10 @@ def load_polygon_df ():
      Output('table', 'data'),
      Output('table', 'columns'),
      Output('current-city-data','data'),
-     Output('reset_button_clicked','data')
+     Output('reset_button_clicked','data'),
+     Output('graphs-container', 'style'),
+     Output('polygon_drop_active','data'),
+     Output('polygon-coords-store', 'data')
     ],
     [Input('city-filter-btn', 'n_clicks'),
      Input('city_filter', "value"),
@@ -672,21 +696,27 @@ def load_polygon_df ():
      Input('Occlusion', 'value'),
      Input('VQ', 'value'),
      Input('Camera_Tilt', 'value'),
-     Input('Distance_Building', 'value')],
+     Input('Distance_Building', 'value'),
+     Input('dropouts','n_clicks')],
     [State('current-city-data','data'),
-     State('reset_button_clicked','data')]
+     State('reset_button_clicked','data'),
+     State('polygon_drop_active','data'),
+     State('polygon-coords-store', 'data')
+
+     ]
 )
 def load_dashboards(load_btn, selected_city, update, pie_clickData, 
                     bar_weather_clickData, bar_clickData, pie2_clickData, duration_range,
                     selected_terrain, selected_occluded, selected_VQ, selected_tilt, selected_distance,
-                    current_data, reset_clicked):
+                    pol_drop,current_data, reset_clicked,polygon_active,polygon_coords_store):
     global polygon_coordinates
     ctx = dash.callback_context
     triggered_id = ctx.triggered[0]['prop_id'] if ctx.triggered else None
+    polygon_coords = polygon_coords_store  # read from store if not None
 
     # Fix #1: Do nothing if the city drop-down (city_filter) is changed without clicking the Load button.
     if triggered_id and triggered_id.startswith('city_filter'):
-        return (dash.no_update,) * 30
+        return (dash.no_update,) * 33
 
     if triggered_id != 'pie-chart.clickData':
         pie_clickData = None
@@ -807,7 +837,10 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             df_city.to_dict('records'),
             table_columns,
             df_city.to_dict('records'),
-            reset_clicked
+            reset_clicked,
+            {"display": "block"},
+            polygon_active,
+            polygon_coordinates
         )
         
     elif triggered_id == 'update.n_clicks':
@@ -893,8 +926,101 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             df_updated.to_dict('records'),
             table_columns,
             df_updated.to_dict('records'),
-            reset_clicked
+            reset_clicked,
+            {"display": "block"},
+            polygon_active,
+            dash.no_update
         )
+    elif triggered_id == 'dropouts.n_clicks' and pol_drop > 0:
+                filtered_polygon = pd.DataFrame(current_data)
+                polygon_active =True
+                filtered_polygon = apply_all_filters2(
+                    df=filtered_polygon,
+                    duration_range=duration_range,
+                    selected_terrain=selected_terrain,
+                    selected_occluded=selected_occluded,
+                    selected_VQ=selected_VQ,
+                    selected_tilt=selected_tilt,
+                    selected_distance=selected_distance,
+                    bar_weather_clickData=bar_weather_clickData,
+                    pie_clickData=pie_clickData,
+                    pie_2_clickData=pie2_clickData,
+                    bar_2_clickData=bar_clickData,
+                    polygon_active = polygon_active
+                )
+                if 'Coordinates' in filtered_polygon.columns:
+                    filtered_polygon = filtered_polygon[filtered_polygon['Coordinates'].str.contains(',', na=False)]
+                    temp = filtered_polygon['Coordinates'].str.split(',', n=1, expand=True)
+                    filtered_polygon['Latitude'] = pd.to_numeric(temp[0], errors='coerce')
+                    filtered_polygon['Longitude'] = pd.to_numeric(temp[1], errors='coerce')
+                    
+
+                else:
+                    city_markers = []
+                city_polygon = Polygon(polygon_coords)
+                # Now remove points *inside* the polygon
+                filtered_polygon = filtered_polygon[
+                    ~filtered_polygon.apply(
+                        lambda row: city_polygon.contains(Point(row['Latitude'], row['Longitude'])), 
+                        axis=1
+                    )
+                ]
+                city_markers = create_map_markers(filtered_polygon)                
+                
+                # Generate charts and markers for the filtered DataFrame
+                city_logos_bar = generate_interactive_bar_plot_2_city(filtered_polygon)
+                city_time_of_day_pie = generate_interactive_pie_chart_city(filtered_polygon)
+                city_weather_bar = generate_interactive_bar_chart_weather_city(filtered_polygon)
+                city_source_pie = generate_interactive_pie_chart_source(filtered_polygon)
+
+
+                if 'Duration' not in filtered_polygon.columns:
+                    filtered_polygon['Duration'] = filtered_polygon['Finish Time'].apply(convert_to_minutes) - filtered_polygon['Start Time'].apply(convert_to_minutes)
+                filtered_polygon.dropna(subset=['Latitude', 'Longitude'], inplace=True)
+                min_dur = filtered_polygon['Duration'].min() if not filtered_polygon['Duration'].empty else 0
+                max_dur = filtered_polygon['Duration'].max() if not filtered_polygon['Duration'].empty else 100
+                record_count = f"Total Records: {len(filtered_polygon)} , 100 % out of Polygon"
+                if city_markers:
+                    random_marker = random.choice(city_markers)
+                    map_center = random_marker.position
+                else:
+                    map_center = (41.9028, 12.4964)
+                            
+                return (
+                    map_center,
+                    city_markers,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    record_count,
+                    min_dur,
+                    max_dur,
+                    [min_dur, max_dur],
+                    city_time_of_day_pie,
+                    city_weather_bar,
+                    city_logos_bar,
+                    city_source_pie,
+                    pie_clickData,
+                    bar_clickData,
+                    bar_weather_clickData,
+                    pie2_clickData,
+                    dash.no_update,
+                    filtered_polygon.to_dict('records'),
+                    dash.no_update,
+                    filtered_polygon.to_dict('records'),
+                    reset_clicked,
+                    {"display": "block"},
+                    polygon_active,
+                    dash.no_update
+                )
     else:
         # --- Filtering branch: Use current data as baseline ---
         reset_clicked = False
@@ -911,7 +1037,7 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             with open(file_path, "r") as file:
                 polygon_data = json.load(file)
             polygon_coordinates = [tuple(coord) for coord in polygon_data]
-            city_polygon = Polygon(polygon_coordinates)
+            city_polygon = Polygon(polygon_coords)
             polygon_layer = dl.LayerGroup(
                 id="polygon-layer",
                 children=[dl.Polygon(
@@ -989,11 +1115,16 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 df_current.to_dict('records'),
                 table_columns,
                 df_current.to_dict('records'),
-                reset_clicked
+                reset_clicked,
+                {"display": "block"},
+                polygon_active,
+                dash.no_update
+ 
             )
         else:
             reset_clicked = False
             df_filtered = pd.DataFrame(current_data)
+
             filtered_df = apply_all_filters2(
                 df=df_filtered,
                 duration_range=duration_range,
@@ -1006,7 +1137,9 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 pie_clickData=pie_clickData,
                 pie_2_clickData=pie2_clickData,
                 bar_2_clickData=bar_clickData,
+                polygon_active = polygon_active
             )
+                
             # Generate charts and markers for the filtered DataFrame
             city_logos_bar = generate_interactive_bar_plot_2_city(filtered_df)
             city_time_of_day_pie = generate_interactive_pie_chart_city(filtered_df)
@@ -1022,8 +1155,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 city_markers = []
             city_polygon = Polygon(polygon_coordinates)
             count_within = sum(city_polygon.contains(Point(row['Latitude'], row['Longitude']))
-                               for _, row in filtered_df.iterrows()
-                               if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude']))
+                            for _, row in filtered_df.iterrows()
+                            if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude']))
             pre_out_city = round(((len(filtered_df) - count_within) / len(filtered_df) * 100), 2)
             if 'Duration' not in filtered_df.columns:
                 filtered_df['Duration'] = filtered_df['Finish Time'].apply(convert_to_minutes) - filtered_df['Start Time'].apply(convert_to_minutes)
@@ -1067,9 +1200,11 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 filtered_df.to_dict('records'),
                 dash.no_update,
                 filtered_df.to_dict('records'),
-                reset_clicked
+                reset_clicked,
+                {"display": "block"},
+                polygon_active,
+                dash.no_update
             )
-
 
 app.layout = html.Div(
     [
