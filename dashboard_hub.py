@@ -91,8 +91,8 @@ container_style = {
     "border-radius": "50px",
     "padding": "15px",
     "box-shadow": "0px 8px 20px rgba(0, 0, 0, 0.3)",
-    "width": "100%",
-    "max-width": "1600px",
+    "width": "150%",
+    "max-width": "1800px",
     "margin": "0 auto",
 }
 background_style = {
@@ -116,9 +116,9 @@ button_style_city = {
 }
 
 button_dropouts = {
-    "width": "50%",
+    "width": "30%",
     "height": "60px",
-    "margin": "-50px 0px 0px 850px",
+    "margin": "-50px 0px 0px 1100px",
     "background-color": 'black',
     "border": "2px solid white",
     "display": "block",
@@ -128,9 +128,9 @@ button_dropouts = {
 }
 
 button_style15 = {
-    "width": "150%",
+    "width": "120%",
     "height": "60px",
-    "margin": "30px",
+    "margin": "20px",
     "background-color": 'white',
     "border": "2px solid white",
     "display": "block",
@@ -290,19 +290,25 @@ def create_map_markers(df):
 def generate_interactive_bar_plot_2_city(df):
     source_counts = df['Logos and text'].value_counts().reset_index()
     source_counts.columns = ['Logos and text', 'Count']
+    source_counts['Percentage'] = (source_counts['Count'] / source_counts['Count'].sum()) * 100
+    
     fig = px.bar(
         source_counts, 
         x='Logos and text', 
         y='Count', 
         color='Logos and text', 
         color_discrete_map=color_map4_city,
-        title='Logos and text Distribution'
+        title='Logos and text Distribution',
+        text=source_counts['Percentage'].apply(lambda x: f'{x:.2f}%')  # Adding percentage labels
     )
+    
     fig.update_traces(
         marker_line_width=1.5, 
-        hovertemplate="Count: %{y}", 
+        hovertemplate="Count: %{y}<br>Percentage: %{text}", 
+        textposition='outside',
         textfont=dict(size=22)
     )
+    
     fig.update_layout(
         xaxis_title="Logos and text", 
         yaxis_title="Count", 
@@ -320,15 +326,18 @@ def generate_interactive_bar_plot_2_city(df):
             tickfont=dict(color='white')
         ),
         yaxis=dict(
-            color='white',
+            color='yellow',
             gridcolor='gray',
             zerolinecolor='gray',
             title_font=dict(color='white'),
-            tickfont=dict(color='white')
+            tickfont=dict(color='white'),
+            range=[source_counts['Count'].min(), 1.10*(source_counts['Count'].max())]
         ),
         hoverlabel=dict(font=dict(size=24, color='white'))
     )
+    
     return fig
+
 
 def generate_interactive_pie_chart_city(df):
     tod_counts = df['Time of the day'].value_counts().reset_index()
@@ -339,11 +348,11 @@ def generate_interactive_pie_chart_city(df):
         values='Count',
         color='Time of the day',
         color_discrete_map=color_map2_city,
-        title='Time of the day'
+        title='Time'
     )
     fig.update_traces(
         marker=dict(line=dict(color='white', width=2)),
-        textinfo='label',
+        textinfo='label+percent',
         textfont=dict(color='yellow', size=22)
     )
     fig.update_layout(
@@ -358,9 +367,13 @@ def generate_interactive_pie_chart_city(df):
     )
     return fig
 
+import plotly.express as px
+
 def generate_interactive_bar_chart_weather_city(df):
     weather_counts = df['Weather'].value_counts().reset_index()
     weather_counts.columns = ['Weather', 'Count']
+    weather_counts['Percentage'] = (weather_counts['Count'] / weather_counts['Count'].sum()) * 100
+    
     fig = px.bar(
         weather_counts,
         y='Weather',
@@ -368,13 +381,17 @@ def generate_interactive_bar_chart_weather_city(df):
         orientation='h',
         color='Weather',
         color_discrete_map=color_map3_city,
-        title='Weather'
+        title='Weather',
+        text=weather_counts['Percentage'].apply(lambda x: f'{x:.2f}%')  # Adding percentage labels
     )
+    
     fig.update_traces(
         marker_line_width=1.5,
-        hovertemplate="Count: %{x}",
+        hovertemplate="Count: %{x}<br>Percentage: %{text}",
+        textposition='outside',
         textfont=dict(size=22)
     )
+    
     fig.update_layout(
         xaxis_title="Count",
         yaxis_title="Weather",
@@ -385,11 +402,12 @@ def generate_interactive_bar_chart_weather_city(df):
         paper_bgcolor='black',
         title_font=dict(color='white', size=24),
         xaxis=dict(
-            color='white',
+            color='yellow',
             gridcolor='gray',
             zerolinecolor='gray',
             title_font=dict(color='white'),
-            tickfont=dict(color='white')
+            tickfont=dict(color='white'),
+            range=[0, 1.25*(weather_counts['Count'].max())]  # Adjusted range calculation
         ),
         yaxis=dict(
             color='white',
@@ -401,7 +419,11 @@ def generate_interactive_bar_chart_weather_city(df):
         margin=dict(t=40, b=20, l=0, r=0),
         hoverlabel=dict(font=dict(size=24, color='white'))
     )
+    
     return fig
+
+
+import plotly.express as px
 
 def generate_interactive_pie_chart_source(df):
     color_map = {
@@ -410,21 +432,25 @@ def generate_interactive_pie_chart_source(df):
         'not found': '#DC143C',
         'irrelevant': '#00FFFF'
     }
+    
     source_counts = df['Source'].value_counts().reset_index()
     source_counts.columns = ['Source', 'Count']
+    
     fig = px.pie(
         source_counts,
         names='Source',
         values='Count',
         color='Source',
-        color_discrete_map=color_map_city,
+        color_discrete_map=color_map,
         title='Source Distribution'
     )
+    
     fig.update_traces(
         marker=dict(line=dict(color='white', width=2)),
-        textinfo='label',
+        textinfo='label+percent',  # Added percent here
         textfont=dict(color='yellow', size=22)
     )
+    
     fig.update_layout(
         showlegend=False,
         hovermode="x unified",
@@ -435,7 +461,9 @@ def generate_interactive_pie_chart_source(df):
         title_font=dict(color='white', size=24),
         hoverlabel=dict(font=dict(size=24, color='white'))
     )
+    
     return fig
+
 
 def city_load_data():
     SHEET_ID = '1Svc-2iK5wvHFicmBZHoOxqf5iajdg57ntilgR_cM3ZE'
@@ -487,9 +515,10 @@ def tab_layout():
             ), 
             dcc.Store(id='data', data=None),
             dcc.Store(id='current-city-data', data=None),
-            dcc.Store('polygon_drop_active',data=False),
+            dcc.Store('polygon_drop_active', data=False),
             dcc.Store(id='polygon-coords-store', data=None),
             dcc.Store(id='reset_button_clicked', data=False),
+
             dbc.Container(
                 style=container_style,
                 children=[
@@ -501,7 +530,6 @@ def tab_layout():
                     ),
                     dbc.Row([
                         dbc.Col([
-                            # Assign an id "map" so we can update its center dynamically.
                             dl.Map(
                                 id='map',
                                 children=[
@@ -509,7 +537,7 @@ def tab_layout():
                                     dl.LayerGroup(id="map-layer", children=[]),
                                     dl.LayerGroup(id="polygon-layer", children=[]),
                                 ],
-                                center=(41.9028, 12.4964),  # default center (Rome)
+                                center=(41.9028, 12.4964),  
                                 zoom=10,
                                 style={"width": "100%", "height": "500px", "margin": "6px"}
                             ),
@@ -547,30 +575,76 @@ def tab_layout():
                                     width=4
                                 )  
                             ])
-                        ], width=8),                 
+                        ], width=7),                 
+                        
                         dbc.Col([
-                            html.Div([
-                                html.H4("Filters", className='mb-3', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),
-                                dbc.Label("Terrain Filtering:", style=font_style),
-                                dcc.Dropdown(id='Terrain', options=[], value=None, className="form-control mb-2"),
-                                dbc.Label("Camera Tilt Filtering:", style=font_style),
-                                dcc.Dropdown(id='Camera_Tilt', options=[], value=None, className="form-control mb-2"),
-                                dbc.Label("Occlusion Filtering:", style=font_style),
-                                dcc.Dropdown(id='Occlusion', options=[], value=None, className="form-control mb-2"),
-                                dbc.Label("Video Quality Filtering:", style=font_style),
-                                dcc.Dropdown(id='VQ', options=[], value=None, className="form-control mb-2"),
-                                dbc.Label("Distance Filtering:", style=font_style),
-                                dcc.Dropdown(id='Distance_Building', options=[], value=None, className="form-control mb-2"),
-                                dbc.Row([
-                                    dbc.Col(dbc.Button("Update DB & Reset Filters", id='update', color='primary', n_clicks=0, style=button_style15), width="auto"),
-                                ]),
-                            ], style={"marginBottom": "30px"}),
-                        ], width=4),
+                            dbc.Row([
+                                dbc.Col([
+                                    html.Div([
+                                        html.H4("Filters", className='mb-3', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),
+                                        dbc.Label("Terrain Filtering:", style=font_style),
+                                        dcc.Dropdown(id='Terrain', options=[], value=None, className="form-control mb-2"),
+                                        dbc.Label("Camera Tilt Filtering:", style=font_style),
+                                        dcc.Dropdown(id='Camera_Tilt', options=[], value=None, className="form-control mb-2"),
+                                        dbc.Label("Occlusion Filtering:", style=font_style),
+                                        dcc.Dropdown(id='Occlusion', options=[], value=None, className="form-control mb-2"),
+                                        dbc.Label("Video Quality Filtering:", style=font_style),
+                                        dcc.Dropdown(id='VQ', options=[], value=None, className="form-control mb-2"),
+                                        dbc.Label("Distance Filtering:", style=font_style),
+                                        dcc.Dropdown(id='Distance_Building', options=[], value=None, className="form-control mb-2"),
+                                        dbc.Row([
+                                            dbc.Col(dbc.Button("Update DB & Reset Filters", id='update', color='primary', n_clicks=0, style=button_style15), width="auto"),
+                                        ]),
+                                    ], style={"marginBottom": "30px"}),
+                                ], width=6),
+
+                                dbc.Col([
+                                    html.Div([
+                                        html.H4("Filter/City Comparison:", className='mb-4', style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}),
+                                        html.Br(),
+                                        dash_table.DataTable(
+                                            id='filter_comp',
+                                            columns=[
+                                                {"name": "Filter", "id": "Filter"},
+                                                {"name": "City", "id": "City"},
+                                                {"name": "Percentage", "id": "Percentage"},
+                                            ],
+                                            data=[],
+                                            sort_action="native",
+                                            filter_action="native",
+                                            fixed_rows={'headers': True},
+                                            style_table={'maxHeight': '500px', 'overflowX': 'auto', 'overflowY': 'auto'},
+                                            style_cell={
+                                                'textAlign': 'center',
+                                                'width': '30px',
+                                                'maxWidth': '30px',
+                                                'whiteSpace': 'nowrap',
+                                                'overflow': 'hidden',
+                                                'textOverflow': 'ellipsis',
+                                            },
+                                            style_header={
+                                                'backgroundColor': 'rgb(30, 30, 30)',
+                                                'color': 'white',
+                                                'fontWeight': 'bold',
+                                            },
+                                            style_data_conditional=[]
+                                        ),
+                                    ]),  
+                                ], width=6),
+                            ])
+                        ], width=5),
                     ]),
+                    
                     html.H1(
                         id='record-count',
                         children="Total Records: 0",
-                        style={'textAlign': 'left', 'fontWeight': 'bold', 'marginTop': '0', 'color': 'rgb(255,51,153)'}
+                        style={'textAlign': 'center', 'fontWeight': 'bold', 'marginTop': '0', 'color': 'rgb(255,51,153)'}
+                    ),
+                    html.Br(),
+                    html.H2(
+                        id='drop-pre',
+                        children=f"0% out of Poylgon",
+                        style={'textAlign': 'center', 'fontWeight': 'bold', 'marginTop': '0', 'color': 'rgb(255,51,153)'}
                     ),
                     dbc.Col(
                         dbc.Button(
@@ -598,11 +672,12 @@ def tab_layout():
                             ), width=8
                         )
                     ], justify="left"),
+                    
                     html.Div([
                         html.H4("Graphical Analysis", className='mb-3', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),      
                         html.Div(
                             id="graphs-container",
-                            style={"display": "none"},  # Hides the container initially
+                            style={"display": "none"},  
                             children=[
                                 dbc.Row([
                                     dbc.Col(dcc.Graph(id='pie-chart', figure={}), width=6),
@@ -611,9 +686,9 @@ def tab_layout():
                                     dbc.Col(dcc.Graph(id='source-pie', figure={}), width=6),
                                 ]),
                             ],
-                            # You can also give it extra styling as needed
                         ),
                     ], style={'marginTop': '20px'}),
+                    
                     html.Div([
                         html.H1("Full Details:", className='mb-4', style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}),
                         html.Hr(),
@@ -648,6 +723,7 @@ def tab_layout():
 
 
 
+
     
 @app.callback(
     [Output('map', 'center'),
@@ -664,6 +740,7 @@ def tab_layout():
      Output('Distance_Building', 'options'),
      Output('Distance_Building', 'value'),
      Output('record-count', 'children'),
+     Output('drop-pre', 'children'),
      Output('duration-slider', 'min'),
      Output('duration-slider', 'max'),
      Output('duration-slider', 'value'),
@@ -716,7 +793,7 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
 
     # Fix #1: Do nothing if the city drop-down (city_filter) is changed without clicking the Load button.
     if triggered_id and triggered_id.startswith('city_filter'):
-        return (dash.no_update,) * 33
+        return (dash.no_update,) * 34
 
     if triggered_id != 'pie-chart.clickData':
         pie_clickData = None
@@ -796,8 +873,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
         
         min_dur = df_city['Duration'].min() if not df_city['Duration'].empty else 0
         max_dur = df_city['Duration'].max() if not df_city['Duration'].empty else 100
-        record_count = f"Total Records: {len(df_city)} , {pre_out_city} % out of Polygon"
-        
+        record_count = f"Total Records: {len(df_city)}"
+        drop_count = f"{pre_out_city} % out of Polygon"
         if city_markers:
             random_marker = random.choice(city_markers)
             map_center = random_marker.position
@@ -821,7 +898,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             camera_tilt_value,        
             distance_options,         
             distance_value,           
-            record_count,             
+            record_count,
+            drop_count,             
             min_dur,                  
             max_dur,                  
             [min_dur, max_dur],
@@ -887,8 +965,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
         
         min_dur = df_updated['Duration'].min() if not df_updated['Duration'].empty else 0
         max_dur = df_updated['Duration'].max() if not df_updated['Duration'].empty else 100
-        record_count = f"Total Records: {len(df_updated)} , {pre_out_city} % out of Polygon"
-        
+        record_count = f"Total Records: {len(df_updated)}"
+        drop_count = f"{pre_out_city} % out of Polygon"
         if city_markers:
             random_marker = random.choice(city_markers)
             map_center = random_marker.position
@@ -910,7 +988,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             camera_tilt_value,        
             distance_options,         
             distance_value,           
-            record_count,             
+            record_count,
+            drop_count,            
             min_dur,                  
             max_dur,                  
             [min_dur, max_dur],
@@ -966,7 +1045,14 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                     )
                 ]
                 city_markers = create_map_markers(filtered_polygon)                
-                
+
+                terrain_options = build_options(filtered_polygon, 'Terrain')
+                occlusion_options = build_options(filtered_polygon, 'Occluded')
+                vq_options = build_options(filtered_polygon, 'Video quality')
+                camera_tilt_options = build_options(filtered_polygon, 'Camera tilt')
+                distance_options = build_options(filtered_polygon, 'Distance from building')
+                terrain_value = occlusion_value = vq_value = camera_tilt_value = distance_value = 'All'
+                            
                 # Generate charts and markers for the filtered DataFrame
                 city_logos_bar = generate_interactive_bar_plot_2_city(filtered_polygon)
                 city_time_of_day_pie = generate_interactive_pie_chart_city(filtered_polygon)
@@ -979,7 +1065,17 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 filtered_polygon.dropna(subset=['Latitude', 'Longitude'], inplace=True)
                 min_dur = filtered_polygon['Duration'].min() if not filtered_polygon['Duration'].empty else 0
                 max_dur = filtered_polygon['Duration'].max() if not filtered_polygon['Duration'].empty else 100
-                record_count = f"Total Records: {len(filtered_polygon)} , 100 % out of Polygon"
+                
+                record_count = f"Total Records: {len(filtered_polygon)}"
+
+                city_polygon = Polygon(polygon_coordinates)
+                count_within = sum(city_polygon.contains(Point(row['Latitude'], row['Longitude']))
+                                            for _, row in filtered_polygon.iterrows()
+                                            if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude']))
+                if len(filtered_polygon) - count_within > 0:
+                    drop_count = f"100 % out of Polygon"
+                else:
+                    drop_count = f"Nothing to show"
                 if city_markers:
                     random_marker = random.choice(city_markers)
                     map_center = random_marker.position
@@ -990,17 +1086,18 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                     map_center,
                     city_markers,
                     dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
+                    terrain_options,          
+                    terrain_value,            
+                    occlusion_options,        
+                    occlusion_value,          
+                    vq_options,               
+                    vq_value,                 
+                    camera_tilt_options,      
+                    camera_tilt_value,        
+                    distance_options,         
+                    distance_value,
                     record_count,
+                    drop_count,
                     min_dur,
                     max_dur,
                     [min_dur, max_dur],
@@ -1055,6 +1152,7 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             camera_tilt_options = build_options(df_current, 'Camera tilt')
             distance_options = build_options(df_current, 'Distance from building')
             terrain_value = occlusion_value = vq_value = camera_tilt_value = distance_value = 'All'
+            
             city_logos_bar = generate_interactive_bar_plot_2_city(df_current)
             city_time_of_day_pie = generate_interactive_pie_chart_city(df_current)
             city_weather_bar = generate_interactive_bar_chart_weather_city(df_current)
@@ -1077,7 +1175,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             df_current.dropna(subset=['Latitude', 'Longitude'], inplace=True)
             min_dur = df_current['Duration'].min() if not df_current['Duration'].empty else 0
             max_dur = df_current['Duration'].max() if not df_current['Duration'].empty else 100
-            record_count = f"Total Records: {len(df_current)} , {pre_out_city} % out of Polygon"
+            record_count = f"Total Records: {len(df_current)}"
+            drop_count = f"{pre_out_city} % out of Polygon"
             if city_markers:
                 random_marker = random.choice(city_markers)
                 map_center = random_marker.position
@@ -1100,6 +1199,7 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 distance_options,
                 distance_value,
                 record_count,
+                drop_count,
                 min_dur,
                 max_dur,
                 [min_dur, max_dur],
@@ -1139,7 +1239,15 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 bar_2_clickData=bar_clickData,
                 polygon_active = polygon_active
             )
-                
+            
+
+            terrain_options = build_options(filtered_df, 'Terrain')
+            occlusion_options = build_options(filtered_df, 'Occluded')
+            vq_options = build_options(filtered_df, 'Video quality')
+            camera_tilt_options = build_options(filtered_df, 'Camera tilt')
+            distance_options = build_options(filtered_df, 'Distance from building')
+            terrain_value = occlusion_value = vq_value = camera_tilt_value = distance_value = 'All'
+                            
             # Generate charts and markers for the filtered DataFrame
             city_logos_bar = generate_interactive_bar_plot_2_city(filtered_df)
             city_time_of_day_pie = generate_interactive_pie_chart_city(filtered_df)
@@ -1163,7 +1271,8 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
             filtered_df.dropna(subset=['Latitude', 'Longitude'], inplace=True)
             min_dur = filtered_df['Duration'].min() if not filtered_df['Duration'].empty else 0
             max_dur = filtered_df['Duration'].max() if not filtered_df['Duration'].empty else 100
-            record_count = f"Total Records: {len(filtered_df)} , {pre_out_city} % out of Polygon"
+            record_count = f"Total Records: {len(filtered_df)}"
+            drop_count = f"{pre_out_city} % out of Polygon"
             if city_markers:
                 random_marker = random.choice(city_markers)
                 map_center = random_marker.position
@@ -1174,17 +1283,18 @@ def load_dashboards(load_btn, selected_city, update, pie_clickData,
                 map_center,
                 city_markers,
                 dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
-                dash.no_update,
+                terrain_options,          
+                terrain_value,            
+                occlusion_options,        
+                occlusion_value,          
+                vq_options,               
+                vq_value,                 
+                camera_tilt_options,      
+                camera_tilt_value,        
+                distance_options,         
+                distance_value, 
                 record_count,
+                drop_count,
                 min_dur,
                 max_dur,
                 [min_dur, max_dur],
