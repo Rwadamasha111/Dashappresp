@@ -61,6 +61,8 @@ SPREADSHEET_ID_TRANSCRIPTION = "1ZPcwPcIrGU-brYoGrNLLcjRJbRCNaLfaP3s0shS7ZeI"
 SPREADSHEET_ID_OVERALL_FRAMES = "1pSjFV6o0PHzuTc2pCqL6uJH1VAJ2DPSbOBMZQPDZoIs"
 SPREADSHEET_ID_OTB = "1SD9vtPyeUwUj366zhRNxlLyegYaLlLca4A7DmT6b020"
 SPREADSHEET_ID_ATTRIBUTES = "15NRg3T2B9jPWEn3HzzNXxOgIYe8U0x8a_Ael28d23vk"
+SPREADSHEET_ID_POI = "1-XZPzpql4o0Flq5WHZf8GjuPoXTY_vVFqkYq9QKOuMU"
+Voice_rec = "1LoUYrB_gFCqaMiZ-D31hc4mENCWF42iPvldxi7e2NGU"
 
 # ✅ Sheet Names
 OBJ_ANN_SHEET = "Obj_ann_with_total"
@@ -70,6 +72,10 @@ OVERALL_FRAMES_SHEET = "Overall_ann_od"
 ann_per_obj = "Overall_ann_od_per_obj"
 OTB_SHEET = "OTB2"
 ATTRIBUTES_SHEET = "OTB3"
+POI_SHEET = "POI"
+Voice_sheet = "800 OG copy"
+
+
 
 # ✅ Function to Read Google Sheets into Pandas DataFrame (Fixes Duplicate Headers & Converts Numeric Data)
 def read_google_sheet(spreadsheet_id, sheet_name):
@@ -80,6 +86,7 @@ def read_google_sheet(spreadsheet_id, sheet_name):
     if not raw_data or len(raw_data) < 2:
         print(f"❌ Error: The sheet '{sheet_name}' in {spreadsheet_id} is empty or has no data!")
         return pd.DataFrame()  # Return an empty DataFrame
+    
 
     headers = raw_data[0]  # Extract the first row as headers
     records = raw_data[1:]  # Extract remaining rows as data
@@ -114,6 +121,11 @@ Overall_frames_ann_per_vid = read_google_sheet(SPREADSHEET_ID_OVERALL_FRAMES, OV
 otb = read_google_sheet(SPREADSHEET_ID_OTB, OTB_SHEET)
 attributes = read_google_sheet(SPREADSHEET_ID_ATTRIBUTES, ATTRIBUTES_SHEET)
 ann_per_ob = read_google_sheet(SPREADSHEET_ID_OVERALL_FRAMES, ann_per_obj)
+df2 = read_google_sheet(SPREADSHEET_ID_POI, POI_SHEET)
+df_voice = read_google_sheet(Voice_rec, Voice_sheet)
+
+
+
 
 # ✅ Add 'Total_per_video' Column
 df["Total_per_video"] = df.select_dtypes(include=['number']).sum(axis=1)
@@ -158,7 +170,7 @@ upload_to_google_sheets(joined_df3, MERGED_SPREADSHEET_ID, MERGED_SHEET)
 
 
 df = df.sort_values(by='Total_per_video', ascending=False)
-df2 = pd.read_csv(r'C:\Users\rwad\OneDrive\Documents\classes_distribution\POI_csv.csv')
+
 df_top = df
 df_filt = df.iloc[:1 , : ].reset_index()
 df_gauge_sum = df_filt["Total_per_video"]
@@ -195,14 +207,41 @@ colors_data = {
     "Pink": pink,
 }
 
-
+styles = {
+    "content": {
+        "width": "100%",
+        "background": "#F7F7F7"
+    },
+    "right_content": {
+        "width": "85%",
+        "position": "absolute",
+        "top": "0",
+        "right": "0"
+    },
+    "top_metrics": {
+        "background": "#EAEAEA",
+        "height": "200px",
+        "width": "85%",
+        "position": "absolute",
+        "top": "0",
+        "right": "0"
+    },
+    "left_menu": {
+        "width": "15%",
+        "position": "absolute",
+        "top": "0",
+        "left": "0",
+        "height": "100vh",
+        "z-index": "999",
+        "background": "#2A3F54"
+    }
+}
 
 colors_df = pd.DataFrame(list(colors_data.items()), columns=["Color Name", "Count"])
 
 df2 = df2.sort_values(by='Overall Frames Annotated', ascending=False)
 objects = transposed_df.columns[0]
 df2 = df2.head(16)
-
 sum_of_nlp_audio = pd.to_numeric(df3["video_length_secs"], errors='coerce').sum() / 3600
 sum_of_nlp_audio_hour = int(sum_of_nlp_audio)
 sum_of_nlp_audio_min = int((sum_of_nlp_audio - sum_of_nlp_audio_hour) * 1000)
@@ -250,8 +289,8 @@ occluded_df = {
 
 
 colors = {
-    'background': '#111111',
-    'text': '#7FDBFF'
+    'background': '#e8f5f1',
+    'text': '#1f1f1f'
 }
 
 # Dropdown Style
@@ -272,19 +311,30 @@ tabs_styles = {
     'padding': '10px',
     'fontFamily': 'Arial, sans-serif'
 }
-tab_style = {
-    'backgroundColor': colors['background'],
-    'color': colors['text'],
-    'border': '1px solid #333',
-    'borderRadius': '8px',
-    'padding': '10px'
+colors_tab = {
+    'background': '#111111',
+    'text': '#7FDBFF',
+    'tab': '#222222',
+    'tab_selected': '#444444',
+    'card_bg': '#222831',
+    'card_shadow': '2px 2px 10px rgba(0,0,0,0.2)',
 }
+
+tab_style = {
+    'backgroundColor': colors_tab['tab'],
+    'color': 'white',
+    'padding': '10px',
+    'borderRadius': '5px',
+    'margin': '2px'
+}
+
 selected_tab_style = {
-    'backgroundColor': '#444',
-    'color': colors['text'],
-    'border': '1px solid #333',
-    'borderRadius': '8px',
-    'padding': '10px'
+    'backgroundColor': colors_tab['tab_selected'],
+    'color': colors_tab['text'],
+    'padding': '10px',
+    'borderRadius': '5px',
+    'margin': '2px',
+    'fontWeight': 'bold'
 }
 text_style = {
     'color': colors['text'],
@@ -369,10 +419,45 @@ df_audio_event_counts = pd.read_sql_query(query, conn)
 # Close the database connection
 conn.close()
 
-
 def create_objects_tab():
     """Create the 'Objects' tab layout."""
-    return dcc.Tab(label='Objects', children=[
+    return dcc.Tab(
+        label='Objects',
+        children=[
+            html.Div(
+                style={'display': 'flex', 'justifyContent': 'space-around', 
+                       'padding': '20px', 'background': '#F7F7F7', 
+                       'align-items': 'center'},  # Aligns all elements at center
+                children=[
+
+                    # KPI 1: Color Distribution
+                    html.Div(children=[
+                        html.H4("Color Distribution", style={'textAlign': 'center', 
+                                                              'color': '#333', 
+                                                              'fontSize': '18px'}),
+                        dcc.Graph(figure=pie_OD_colors(colors_data), 
+                                  style={'width': '100%', 'height': '150px', 
+                                         'padding': '5px'})  # Reduced height
+                    ], style={'width': '25%', 'background': 'white', 
+                              'padding': '15px', 'border-radius': '15px', 
+                              'box-shadow': '2px 2px 10px lightgray', 
+                              'textAlign': 'center'}),
+        html.Div(children=[
+            html.H4("Face Show", style={'textAlign': 'center', 'color': '#333'}),
+            dcc.Dropdown(
+                id='df-dropdown_OD',
+                options=[
+                    {'label': 'Blur', 'value': 'blurry'},
+                    {'label': 'Occlusion', 'value': 'occluded'},
+                    {'label': 'Truncation', 'value': 'truncated'}
+                ],
+                value='blurry',  # Ensure this matches one of the available options
+                clearable=False,
+                style={'width': '50%', 'margin': '0 auto', 'display': 'block'}
+            ),
+            dcc.Graph(id='OD-pie', style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'})
+        ], style={'width': '30%', 'background': 'white', 'padding': '10px', 'border-radius': '10px', 'box-shadow': '2px 2px 10px lightgray'})
+    ]),
         html.H3("select a row to see data for each video. " , style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
         html.P(
                 [
@@ -875,28 +960,36 @@ def create_table_tab():
 
 # Heatmap Chart Tab
 def heat_map_tab():
-    """Create the 'Heatmap Chart' tab layout."""
-    fig = px.density_mapbox(
-        coordinates_df,
-        lat='Latitude',
-        lon='Longitude',
-        hover_name='City',
-        hover_data={'Source': True , 'Latitude': True, 'Longitude': True },
-        radius=10, 
-        zoom=3,
-        mapbox_style='carto-positron'
-    )
-    fig.update_layout(
-        paper_bgcolor=colors['background'],  # Outer background
-        plot_bgcolor=colors['background'],  # Plot area background
-        font_color=colors['text']           # Font color for labels
-    )
-    return dcc.Tab(label='Heatmap Chart', children=[
-        html.Div([
-            html.H3("Heatmap of Coordinate Density", style={'textAlign': 'center', 'color': colors['text']}),
-            dcc.Graph(figure=fig, style={'border': '1px solid #333', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.5)', 'borderRadius': '20px'})
-        ], style={'padding': '20px'})
-    ])
+
+    return dcc.Tab(label='Voice Recognition Analysis', children=[
+      html.Div(style={'display': 'flex', 'justifyContent': 'space-around', 'padding': '20px', 'background': '#F7F7F7'}, children=[
+        
+        html.Div(children=[
+            html.H4("Voice Gender", style={'textAlign': 'center', 'color': '#333'}),
+            dcc.Graph(figure=Male_female_voice(), style={'width': '100%', 'height': '250px'})
+        ], style={'width': '30%', 'background': 'white', 'padding': '10px', 'border-radius': '10px', 'box-shadow': '2px 2px 10px lightgray'}),
+        
+        html.Div(children=[
+            html.H4("Dominant Analysis", style={'textAlign': 'center', 'color': '#333'}),
+            dcc.Graph(figure=Dominant(), style={'width': '100%', 'height': '250px'})
+        ], style={'width': '30%', 'background': 'white', 'padding': '10px', 'border-radius': '10px', 'box-shadow': '2px 2px 10px lightgray'}),
+        
+        html.Div(children=[
+            html.H4("Face Show", style={'textAlign': 'center', 'color': '#333'}),
+            dcc.Graph(figure=Face_show(), style={'width': '100%', 'height': '250px'})
+        ], style={'width': '30%', 'background': 'white', 'padding': '10px', 'border-radius': '10px', 'box-shadow': '2px 2px 10px lightgray'})
+    ]),
+
+    # Graph Title Section
+    html.Div([
+        html.H3("Network Activities", style={'color': '#333', 'display': 'inline'}),
+        dcc.Graph(figure=language_bar(df_voice), style={'color': 'gray', 'margin-left': '10px'})
+    ], style={'padding': '10px'})
+
+])
+
+
+        
 
 def create_empty_tab(label, content=[]):
     """Create an empty tab with the given label and content."""
@@ -1008,7 +1101,7 @@ app.layout = html.Div([
             selected_style=selected_tab_style
         ),
         dcc.Tab(
-            label='Heatmap Chart',
+            label='Voice recognition',
             value='tab-4',
             style=tab_style,
             selected_style=selected_tab_style
@@ -1046,7 +1139,7 @@ def update_main_content(tab):
         return html.Div("Tab not found.", style={
             'textAlign': 'center',
             'fontSize': '24px',
-            'color': colors['text']
+            'color': 'gray'
         })
 
 
@@ -1056,32 +1149,37 @@ def update_main_content(tab):
      Output('scatter-plot', 'figure')],
     [Input('my-slider', 'value'),
      Input('objects-treemap', 'clickData'), 
-     Input('att_selection' , 'value')]
-   
+     Input('att_selection', 'value'),
+     Input('reset-button', 'n_clicks')]  # Reset button input
 )
-def update_treemap_and_scatter(selected_range, clickData, selected_attributes):
+def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n_clicks):
     """
     Update the treemap and scatter plot based on:
     1. The selected range from the slider.
     2. The clicked segment from the treemap.
     3. The selected attributes from the multi-dropdown.
+    4. Resetting the treemap when the reset button is clicked.
     """
     fixed_y_axis = 'Total_per_video'  # Set fixed y-axis column
     filtered_treemap_df = transposed_df.iloc[:-1, :].reset_index()
 
     # Range Filtering for Treemap
     if not selected_range or len(selected_range) != 2:
-        min_val = filtered_treemap_df.iloc[:-1, :]['Total'].min()
-        max_val = filtered_treemap_df.iloc[:-1, :]['Total'].max()
+        min_val = filtered_treemap_df['Total'].min()
+        max_val = filtered_treemap_df['Total'].max()
     else:
         min_val, max_val = selected_range
         filtered_treemap_df = filtered_treemap_df[
-            (filtered_treemap_df['Total'] >= min_val) &
+            (filtered_treemap_df['Total'] >= min_val) & 
             (filtered_treemap_df['Total'] <= max_val)
         ]
 
+    # **RESET TREEMAP FILTER** if reset button is clicked
+    if n_clicks:
+        clickData = None  # Clear treemap selection
+    
     treemap_fig = px.treemap(
-        filtered_treemap_df.reset_index(),
+        filtered_treemap_df,
         path=['index'],
         values='Total',
         title=f"Treemap: Annotations per Object ({min_val} ≤ x ≤ {max_val})",
@@ -1097,11 +1195,11 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes):
         paper_bgcolor=colors['background'],
         font_color=colors['text']
     )
-    
+
     # Start with full dataset
     df_top_filtered = df_top.drop(index=df.index[0])
 
-    # Filtering by clicked treemap object
+    # **Filtering by clicked treemap object**
     if clickData:
         clicked_object = clickData['points'][0]['label']
         if clicked_object in df_filtered.columns:
@@ -1111,14 +1209,14 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes):
     else:
         filtered_df = df_top_filtered  # Default case
 
-    # Filtering by selected attributes in OD_ATT
+    # **Filtering by selected attributes in OD_ATT**
     if selected_attributes:
         filtered_videos = OD_ATT.loc[
-            OD_ATT[selected_attributes].apply(lambda x: x != "").any(axis=1),
+            OD_ATT[selected_attributes].apply(lambda x: x != "").all(axis=1),
             "Video Name"
         ].unique()
         
-        # Filter df_top based on the videos from OD_ATT
+        # Apply the video name filter
         filtered_df = filtered_df[filtered_df["Video Name"].isin(filtered_videos)]
 
     # Generate Scatter Plot (Bar Chart)
@@ -1364,18 +1462,7 @@ def display_row_explanation(selected_rows, data):
 def pie_OD_colors(colors_data):
     """
     Generate a pie chart showing the distribution of colors with real colors.
-
-    Parameters:
-        colors_data (dict): A dictionary where keys are color names and values are counts.
-
-    Returns:
-        fig: A Plotly pie chart figure.
     """
-    # Validate input is a dictionary
-    if not isinstance(colors_data, dict):
-        raise ValueError("Input should be a dictionary with color names as keys and counts as values.")
-
-    # Define the mapping of color names to real color codes
     color_name_to_hex = {
         "Black": "#323232",
         "Blue": "#0000FF",
@@ -1389,33 +1476,35 @@ def pie_OD_colors(colors_data):
         "Pink": "#FFC0CB"
     }
 
-    # Ensure only colors in the mapping are included
     filtered_colors = {k: v for k, v in colors_data.items() if k in color_name_to_hex}
     if not filtered_colors:
-        raise ValueError("No matching color names found in the color mapping.")
+        return px.pie(title="No Valid Colors Found")
 
-    # Create the pie chart
     fig = px.pie(
         values=list(filtered_colors.values()),
         names=list(filtered_colors.keys()),
-        title="Color Distribution",
-        color=list(filtered_colors.keys()),  # Match the colors by name
-        color_discrete_map=color_name_to_hex  # Use the real colors
+        title="",
+        color=list(filtered_colors.keys()),
+        color_discrete_map=color_name_to_hex,
+        hole=0.4  # Creates a donut-style chart to match KPI style
     )
 
-    # Update layout for colors and styling
+    # Adjusting Pie Chart to fit KPI size
     fig.update_layout(
-            plot_bgcolor=colors['background'],
-            paper_bgcolor=colors['background'],
-            font_color=colors['text']
-        )
-
-    # Update hover template for better interactivity
-    fig.update_traces(
-        hovertemplate='<b>%{label}</b><br>Annotations: %{value}<extra></extra>'
+        showlegend=False,  # Hide legend for KPI look
+        height=200,  # Adjust height for KPI container
+        margin=dict(l=0, r=0, t=30, b=0),  # Remove extra spacing
+        font=dict(size=12),  # Reduce font size for better display
+        annotations=[dict(
+            text=f"{sum(filtered_colors.values())}",  # Show total count in center
+            x=0.5, y=0.5, font_size=18, showarrow=False
+        )]
     )
 
     return fig
+
+
+
 
 def bar_attributes():
 
@@ -1441,6 +1530,94 @@ def bar_attributes():
 
     return fig
 
+
+def language_bar(df):
+    """Creates a bar chart showing language counts from a DataFrame."""
+    
+    # Ensure column exists
+    if "Language" not in df.columns:
+        print("❌ Error: 'Language' column is missing from DataFrame")
+        return px.bar(title="No Language Data Available")  # Return a blank figure
+
+    # Normalize column names (strip spaces)
+    df.columns = df.columns.str.strip()
+
+    # Clean and capitalize Language values
+    df["Language"] = df["Language"].astype(str).str.strip().str.capitalize()
+
+    # Count occurrences
+    lans = df["Language"].value_counts()
+
+    # Create the bar chart
+    fig = px.bar(
+        x=lans.index,  # Language names
+        y=lans.values,  # Count
+        title="Language Count",
+        labels={"x": "Language", "y": "Count"},
+        text=lans.values  # Show count as text on bars
+    )
+
+    # Improve styling
+    fig.update_traces(
+        textposition="outside",
+        marker=dict(color="lightblue")  # Change bar color
+    )
+
+    fig.update_layout(
+        plot_bgcolor="white",
+        paper_bgcolor="white",
+        font=dict(color="black"),
+        title_x=0.5  # Center the title
+    )
+
+    return fig  # ✅ Return only the figure!
+  
+
+def Male_female_voice() : 
+    
+    df_voice["Gender"] = df_voice["Gender"].astype(str).str.strip().str.capitalize()
+
+    male_count = (df_voice["Gender"] == "Male").sum()
+    female_count = (df_voice["Gender"] == "Female").sum()
+
+    fig = px.pie(
+        values=[male_count, female_count], 
+        names=["Male", "Female"], 
+        title="Gender Distribution"
+    )
+
+    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    return fig
+
+    
+def Face_show() : 
+    
+
+    Not_show = (df_voice["Face Showing"] == "No").sum()
+    Partly = (df_voice["Face Showing"] == "Partly").sum()
+    Showing = (df_voice["Face Showing"] == "Most-All video").sum()
+
+    Face = {"No": Not_show, "Partly": Partly, "Showing_mostly" : Showing}
+
+    fig = px.pie (values=list(Face.values()) ,names=list(Face.keys()) ,title = "Face show distibution")
+    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    return fig
+
+    
+def Dominant():
+    df_voice["Super Dominant"] = df_voice["Super Dominant"].astype(str).str.strip().str.capitalize()
+
+    YES = (df_voice["Super Dominant"] == "Yes").sum()
+    NO = (df_voice["Super Dominant"] == "No").sum()
+
+    fig = px.pie(
+        values=[YES, NO], 
+        names=["Super Dominant", "Not Dominant"], 
+        title="Dominant Analysis"
+    )
+
+    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    return fig
 
 
 # Save the transposed DataFrame
