@@ -156,7 +156,7 @@ button_search = {
 }
 
 export_button ={
-    "width": "30%",
+    "width": "100%",
     "height": "60px",
     "margin": "30px",
     "background-color": '#faf0e6',
@@ -192,9 +192,9 @@ button_dropouts = {
 }
 
 button_clear = {
-    "width": "30%",
+    "width": "100%",
     "height": "60px",
-    "margin": "-60px 0px 0px 2000px",
+    "margin": "30px",
     "background-color": 'white',
     "border": "2px solid white",
     "display": "block",
@@ -866,16 +866,31 @@ def tab_layout():
                                             },
                                             style_data_conditional=[]
                                         ),
-                                html.Div(  # 👉 Add this block
-                                    dbc.Button(
-                                        "Export Filters Log",
-                                        id='export_log',
-                                        color='primary',
-                                        n_clicks=0,
-                                        style=export_button
+                                html.Div([
+                                        dbc.Row([
+                                            dbc.Col(
+                                                dbc.Button(
+                                                    "Clear Filters Table",
+                                                    id='clear_table',
+                                                    color='primary',
+                                                    n_clicks=0,
+                                                    style=button_clear
+                                                ),
+                                                width="auto"
+                                            ),
+                                            dbc.Col(
+                                                dbc.Button(
+                                                    "Export Filters Log",
+                                                    id='export_log',
+                                                    color='primary',
+                                                    n_clicks=0,
+                                                    style=export_button
+                                                ),
+                                                width="auto"
+                                            )
+                                            ])
+                                ],style={"textAlign": "center", "marginTop": "10px"}
                                     ),
-                                    style={"textAlign": "center", "marginTop": "10px"}
-                                ),
                                 dcc.Download(id="download-component")
                                     ]),  
                                 ], width=8),
@@ -975,16 +990,7 @@ def tab_layout():
                         id="confirmation-modal",
                         is_open=False,  # Initially closed
                     ),
-                    dbc.Col(
-                        dbc.Button(
-                            "Clear Filters Table",
-                            id='clear_table',
-                            color='primary',
-                            n_clicks=0,
-                            style=button_clear
-                        ),
-                        width=4
-                    ),                      
+                     
                     html.Br(),
                     html.H3("Filter by Video Duration (minutes):", className='mb-1', style={'textAlign': 'left', 'color': 'rgb(255,51,153)'}),
                     dbc.Row([
@@ -1953,7 +1959,38 @@ polygon_coords_store, filter_comp_store, load_clicked,search_value,coord_modal_i
         filters_comp_data = pd.DataFrame(filter_comp_store)
         if filter_comp_store:
             filters_comp_data.columns = ['City', 'Filters', 'Values', 'Precentage', 'Total']
-            filters_log = filters_comp_data
+            filters_comp_data['Total'] = pd.to_numeric(filters_comp_data['Total'], errors='coerce')
+            max_rec = filters_comp_data['Total'].max()
+            min_rec = filters_comp_data['Total'].min()
+            sum_rec = filters_comp_data['Total'].sum()
+            count_rec = filters_comp_data['Total'].count()
+            mean_rec = filters_comp_data['Total'].mean()
+            
+            Agg_data = pd.DataFrame([
+                        ['Max', max_rec],
+                        ['Min', min_rec],
+                        ['Sum', sum_rec],
+                        ['Count', count_rec],
+                        ['Average', mean_rec]], columns = ['AggFunction','Value'])
+            # Create 4 empty columns as a spacer
+            spacer = pd.DataFrame('', index=range(max(len(filters_comp_data), len(Agg_data))), columns=['']*4)
+
+            # Reset indexes to align properly
+            filters_comp_data = filters_comp_data.reset_index(drop=True)
+            Agg_data = Agg_data.reset_index(drop=True)
+
+            # Pad the shorter DataFrame to match the length
+            if len(filters_comp_data) < len(Agg_data):
+                pad_len = len(Agg_data) - len(filters_comp_data)
+                pad_df = pd.DataFrame('', index=range(pad_len), columns=filters_comp_data.columns)
+                filters_comp_data = pd.concat([filters_comp_data, pad_df], ignore_index=True)
+            elif len(Agg_data) < len(filters_comp_data):
+                pad_len = len(filters_comp_data) - len(Agg_data)
+                pad_df = pd.DataFrame('', index=range(pad_len), columns=Agg_data.columns)
+                Agg_data = pd.concat([Agg_data, pad_df], ignore_index=True)
+            
+            filters_log= pd.concat([filters_comp_data,spacer, Agg_data], axis=1)
+            
             return (
                 dash.no_update, dash.no_update, dash.no_update, dash.no_update,
                 dash.no_update, dash.no_update, dash.no_update, dash.no_update,
