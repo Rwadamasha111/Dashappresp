@@ -107,6 +107,7 @@ columns_to_drop = ["video_name", "object_hash", "Blurring", "Truncation", "Occlu
 joined_df3 = joined_df3.drop(columns=[c for c in columns_to_drop if c in joined_df3.columns])
 joined_df3 = joined_df3.drop_duplicates()
 
+
 # ✅ Upload to Google Sheets
 def upload_to_google_sheets(df, spreadsheet_id, sheet_name):
     try:
@@ -146,7 +147,7 @@ OD_ATT = joined_df3.drop(columns=columns_to_drop)
 OD_ATT = OD_ATT.fillna("")
 OD_ATT = OD_ATT.replace("none" , "")
 OD_ATT_FILT_cols = ["Video Name" , "object_name" , "Object_Hash", "No" , "Partial"]
-OD_ATT_FILT = OD_ATT.drop (columns = OD_ATT_FILT_cols )
+OD_ATT_FILT = OD_ATT.drop (columns = OD_ATT_FILT_cols)
 snips_df = pd.read_csv("snippets_metadata.csv")
 # ✅ Store results in a dictionary
 colors_data = {
@@ -201,7 +202,6 @@ sum_of_nlp_audio = pd.to_numeric(df3["video_length_secs"], errors='coerce').sum(
 sum_of_nlp_audio_hour = int(sum_of_nlp_audio)
 sum_of_nlp_audio_min = int((sum_of_nlp_audio - sum_of_nlp_audio_hour) * 1000)
 sum_of_size = df3["size_in_mb"].sum()
-# Load coordinates data for the map chart
 
 sum_of_blurry = df2["Blurry"].sum()
 sum_of_acceptable = df2["Blur (Acceptable)"].sum()
@@ -276,16 +276,16 @@ colors_tab = {
 }
 
 tab_style = {
-    'backgroundColor': colors_tab['tab'],
-    'color': 'white',
+    'backgroundColor': tabs_styles['backgroundColor'],
+    'color': '809C94',
     'padding': '10px',
     'borderRadius': '5px',
     'margin': '2px'
 }
 
 selected_tab_style = {
-    'backgroundColor': colors_tab['tab_selected'],
-    'color': colors_tab['text'],
+    'backgroundColor': tabs_styles['backgroundColor'],
+    'color': '375048',
     'padding': '10px',
     'borderRadius': '5px',
     'margin': '2px',
@@ -694,11 +694,6 @@ def create_NLP_table():
     ]
 )
 
-    # Pie chart for NLP status
-    pie_chart = dcc.Graph(
-        figure=pie_NLP(),
-        style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'}
-    )
 
     # Pie chart for audio events
     pie_chart2 = dcc.Graph(
@@ -736,13 +731,6 @@ def create_NLP_table():
                 'fontSize': '16px'
             }),
             html.H3("Pie Chart for NLP Status", style={
-                'color': colors['text'],
-                'textAlign': 'center',
-                'margin-top': '40px',
-                'margin-bottom': '20px'
-            }),
-            pie_chart,
-            html.H3("Pie Chart for Audio Events", style={
                 'color': colors['text'],
                 'textAlign': 'center',
                 'margin-top': '40px',
@@ -906,7 +894,6 @@ def heat_map_tab():
 
     # Graph Title Section
     html.Div([
-        html.H3("Network Activities", style={'color': '#333', 'display': 'inline'}),
         dcc.Graph(figure=language_bar(df_voice), style={'color': 'gray', 'margin-left': '10px'})
     ], style={'padding': '10px'})
 
@@ -1049,7 +1036,8 @@ app.layout = html.Div([
         'textAlign': 'center',
         'color': colors['text'],
         'fontSize': '24px',
-        'backgroundColor': colors['background']
+        'backgroundColor': colors['background'], 
+        'borderRadius' : '9px'
     }),
     dcc.Tabs(id='tabs', value='tab-1', children=[
         dcc.Tab(
@@ -1113,27 +1101,21 @@ def update_main_content(tab):
         })
 
 
-# Callback to update treemap and scatter plot
+from dash import callback_context
+
 @app.callback(
     [Output('objects-treemap', 'figure'),
      Output('scatter-plot', 'figure')],
     [Input('my-slider', 'value'),
-     Input('objects-treemap', 'clickData'), 
+     Input('objects-treemap', 'clickData'),
      Input('att_selection', 'value'),
-     Input('reset-button', 'n_clicks')]  # Reset button input
+     Input('reset-button', 'n_clicks')]
 )
 def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n_clicks):
-    """
-    Update the treemap and scatter plot based on:
-    1. The selected range from the slider.
-    2. The clicked segment from the treemap.
-    3. The selected attributes from the multi-dropdown.
-    4. Resetting the treemap when the reset button is clicked.
-    """
-    fixed_y_axis = 'Total_per_video'  # Set fixed y-axis column
+    fixed_y_axis = 'Total_per_video'
     filtered_treemap_df = transposed_df.iloc[:-1, :].reset_index()
 
-    # Range Filtering for Treemap
+    # Filter range for treemap
     if not selected_range or len(selected_range) != 2:
         min_val = filtered_treemap_df['Total'].min()
         max_val = filtered_treemap_df['Total'].max()
@@ -1144,10 +1126,11 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
             (filtered_treemap_df['Total'] <= max_val)
         ]
 
-    # **RESET TREEMAP FILTER** if reset button is clicked
-    if n_clicks:
-        clickData = None  # Clear treemap selection
-    
+    # Detect trigger source
+    triggered = callback_context.triggered[0]['prop_id'].split('.')[0]
+    if triggered == 'reset-button':
+        clickData = None
+
     treemap_fig = px.treemap(
         filtered_treemap_df,
         path=['index'],
@@ -1166,30 +1149,24 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
         font_color=colors['text']
     )
 
-    # Start with full dataset
     df_top_filtered = df_top.drop(index=df.index[0])
 
-    # **Filtering by clicked treemap object**
     if clickData:
         clicked_object = clickData['points'][0]['label']
         if clicked_object in df_filtered.columns:
             filtered_df = df_filtered[df_filtered[clicked_object] > 0]
         else:
-            filtered_df = pd.DataFrame()  # No valid data
+            filtered_df = pd.DataFrame()
     else:
-        filtered_df = df_top_filtered  # Default case
+        filtered_df = df_top_filtered
 
-    # **Filtering by selected attributes in OD_ATT**
     if selected_attributes:
         filtered_videos = OD_ATT.loc[
             OD_ATT[selected_attributes].apply(lambda x: x != "").all(axis=1),
             "Video Name"
         ].unique()
-        
-        # Apply the video name filter
         filtered_df = filtered_df[filtered_df["Video Name"].isin(filtered_videos)]
 
-    # Generate Scatter Plot (Bar Chart)
     if not filtered_df.empty:
         scatter_fig = px.bar(
             filtered_df,
@@ -1204,18 +1181,17 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
             marker_color='LightSkyBlue'
         )
     else:
-        scatter_fig = px.bar(
-            title="No Videos Match the Selected Attributes"
-        )
+        scatter_fig = px.bar(title="No Videos Match the Selected Attributes")
 
     scatter_fig.update_layout(
         plot_bgcolor=colors['background'],
         paper_bgcolor=colors['background'],
-        font_color=colors['text'], 
+        font_color=colors['text'],
         yaxis=dict(range=[0, 70])
     )
 
     return treemap_fig, scatter_fig
+
 
 
 
@@ -1512,6 +1488,8 @@ def language_bar(df):
 
     # Count occurrences
     lans = df["Language"].value_counts()
+    maxxx = lans.max()
+    lim = maxxx + 50
 
     # Create the bar chart
     fig = px.bar(
@@ -1525,13 +1503,14 @@ def language_bar(df):
     # Improve styling
     fig.update_traces(
         textposition="outside",
-        marker=dict(color="lightblue")  # Change bar color
+        marker=dict(color="lightblue")
     )
 
     fig.update_layout(
         plot_bgcolor="white",
         paper_bgcolor="white",
         font=dict(color="black"),
+        yaxis = dict(range = [0 , lim]),
         title_x=0.5  # Center the title
     )
 
@@ -1551,7 +1530,7 @@ def Male_female_voice() :
         title="Gender Distribution"
     )
 
-    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    fig.update_traces(textinfo='percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
     return fig
 
     
@@ -1565,7 +1544,7 @@ def Face_show() :
     Face = {"No": Not_show, "Partly": Partly, "Showing_mostly" : Showing}
 
     fig = px.pie (values=list(Face.values()) ,names=list(Face.keys()) ,title = "Face show distibution")
-    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    fig.update_traces(textinfo='percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
     return fig
 
     
@@ -1581,7 +1560,7 @@ def Dominant():
         title="Dominant Analysis"
     )
 
-    fig.update_traces(textinfo='label+percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
+    fig.update_traces(textinfo='percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
     return fig
 
     
