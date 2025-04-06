@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "gentle-bounty-449311-g9",
-  "private_key_id": "eb09307f62eec276b1ae6d016168316b0fa4a076",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCr0pcUeUULMsQn\nHLjpaRj3JPeGVwjner7rqKJrvdz5zFbAgC3pygJYPwNcmB9htbUD7sl1nYVa5REn\nQeDVH7XUjRusYEMW0jXml8RONH7jc+wKAvwl36gw+CZIv0NIfh3miDIPszVgxpRb\n28cYcBQ9UHcRAZEqjfZI70PS8oGJF6HHQj+H+AdMqpGEqRPcXckgbSqkbnCF2YMz\nxzijdBc/z29lYfCmNnsnRik+ULiT53IipPrylR4+EPU4U6/9i9xeTbh0JIAE/o+o\nfJHYf66+4lzcfKpVT71u/dcbfeawi4DpNztZI7qwKk4kuuuEKM/F711DyC2xbAgh\nyddJembBAgMBAAECggEAPZLOhE4/AVfUdkWzOCXrBeoP7+rxrG5Oy8mXRu/3p+bj\nscFdcrnrJC+Up1J2cH/62elw9X6ZAu0yu/Q+O3HNKdnVcGzgreVv3m5FsVbbn+vz\nStUuAe6H6eCLa6dq16gmU+47rmekucT/9nkofGfxwNU8jfIXUP4lo5Zmoko4RGWG\nyTFdZFaeisvRMp7tohEvy/NG+irXo0I+Jd0mojssaNNFlwKvEy0DZqpw/hRefNaO\nyfusAB9tqC2R0uosFYahBVtrS7uVbX9gLZnyEYAe88s15Xvm6uf630nn8LzC254Q\nIO7X/b7gUf8+l/pdfWE5r1+kmQcitXWSkRnRX6U9lwKBgQDSCoKMls4P6BaKX4Bo\nHdUW/IAYVb73vHY4jf1IB8XmFJPdfncF4INH9cwrTXfkFKIo25zB4z8mQdy0YhrD\npqze7q/tV1IemrbIsw0wg+4xnN0uJob28pMzs8wFsQjDJO2/htRXjuUhPsEeJ8IE\nZNT7Zrvk9//Cq166wNJYcf0DpwKBgQDRa0Rh6ubMvaK0jc5lnIx1PRa0xw9U4T02\nVtAFtP+jTQnDAUbynz4c9GG/dFFJ/VwgY8xt4pzLy0UfHH81aFpWdva/2zgqir0A\nxNnUwpa/rMptc3bkhWUt/E4FKeXpqncOd1Tjnr4h9zpt8BapPnCtN34z9b0NR5e4\nUJAiHOmvVwKBgHBxB+pTYQTK7iYtcgRK1CR2D+z3GkBtN6yW9px07NB6+517ciRH\nSIBhaWdVFXWYRicxSf3RtaC5aXl3e3R56dl+VdftAx03HdrbX5g1SHJu00k9fsr8\nmSj4e6QgXdx6DHyXpV0qNidR/PgzuH25rPrYyIWO7fA85X18dB69BwHJAoGALi7+\nzK1WKu7jU/g1/Vix7SUEvedsbSajLjmk9K0+90+FCJlegSE3PIF0kRlg1/Vk/Mul\niNJCC/uPCdZqA2g5C/p+Xj9FOrSQC/xdobssLac4mTyuiqUUdDjBKAheaNKsIOeW\nNACNI8Z2/0nEZZycksa7MVBPWf9g6UfzEWLY8k8CgYBjbKAy+aTDmaCB9Sk6xGHr\nO6ugidEVhDzGSSjiukgTpPy30awWLYP3OKz70wfCravbxVvZ56ZmD44W+15SW3Sa\nTl5uRunh0MyaEspg0S+0cHJjOPBxYahgcjxLCRdBMsWbcOZBA3tflc7D5Xe4hL/j\nUkixVBKM/HTyiQagHRKUhg==\n-----END PRIVATE KEY-----\n",
-  "client_email": "encord@gentle-bounty-449311-g9.iam.gserviceaccount.com",
-  "client_id": "100444416796424237866",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/encord%40gentle-bounty-449311-g9.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
