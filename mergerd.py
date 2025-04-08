@@ -312,6 +312,19 @@ colors = {
     'text': '#1f1f1f'
 }
 
+
+update_log_button ={
+    "width": "100%",
+    "height": "60px",
+    "margin": "30px",
+    "background-color": '#F0FFF0',
+    "border": "2px solid white",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "#ff1493",
+    "borderRadius": "50px",   
+}
+
 # Dropdown Style
 dropdown_style = {
     'width': '50%',
