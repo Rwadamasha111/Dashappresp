@@ -86,7 +86,7 @@ server = app.server  # if you need the Flask server reference
 
 
 # ✅ Service account and scopes
-SERVICE_ACCOUNT_FILE = "C:/rwad/gentle-bounty-449311-g9-eb09307f62ee.json"
+SERVICE_ACCOUNT_FILE = r"C:\Users\roy\OneDrive\Desktop\ASR JSONS\Geo_Analysis\arabic-transcription-435113-c8120df00a35.json"
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # ✅ Authenticate
@@ -356,7 +356,7 @@ geolocator = Nominatim(user_agent="myGeocoder")
 
 
 # Path to your service account key file
-SERVICE_ACCOUNT_FILE = r"C:\Users\rwad\Downloads\arabic-transcription-435113-c8120df00a35.json"
+SERVICE_ACCOUNT_FILE = r"C:\Users\roy\OneDrive\Desktop\ASR JSONS\Geo_Analysis\arabic-transcription-435113-c8120df00a35.json"
 
 # Authenticate and connect to the Sheets API
 creds = Credentials.from_service_account_file(
@@ -4486,4 +4486,4 @@ def Dominant():
     
 
 if __name__ == '__main__':
-    app.run_server(host='100.84.182.85', port=8050, debug=True)
+    app.run_server(host='100.118.47.56', port=8051, debug=True)
