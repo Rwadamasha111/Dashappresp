@@ -4287,6 +4287,12 @@ app.layout = html.Div([
             style=tab_style,
             selected_style=selected_tab_style
         ),
+        dcc.Tab(
+            label='Geo',
+            value='tab-6',
+            style=tab_style,
+            selected_style=selected_tab_style
+        ),
     ]),
     html.Div(id='main-content', style={
         'padding': '22px',
@@ -4310,6 +4316,8 @@ def update_main_content(tab):
         return add_image_to_tab(voice_rec())  # Add image to Heatmap tab
     elif tab == 'tab-5':
         return add_image_to_tab(create_table_tab())  # Add image to DataFrames tab
+    elif tab == 'tab-6':
+        return add_image_to_tab(tab_layout())  # Add image to DataFrames tab
     else:
         return html.Div("Tab not found.", style={
             'textAlign': 'center',
