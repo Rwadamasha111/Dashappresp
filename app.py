@@ -43,8 +43,13 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 
+# Initialize the app
+app = Dash(__name__, suppress_callback_exceptions=True)
+server = app.server 
+
+
 # ✅ Service account and scopes
-SERVICE_ACCOUNT_FILE = "C:/rwad/gentle-bounty-449311-g9-eb09307f62ee.json"
+SERVICE_ACCOUNT_FILE = r"C:\Users\rwad\Downloads\arabic-transcription-435113-c8120df00a35 (1).json"
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # ✅ Authenticate
@@ -61,32 +66,51 @@ sheets_to_load = {
     "otb": ("1SD9vtPyeUwUj366zhRNxlLyegYaLlLca4A7DmT6b020", "OTB2"),
     "attributes": ("15NRg3T2B9jPWEn3HzzNXxOgIYe8U0x8a_Ael28d23vk", "OTB3"),
     "df2": ("1-XZPzpql4o0Flq5WHZf8GjuPoXTY_vVFqkYq9QKOuMU", "POI"),
-    "df_voice": ("1LoUYrB_gFCqaMiZ-D31hc4mENCWF42iPvldxi7e2NGU", "800 OG copy")
+    "df_voice": ("1LoUYrB_gFCqaMiZ-D31hc4mENCWF42iPvldxi7e2NGU", "800 OG copy"),
+    "df_encord_Work_od" : ("1MnK95qghsLCjQDFGboB0r79S0NJwHnQ09cN8LT_t4OM" , "OD Q1"),
+    "df_encord_Work_poi" : ("1MnK95qghsLCjQDFGboB0r79S0NJwHnQ09cN8LT_t4OM" , "POI Q1")
 }
 
-# ✅ Load all sheets into DataFrames
-def load_sheets(sheet_map):
+import time 
+import random
+
+def load_sheets(sheet_map, client, max_retries=8, max_backoff=64):
     sheet_dfs = {}
     for key, (spreadsheet_id, sheet_name) in sheet_map.items():
-        try:
-            worksheet = client.open_by_key(spreadsheet_id).worksheet(sheet_name)
-            data = worksheet.get_all_values()
-            if not data or len(data) < 2:
-                print(f"⚠️ Skipping empty sheet: {sheet_name}")
-                sheet_dfs[key] = pd.DataFrame()
-                continue
+        n = 0  # Retry counter
+        while n <= max_retries:
+            try:
+                worksheet = client.open_by_key(spreadsheet_id).worksheet(sheet_name)
+                data = worksheet.get_all_values()
+                if not data or len(data) < 2:
+                    print(f"⚠️ Skipping empty sheet: {sheet_name}")
+                    sheet_dfs[key] = pd.DataFrame()
+                    break
 
-            headers, rows = data[0], data[1:]
-            sheet_dfs[key] = pd.DataFrame(rows, columns=headers)
-            sheet_dfs[key] = sheet_dfs[key].apply(pd.to_numeric, errors='ignore')
-            print(f"✅ Loaded: {sheet_name}")
-        except Exception as e:
-            print(f"❌ Error loading {sheet_name}: {e}")
+                headers, rows = data[0], data[1:]
+                df = pd.DataFrame(rows, columns=headers)
+                sheet_dfs[key] = df.apply(pd.to_numeric, errors='ignore')
+                print(f"✅ Loaded: {sheet_name}")
+                break  # success, exit retry loop
+
+            except Exception as e:
+                if '429' in str(e):  # Rate limit error
+                    wait_time = min((2 ** n) + random.randint(0, 1000) / 1000.0, max_backoff)
+                    print(f"🔁 Rate limit hit. Retrying in {wait_time:.2f}s (attempt {n + 1})...")
+                    time.sleep(wait_time)
+                    n += 1
+                else:
+                    print(f"❌ Error loading {sheet_name}: {e}")
+                    sheet_dfs[key] = pd.DataFrame()
+                    break  # other errors: don't retry
+
+        if n > max_retries:
+            print(f"❌ Max retries reached for {sheet_name}. Giving up.")
             sheet_dfs[key] = pd.DataFrame()
 
     return sheet_dfs
 
-dfs = load_sheets(sheets_to_load)
+dfs = load_sheets(sheets_to_load, client)
 
 # ✅ Access your DataFrames by name
 df = dfs["df"]
@@ -98,6 +122,8 @@ otb = dfs["otb"]
 attributes = dfs["attributes"]
 df2 = dfs["df2"]
 df_voice = dfs["df_voice"]
+df_work_od = dfs["df_encord_Work_od"]
+df_work_poi = dfs["df_encord_Work_poi"]
 
 # ✅ Total column & merge
 df["Total_per_video"] = df.select_dtypes(include="number").sum(axis=1)
@@ -149,6 +175,7 @@ OD_ATT = OD_ATT.replace("none" , "")
 OD_ATT_FILT_cols = ["Video Name" , "object_name" , "Object_Hash", "No" , "Partial"]
 OD_ATT_FILT = OD_ATT.drop (columns = OD_ATT_FILT_cols)
 snips_df = pd.read_csv("snippets_metadata.csv")
+print (OD_ATT)
 # ✅ Store results in a dictionary
 colors_data = {
     "Black": black, 
@@ -307,9 +334,7 @@ FROM nlp_data
 WHERE override_translation LIKE  ''
 """
 
-# Initialize the app
-app = Dash(__name__, suppress_callback_exceptions=True)
-server = app.server  # For deploying to platforms like Heroku
+
 
 def add_image_to_tab(content):
     """Add a small logo to the top-left corner of each tab."""
@@ -371,7 +396,7 @@ ORDER BY Count DESC
 # Execute the query and save the result into a new DataFrame
 df_audio_event_counts = pd.read_sql_query(query, conn)
 
-# Close the database connection
+# Close the database connection Total_ann_hours_per_user
 conn.close()
 
 def create_objects_tab():
@@ -379,114 +404,235 @@ def create_objects_tab():
     return dcc.Tab(
         label='Objects',
         children=[
-        html.H3("select a row to see data for each video. " , style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
-        html.P(
-                [
-                    "You can also search for a criterion in the search bar above each column in the table and press Enter or you can click the check box to see the video details below."
-                ],
-                style={
+
+            # Row: Number chart and Dynamic Color Pie chart
+            html.Div([
+                create_attributes_axis_dropdown('att_selection'),
+                create_objects_axis_dropdown('obj_selection'),
+                html.Div([
+                    dcc.Graph(
+                        id='number-chart-videos',
+                        style={
+                            'border': '1px solid #ddd',
+                            'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                            'borderRadius': '8px'
+                        }
+                    )
+                ], style={'flex': '1', 'marginRight': '10px'}),
+
+                html.Div([
+                    dcc.Graph(
+                        id='OD-color-pie',  # 🔄 now dynamic via callback
+                        style={
+                            'border': '1px solid #ddd',
+                            'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                            'borderRadius': '8px'
+                        }
+                    )
+                ], style={'flex': '1'})
+            ], style={
+                'display': 'flex',
+                'flexDirection': 'row',
+                'gap': '20px',
+                'marginBottom': '30px',
+                'padding': '20px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '8px'
+            }),
+
+            # Bar Plot Section
+            html.Div([
+                html.H3("Bar Plot", style={
+                    'textAlign': 'center', 'fontSize': '24px',
+                    'color': colors['text'], 'fontWeight': 'bold'
+                }),
+                dcc.Graph(
+                    id='scatter-plot',
+                    style={
+                        'border': '5px solid #ddd',
+                        'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        'borderRadius': '20px'
+                    }
+                )
+            ], style={
+                'marginBottom': '40px',
+                'padding': '60px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '20px',
+                'width': '100%',
+                'margin': 'auto'
+            }),     
+            # Treemap Section
+            html.Div([
+                html.H3("Objects Treemap", style={
+                    'textAlign': 'center',
+                    'fontSize': '24px',
+                    'color': colors['text'],
+                    'fontWeight': 'bold'
+                }),
+                html.P([
+                    "You can click on the object that you want to and it will filter the bar chart above to videos that contain the picked object.",
+                    html.Br(),
+                    "Also you can interact with the slider below to filter object annotation count in a given range."
+                ], style={
                     'color': colors['text'],
                     'textAlign': 'center',
-                    'margin-bottom': '10px', 
+                    'marginBottom': '10px',
                     'fontWeight': 'bold',
                     'fontSize': '20px'
-                }
-            ),
-           create_OD_attributes(),  # Insert DataTable here
-            html.Div(id='datatable-interactivity-container-od', style={'margin-top': '20px'}),  # Output container
+                }),
+                create_slider_treemap('my-slider'),
+                html.Button(
+                    'Reset Filters',
+                    id='reset-button',
+                    n_clicks=0,
+                    style={
+                        'display': 'block',
+                        'margin': '0 auto',
+                        'padding': '10px',
+                        'backgroundColor': '#2ECC40',
+                        'color': 'white',
+                        'border': 'none',
+                        'borderRadius': '8px'
+                    }
+                ),
+                dcc.Graph(
+                    id='objects-treemap',
+                    style={
+                        'border': '1px solid #ddd',
+                        'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        'borderRadius': '8px'
+                    }
+                )
+            ], style={
+                'marginBottom': '30px',
+                'padding': '20px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '8px'
+            }),
+
+            # Attribute Bar Chart
+            html.Div([
+                html.H3(
+                    "This bar chart shows the instances of attributes in the annotations",
+                    style={
+                        'textAlign': 'center',
+                        'fontSize': '24px',
+                        'color': colors['text'],
+                        'fontWeight': 'bold'
+                    }
+                ),
+                dcc.Graph(
+                    figure=bar_attributes(),
+                    style={
+                        'border': '1px solid #ddd',
+                        'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        'borderRadius': '8px'
+                    }
+                )
+            ], style={
+                'marginBottom': '30px',
+                'padding': '20px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '8px'
+            }),
+
+            # Dropdown Pie Chart
+            html.Div([
+                html.H3("Pick an attribute to see distribution", style={
+                    'textAlign': 'center',
+                    'fontSize': '24px',
+                    'color': colors['text'],
+                    'fontWeight': 'bold'
+                }),
+                dcc.Dropdown(
+                    id='df-dropdown_OD',
+                    options=[
+                        {'label': 'Blur', 'value': 'blurry'},
+                        {'label': 'Occlusion', 'value': 'occluded'},
+                        {'label': 'Truncation', 'value': 'truncated'}
+                    ],
+                    value='blurry',
+                    clearable=False,
+                    style={'width': '50%', 'margin': '0 auto', 'display': 'block'}
+                ),
+                dcc.Graph(
+                    id='OD-pie',
+                    style={
+                        'border': '1px solid #ddd',
+                        'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        'borderRadius': '8px'
+                    }
+                )
+            ], style={
+                'marginBottom': '30px',
+                'padding': '20px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '8px'
+            }),
+
+            # Gauge Chart for Objects
+            html.Div([
+                html.H3(
+                    "Select an object to view the number of annotations associated with it",
+                    style={
+                        'textAlign': 'center',
+                        'fontSize': '24px',
+                        'color': colors['text'],
+                        'fontWeight': 'bold'
+                    }
+                ),
+                create_y_axis_dropdown('y-axis-dropdown-overall', 'total', include_video_name=False),
+                dcc.Graph(
+                    id='gauge-indicator-total',
+                    style={
+                        'border': '1px solid #ddd',
+                        'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        'borderRadius': '8px'
+                    }
+                )
+            ], style={
+                'marginBottom': '30px',
+                'padding': '20px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '8px'
+            }),
+
+            # Data Table Section
+            html.H3("Select a row to see data for each video.", style={
+                'textAlign': 'center',
+                'fontSize': '24px',
+                'color': colors['text'],
+                'fontWeight': 'bold'
+            }),
+            html.P([
+                "You can also search for a criterion in the search bar above each column in the table and press Enter or you can click the check box to see the video details below."
+            ], style={
+                'color': colors['text'],
+                'textAlign': 'center',
+                'marginBottom': '10px',
+                'fontWeight': 'bold',
+                'fontSize': '20px'
+            }),
+            create_OD_attributes(),
+            html.Div(id='datatable-interactivity-container-od', style={'marginTop': '20px'}),
             html.Ul([
                 html.Li("Info on the whole database:"),
                 html.Li(f"This table shows the data of '{vid_count}' videos"),
                 html.Li(f"There are a total of '{total_frames_ann}' frames annotated")
             ], style={
-                'margin-top': '20px',
+                'marginTop': '20px',
                 'color': colors['text'],
                 'fontSize': '16px'
             }),
-        html.Div([
-            html.H3("Bar Plot", style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
-            create_attributes_axis_dropdown('att_selection'),
-            # Dropdown removed
-            dcc.Graph(id='scatter-plot', style={'border': '5px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '20px'})
-        ], style={'margin-bottom': '40px', 'padding': '60px', 'backgroundColor': colors['background'], 'borderRadius': '20px', 'width': '100%', "margin": "auto"}),
 
-        # Treemap and its slider
-        html.Div([
-            html.H3("Objects Treemap", style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
-            html.P(
-                [
-                    "You can click on the object that you want to and it will filter the bar chart above to videos that contain the picked object.",
-                    html.Br(),
-                    "Also you can interact with the slider below to filter object annotation count in a given range."
-                ],
-                style={
-                    'color': colors['text'],
-                    'textAlign': 'center',
-                    'margin-bottom': '10px', 
-                    'fontWeight': 'bold',
-                    'fontSize': '20px'
-                }
-            ),
-            create_slider_treemap('my-slider'),  # Use 'my-slider' to match the callback
-            html.Button('Reset Filters', id='reset-button', n_clicks=0, style={'display': 'block', 'margin': '0 auto', 'padding': '10px', 'backgroundColor': '#2ECC40', 'color': 'white', 'border': 'none', 'borderRadius': '8px'}),
-            dcc.Graph(id='objects-treemap', style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'})
-        ], style={'margin-bottom': '30px', 'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
-
-        html.Div([
-    html.H3(
-        "This bar chart shows the instances of attributes in the annotations",
-        style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}
-    ),
-    dcc.Graph(
-        figure=bar_attributes(),  # Call the function and pass the data
-        style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'}
+            # Average Gauge Section
+            html.Div([
+                create_average_annotations_gauge()
+            ])
+        ]
     )
-], style={'margin-bottom': '30px', 'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
 
-        
-
-        # Pie chart section
-        html.Div([
-            html.H3("Pick an attribute to see distribution", style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
-            dcc.Dropdown(
-                id='df-dropdown_OD',
-                options=[
-                    {'label': 'Blur', 'value': 'blurry'},
-                    {'label': 'Occlusion', 'value': 'occluded'},
-                    {'label': 'Truncation', 'value': 'truncated'}
-                ],
-                value='blurry',  # Ensure this matches one of the available options
-                clearable=False,
-                style={'width': '50%', 'margin': '0 auto', 'display': 'block'}
-            ),
-            dcc.Graph(id='OD-pie', style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'})
-        ], style={'margin-bottom': '30px', 'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
-
-        # Gauge indicator and its dropdown
-        html.Div([
-            html.H3("Select an object to view the number of annotations associated with it", style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}),
-            create_y_axis_dropdown('y-axis-dropdown-overall', 'total', include_video_name=False),
-            dcc.Graph(id='gauge-indicator-total', style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'})
-        ], style={'margin-bottom': '30px', 'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
-
-        html.Div([
-    html.H3(
-        "This pie chart represents the instances of colors in the annotations in relation to the overall instances ",
-        style={'textAlign': 'center', 'fontSize': '24px', 'color': colors['text'], 'fontWeight': 'bold'}
-    ),
-    dcc.Graph(
-        figure=pie_OD_colors(colors_data),  # Call the function and pass the data
-        style={'border': '1px solid #ddd', 'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)', 'borderRadius': '8px'}
-    )
-], style={'margin-bottom': '30px', 'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
-
-
-
-        # Average annotations gauge (no dropdown)
-        html.Div([
-            create_average_annotations_gauge()
-        ])
-    ])
 
 
 
@@ -495,6 +641,24 @@ def create_attributes_axis_dropdown(id):
     """Create a dropdown for selecting the y-axis value."""
     options = [{'label': col, 'value': col} for col in OD_ATT_FILT.columns]
     return dcc.Dropdown(id=id, options=options, multi= True, clearable=True, style={'width': '50%', 'margin': '0 auto', 'display': 'block'})
+
+def create_objects_axis_dropdown(id):
+    """Create a dropdown for selecting object names from the 'object_name' column."""
+    if 'object_name' not in OD_ATT.columns:
+        return html.Div("⚠️ 'object_name' column not found in data.")
+
+    object_names = OD_ATT['object_name'].dropna().unique()
+    options = [{'label': name, 'value': name} for name in sorted(object_names)]
+
+    return dcc.Dropdown(
+        id=id,
+        options=options,
+        multi=True,
+        clearable=True,
+        placeholder="Select object(s)...",
+        style={'width': '50%', 'margin': '0 auto', 'display': 'block'}
+    )
+
 
 def create_y_axis_dropdown(id, default_value, include_video_name=True):
     """Create a dropdown for selecting the y-axis value."""
@@ -645,7 +809,7 @@ def create_NLP_table():
 
     Returns:
         html.Div: Dash layout containing the table, statistics, and pie charts.
-    """
+    
     # Data table for NLP data
     table_nlp = dash_table.DataTable(
     id="nlp-table",
@@ -692,7 +856,7 @@ def create_NLP_table():
             'color': 'white'  # Text color for selected row
         }
     ]
-)
+)"""
 
 
     # Pie chart for audio events
@@ -718,18 +882,6 @@ def create_NLP_table():
                 'fontSize' : '20px'
             }
         ),
-            
-            table_nlp,  # Insert DataTable here
-            html.Div(id='datatable-interactivity-container', style={'margin-top': '20px'}),  # Output container
-            html.Ul([
-                html.Li("Info on the whole database:"),
-                html.Li(f"The total time of the videos is {sum_of_nlp_audio_hour} hour and {sum_of_nlp_audio_min} minutes."),
-                html.Li(f"The overall size of the videos is: {sum_of_size} Mbs")
-            ], style={
-                'margin-top': '20px',
-                'color': colors['text'],
-                'fontSize': '16px'
-            }),
             html.H3("Pie Chart for NLP Status", style={
                 'color': colors['text'],
                 'textAlign': 'center',
@@ -779,99 +931,114 @@ def display_row_explanation(selected_rows, data):
 
     return html.Div(explanations)
 
-# Data Table Tab
 def create_table_tab():
-    """Create the 'Data Table' tab layout."""
-    table = dash_table.DataTable(
-        data=df.to_dict('records'),  # Convert DataFrame to list of dicts
-        columns=[{"name": i, "id": i} for i in df.columns],
-        style_table={'overflowX': 'auto'},  # Enable horizontal scrolling
-        style_cell={
-            'backgroundColor': colors['background'],
-            'color': colors['text'],
-            'textAlign': 'left',
-            'padding': '5px',
-            'fontSize': '14px'
-        },
-        style_header={
-            'backgroundColor': '#444',
-            'color': colors['text'],
-            'fontWeight': 'bold'
-        },
-        page_size=15,  # Display 10 rows per page
-        sort_action='native',  # Enable sorting
-        filter_action='native',  # Enable filtering
-    )
-
-    table2 = dash_table.DataTable(
-        data=df2.to_dict('records'),  # Convert DataFrame to list of dicts
-        columns=[{"name": i, "id": i} for i in df2.columns],
-        style_table={'overflowX': 'auto'},  # Enable horizontal scrolling
-        style_cell={
-            'backgroundColor': colors['background'],
-            'color': colors['text'],
-            'textAlign': 'left',
-            'padding': '5px',
-            'fontSize': '14px'
-        },
-        style_header={
-            'backgroundColor': '#444',
-            'color': colors['text'],
-            'fontWeight': 'bold'
-        },
-        page_size=15,  # Display 10 rows per page
-        sort_action='native',  # Enable sorting
-        filter_action='native',  # Enable filtering
-    )
-
-    return dcc.Tab(label='Data Table', children=[
+    return dcc.Tab(
+        children=[
         html.Div([
-            html.H3("DataFrames Overview", style={
-                'textAlign': 'center',
-                'color': colors['text'],
-                'margin-bottom': '20px'
-            }),
-            
-            # First Table Section
-            html.Div([
-                html.H4("Objects DataFrame", style={
+      
+    html.H4("Select Dataset"),
+    dcc.Dropdown(
+        id='dataset-selector',
+        options=[
+            {'label': 'OD Dataset', 'value': 'od'},
+            {'label': 'POI Dataset', 'value': 'poi'}
+        ],
+        value='od',
+        clearable=False,
+        style={'width': '300px', 'margin': '10px auto'}
+    ),
+    html.H3("This bar chart shows the total working hours per user in correlation to the tasks submitted", style={
                     'textAlign': 'center',
+                    'fontSize': '24px',
                     'color': colors['text'],
-                    'margin-bottom': '10px'
+                    'fontWeight': 'bold'
                 }),
-                table
-            ], style={
+    dcc.Graph(id='bar-hours-tasks', style={
+                    'border': '5px solid #ddd',
+                    'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                    'borderRadius': '20px'
+                })
+], style={
                 'margin-bottom': '40px',
-                'padding': '10px',
+                'padding': '30px',
                 'backgroundColor': colors['background'],
-                'borderRadius': '8px'
-            }),
-            
-            # Second Table Section
-            html.Div([
-                html.H4("Faces DataFrame", style={
-                    'textAlign': 'center',
-                    'color': colors['text'],
-                    'margin-bottom': '10px'
-                }),
-                table2
-            ], style={
-                'padding': '10px',
+                'borderRadius': '20px',
+                'width': '70%',
+                'margin': 'auto'
+            }
+) ,
+html.Div([
+    dcc.Graph(id='rejection-rate-bar', style={
+                    'border': '5px solid #ddd',
+                    'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                    'borderRadius': '20px'
+                })
+], style={
+                'margin-bottom': '40px',
+                'padding': '30px',
                 'backgroundColor': colors['background'],
-                'borderRadius': '8px'
-            })
-            
-        ], style={
-            'padding': '20px',
-            'backgroundColor': colors['background'],
-            'borderRadius': '8px'
-        })
-    ])
+                'borderRadius': '20px',
+                'width': '70%',
+                'margin': 'auto'
+            }
+),
+html.Div([
+    dcc.Graph(id='avg-work-time-bar', style={
+                    'border': '5px solid #ddd',
+                    'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                    'borderRadius': '20px'
+                })
+], style={
+                'margin-bottom': '40px',
+                'padding': '30px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '20px',
+                'width': '70%',
+                'margin': 'auto'
+            }
+) , 
+html.Div([
+    dcc.Graph(id='rejection-rate-pie', style={
+                    'border': '5px solid #ddd',
+                    'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                    'borderRadius': '20px'
+                })
+], style={
+                'margin-bottom': '40px',
+                'padding': '30px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '20px',
+                'width': '70%',
+                'margin': 'auto'
+            }
+),
+
+
+
+html.Div([
+    dcc.Graph(id='generate_avg_time_per_user', style={
+                    'border': '5px solid #ddd',
+                    'boxShadow': '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                    'borderRadius': '20px'
+                })
+], style={
+                'margin-bottom': '40px',
+                'padding': '30px',
+                'backgroundColor': colors['background'],
+                'borderRadius': '20px',
+                'width': '70%',
+                'margin': 'auto'
+            }
+)
+
+
+])
+    
 
 
 
 # Heatmap Chart Tab
-def heat_map_tab():
+def voice_rec():
 
     return dcc.Tab(label='Voice Recognition Analysis', children=[
       html.Div(style={'display': 'flex', 'justifyContent': 'space-around', 'padding': '20px', 'background': '#F7F7F7'}, children=[
@@ -955,7 +1122,7 @@ sheet1_content = [
     html.Div(
         [
            
-            html.H3("Face Annotation Overview", style={'color': colors['text'], 'textAlign': 'center'}),
+            html.H3("Face frames Overview", style={'color': colors['text'], 'textAlign': 'center'}),
             dcc.Graph(
                 
                 figure=px.bar(
@@ -1021,7 +1188,7 @@ sheet1_content = [
     )
 ], style={'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'}),
 html.Div([
-    html.H2("Annotated Data Table", style={'textAlign': 'center', 'color': colors['text']}),
+    html.H2("Faces snips table per video", style={'textAlign': 'center', 'color': colors['text']}),
 
     snips_table()  # Call the function from Part 1
 ], style={'padding': '20px', 'backgroundColor': colors['background'], 'borderRadius': '8px'})
@@ -1065,7 +1232,7 @@ app.layout = html.Div([
             selected_style=selected_tab_style
         ),
         dcc.Tab(
-            label='DataFrames(source)',
+            label='Encord work progress',
             value='tab-5',
             style=tab_style,
             selected_style=selected_tab_style
@@ -1090,7 +1257,7 @@ def update_main_content(tab):
     elif tab == 'tab-3':
         return add_image_to_tab(create_NLP_table())  # Add image to NLP tab
     elif tab == 'tab-4':
-        return add_image_to_tab(heat_map_tab())  # Add image to Heatmap tab
+        return add_image_to_tab(voice_rec())  # Add image to Heatmap tab
     elif tab == 'tab-5':
         return add_image_to_tab(create_table_tab())  # Add image to DataFrames tab
     else:
@@ -1105,13 +1272,14 @@ from dash import callback_context
 
 @app.callback(
     [Output('objects-treemap', 'figure'),
-     Output('scatter-plot', 'figure')],
+     Output('scatter-plot', 'figure'),
+     Output('number-chart-videos', 'figure')],
     [Input('my-slider', 'value'),
-     Input('objects-treemap', 'clickData'),
      Input('att_selection', 'value'),
+     Input('obj_selection', 'value'),
      Input('reset-button', 'n_clicks')]
 )
-def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n_clicks):
+def update_treemap_and_scatter(selected_range, selected_attributes, selected_objects, n_clicks):
     fixed_y_axis = 'Total_per_video'
     filtered_treemap_df = transposed_df.iloc[:-1, :].reset_index()
 
@@ -1126,11 +1294,13 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
             (filtered_treemap_df['Total'] <= max_val)
         ]
 
-    # Detect trigger source
+    # Reset logic
     triggered = callback_context.triggered[0]['prop_id'].split('.')[0]
     if triggered == 'reset-button':
-        clickData = None
+        selected_attributes = None
+        selected_objects = None
 
+    # Treemap figure
     treemap_fig = px.treemap(
         filtered_treemap_df,
         path=['index'],
@@ -1138,11 +1308,7 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
         title=f"Treemap: Annotations per Object ({min_val} ≤ x ≤ {max_val})",
         labels={'index': 'Object', 'Total': 'Annotations'}
     )
-
-    treemap_fig.update_traces(
-        hovertemplate='<b>%{label}</b><br>Annotations: %{value}<extra></extra>'
-    )
-
+    treemap_fig.update_traces(hovertemplate='<b>%{label}</b><br>Annotations: %{value}<extra></extra>')
     treemap_fig.update_layout(
         plot_bgcolor=colors['background'],
         paper_bgcolor=colors['background'],
@@ -1150,29 +1316,33 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
     )
 
     df_top_filtered = df_top.drop(index=df.index[0])
+    filtered_df = df_top_filtered
 
-    if clickData:
-        clicked_object = clickData['points'][0]['label']
-        if clicked_object in df_filtered.columns:
-            filtered_df = df_filtered[df_filtered[clicked_object] > 0]
-        else:
-            filtered_df = pd.DataFrame()
-    else:
-        filtered_df = df_top_filtered
+    # Filter by attributes and object_name
+    if selected_attributes or selected_objects:
+        video_mask = pd.Series(True, index=OD_ATT.index)
 
-    if selected_attributes:
-        filtered_videos = OD_ATT.loc[
-            OD_ATT[selected_attributes].apply(lambda x: x != "").all(axis=1),
-            "Video Name"
-        ].unique()
-        filtered_df = filtered_df[filtered_df["Video Name"].isin(filtered_videos)]
+        if selected_attributes:
+            att_mask = OD_ATT[selected_attributes].apply(lambda x: x != "", axis=1).all(axis=1)
+            video_mask &= att_mask
 
+        if selected_objects:
+            obj_video_map = OD_ATT[OD_ATT['object_name'].isin(selected_objects)]
+            video_counts = obj_video_map.groupby("Video Name")['object_name'].nunique()
+            matching_video_names = video_counts[video_counts == len(selected_objects)].index
+            obj_mask = OD_ATT["Video Name"].isin(matching_video_names)
+            video_mask &= obj_mask
+
+        matching_videos = OD_ATT.loc[video_mask, "Video Name"].unique()
+        filtered_df = filtered_df[filtered_df["Video Name"].isin(matching_videos)]
+
+    # Scatter plot
     if not filtered_df.empty:
         scatter_fig = px.bar(
             filtered_df,
             x='Video Name',
             y=fixed_y_axis,
-            title=f"Videos Matching Attributes: {selected_attributes}",
+            title="Videos Matching Filters",
             text=fixed_y_axis
         )
         scatter_fig.update_traces(
@@ -1181,7 +1351,7 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
             marker_color='LightSkyBlue'
         )
     else:
-        scatter_fig = px.bar(title="No Videos Match the Selected Attributes")
+        scatter_fig = px.bar(title="No Videos Match the Selected Filters")
 
     scatter_fig.update_layout(
         plot_bgcolor=colors['background'],
@@ -1190,7 +1360,20 @@ def update_treemap_and_scatter(selected_range, clickData, selected_attributes, n
         yaxis=dict(range=[0, 70])
     )
 
-    return treemap_fig, scatter_fig
+    # Number chart
+    video_count = filtered_df["Video Name"].nunique() if not filtered_df.empty else 0
+    number_chart_fig = go.Figure(go.Indicator(
+        mode="number",
+        value=video_count,
+        title={"text": "Videos Matching Filters"}
+    ))
+    number_chart_fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
+    )
+
+    return treemap_fig, scatter_fig, number_chart_fig
 
 
 
@@ -1265,7 +1448,7 @@ def update_pie_chart(selected_df):
             font_color=colors['text']
         )
         fig.update_traces(
-            hovertemplate='<b>%{label}</b><br>Annotations: %{value}<extra></extra>'
+            hovertemplate='<b>%{label}</b><br>Frames: %{value}<extra></extra>'
         )
     else:
         # Empty figure if no data is selected
@@ -1279,44 +1462,50 @@ def update_pie_chart(selected_df):
     
     return fig
 
+
+
 @app.callback(
     Output('OD-pie', 'figure'),
-    [Input('df-dropdown_OD', 'value')]
+    [Input('df-dropdown_OD', 'value'),
+     Input('att_selection', 'value'),
+     Input('obj_selection', 'value')]
 )
+def update_attribute_pie(selected, att_selection, obj_selection):
+    df = OD_ATT.copy()
 
-def OTB_pie(selected): 
-    
-     if selected == 'blurry':
-        data1 = Blur_df_od
-        title1 = "Blur Distribution"
-     elif selected == 'occluded':
-        data1 = Oc_df_od
-        title1 = "Occlusion Distribution" 
-     elif selected == 'truncated':
-        data1 = Trunc_df_od
-        title1 =  "Truncation Distribution" 
-     else:
-        data1 = {}
-        title1 = "No Data Selected"
+    # Apply filters
+    if att_selection:
+        att_mask = df[att_selection].apply(lambda x: x != "", axis=1).all(axis=1)
+        df = df[att_mask]
 
-    # Convert the data into a pie chart
-     if data1:
-        labels = list(data1.keys())
-        values = list(data1.values())
-        fig = px.pie(values=values, names=labels, title=title1)
-        
-        fig.update_layout(
-            plot_bgcolor=colors['background'],
-            paper_bgcolor=colors['background'],
-            font_color=colors['text']
-        )
-        fig.update_traces(
-            hovertemplate='<b>%{label}</b><br>Annotations: %{value}<extra></extra>'
-        )
-     
-        
-        return fig
-     
+    if obj_selection:
+        obj_video_map = df[df['object_name'].isin(obj_selection)]
+        video_counts = obj_video_map.groupby("Video Name")['object_name'].nunique()
+        matching_videos = video_counts[video_counts == len(obj_selection)].index
+        df = df[df['Video Name'].isin(matching_videos)]
+
+    # Choose the column
+    col_map = {
+        'blurry': 'Blurry',
+        'occluded': 'Occluded',
+        'truncated': 'Truncated'
+    }
+
+    column = col_map.get(selected)
+    if not column or column not in df.columns:
+        return px.pie(title="No Data Selected")
+
+    counts = df[column].value_counts().to_dict()
+
+    fig = px.pie(values=list(counts.values()), names=list(counts.keys()), title=f"{column} Distribution")
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
+    )
+    return fig
+
+
    
 
      
@@ -1405,10 +1594,12 @@ def display_row_explanation(selected_rows, data):
 
 
 
-def pie_OD_colors(colors_data):
-    """
-    Generate a pie chart showing the distribution of colors with real colors.
-    """
+@app.callback(
+    Output('OD-color-pie', 'figure'),
+    [Input('att_selection', 'value'),
+     Input('obj_selection', 'value')]
+)
+def update_color_pie(att_selection, obj_selection):
     color_name_to_hex = {
         "Black": "#323232",
         "Blue": "#0000FF",
@@ -1422,27 +1613,47 @@ def pie_OD_colors(colors_data):
         "Pink": "#FFC0CB"
     }
 
-    filtered_colors = {k: v for k, v in colors_data.items() if k in color_name_to_hex}
-    if not filtered_colors:
+    df = OD_ATT.copy()
+
+    # Filter by attributes (AND across selected attributes)
+    if att_selection:
+        att_mask = df[att_selection].apply(lambda x: x != "", axis=1).all(axis=1)
+        df = df[att_mask]
+
+    # Filter by object_name (AND logic)
+    if obj_selection:
+        obj_video_map = df[df['object_name'].isin(obj_selection)]
+        video_counts = obj_video_map.groupby("Video Name")['object_name'].nunique()
+        matching_videos = video_counts[video_counts == len(obj_selection)].index
+        df = df[df['Video Name'].isin(matching_videos)]
+
+    # Count non-empty occurrences for known color columns
+    color_counts = {}
+    for color in color_name_to_hex:
+        if color in df.columns:
+            count = df[color].astype(bool).sum()
+            if count > 0:
+                color_counts[color] = count
+
+    if not color_counts:
         return px.pie(title="No Valid Colors Found")
 
     fig = px.pie(
-        values=list(filtered_colors.values()),
-        names=list(filtered_colors.keys()),
-        title="",
-        color=list(filtered_colors.keys()),
+        values=list(color_counts.values()),
+        names=list(color_counts.keys()),
+        title="Color Distribution",
+        color=list(color_counts.keys()),
         color_discrete_map=color_name_to_hex,
-        hole=0.4  # Creates a donut-style chart to match KPI style
+        hole=0.4
+    )
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
     )
 
-    # Adjusting Pie Chart to fit KPI size
-    fig.update_layout(
-            plot_bgcolor=colors['background'],
-            paper_bgcolor=colors['background'],
-            font_color=colors['text']
-        )
-
     return fig
+
 
 
 
@@ -1563,6 +1774,364 @@ def Dominant():
     fig.update_traces(textinfo='percent', marker=dict(colors=["#B6E880", "#FF97FF"]))
     return fig
 
+dcc.Dropdown(
+    id='dataset-selector',
+    options=[
+        {'label': 'OD Dataset', 'value': 'od'},
+        {'label': 'POI Dataset', 'value': 'poi'}
+    ],
+    value='od',  # default selection
+    style={'width': '300px', 'margin': '0 auto'}
+),
+
+
+@app.callback(
+    Output('bar-hours-tasks', 'figure'),
+    Input('dataset-selector', 'value')
+)
+def Total_ann_hours_per_user(selected_dataset):
+    df_en = df_work_od if selected_dataset == 'od' else df_work_poi
+    df_en = df_en.iloc[:-1]  # Exclude last row
+
+    df_en = df_en.sort_values(by='Total annotation time hours', ascending=False)
+    max_val = df_en["Total annotation time hours"].max()
+    bar_limm = max_val + 100
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        x=df_en["User"],
+        y=df_en["Total annotation time hours"],
+        name='Annotation Hours',
+        text=df_en["Total annotation time hours"]
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_en["User"],
+        y=df_en["Submitted tasks"],
+        name='Submitted Tasks',
+        text=df_en["Submitted tasks"]
+    ))
+
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text'],
+        yaxis=dict(range=[0, bar_limm]),
+        barmode='group',
+        title='Annotation Hours vs Submitted Tasks per User'
+    )
+
+    fig.update_traces(
+        texttemplate='%{text:.2f}',
+        textposition='outside',
+        hovertemplate='<b>User: %{x}</b><br>Value: %{y}<extra></extra>'
+    )
+
+    return fig
+
+@app.callback(
+    Output('avg-work-time-bar', 'figure'),
+    Input('dataset-selector', 'value')
+)
+def update_avg_work_time(source):
+    df = df_work_od if source == 'od' else df_work_poi
+    df = df.iloc[:-1].copy()
+    df['AVG annotation time per video (hours)'] = pd.to_numeric(df['AVG annotation time per video (hours)'], errors='coerce')
+
+    max_val = df['AVG annotation time per video (hours)'].max()
+    bins = [0, 0.2 * max_val, 0.4 * max_val, 0.6 * max_val, 0.8 * max_val, max_val]
+    labels = [f"{round(bins[i], 2)}–{round(bins[i+1], 2)}" for i in range(len(bins) - 1)]
+
+    df['Time Bin'] = pd.cut(df['AVG annotation time per video (hours)'], bins=bins, labels=labels, right=False)
+    bar_data = df['Time Bin'].value_counts().sort_index().reset_index()
+    bar_data.columns = ['Time Bin', 'Count']
+
+    fig = px.bar(
+        bar_data,
+        x='Time Bin',
+        y='Count',
+        color='Time Bin',
+        title='Average Work Time Per Video Histogram',
+        text='Count'
+    )
+
+    fig.update_traces(
+        textposition='outside',
+        marker_line_width=1.5,
+        hovertemplate="Count: %{y}",
+        textfont=dict(size=24)
+    )
+
+    fig.update_layout(
+        xaxis_title="AVG annotation time per video (hours)",
+        yaxis_title="Count",
+        showlegend=False,
+        font=dict(size=20, color='white'),
+        yaxis=dict(range=[0, 1.25 * bar_data['Count'].max()])
+    )
+
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
+    )
+
+    return fig
+
+
+
+@app.callback(
+    Output('rejection-rate-pie', 'figure'),
+    Input('dataset-selector', 'value')
+)
+def update_rejection_pie(source):
+    # Select appropriate dataset
+    df = df_work_od if source == 'od' else df_work_poi
+    df = df.iloc[:-1].copy()
+
+    # Convert 'Submitted tasks' to numeric
+    df['Submitted tasks'] = pd.to_numeric(df['Submitted tasks'], errors='coerce')
+
+    # Clean and convert 'Tasks rejection rate' to float
+    df['Tasks rejection rate'] = (
+        df['Tasks rejection rate'].astype(str)
+        .str.replace('%', '', regex=False)
+        .astype(float)
+    )
+
+    # Filter rows with valid data
+    df = df[(df['Tasks rejection rate'] >= 0) & (df['Submitted tasks'] > 0)]
+
+    # Total task count for annotation
+    total_sum = int(df['Submitted tasks'].sum())
+
+    # Define bins and labels
+    bins = [0, 10, 25, 100]
+    labels = ['Good (0%-10%)', 'Mediocre (10%-25%)', 'Bad (>25%)']
+
+    df['Rejection Category'] = pd.cut(
+        df['Tasks rejection rate'],
+        bins=bins,
+        labels=labels,
+        right=True,
+        include_lowest=True
+    )
+
+    # Count each category
+    pie_rejection = df['Rejection Category'].value_counts().reset_index()
+    pie_rejection.columns = ['Tasks rejection rate', 'Count']
+
+    # Custom color map
+    color_map = {
+        'Good (0%-10%)': 'green',
+        'Mediocre (10%-25%)': 'orange',
+        'Bad (>25%)': 'red'
+    }
+
+    # Build pie chart
+    fig = px.pie(
+        pie_rejection,
+        names='Tasks rejection rate',
+        values='Count',
+        color='Tasks rejection rate',
+        color_discrete_map=color_map,
+        title='Rejection Rate'
+    )
+
+    fig.update_traces(
+        marker=dict(line=dict(color='black', width=2)),
+        textinfo='label+percent',
+        textfont=dict(color='black', size=12)
+    )
+
+    # Styling
+    fig.update_layout(
+        hovermode="x unified",
+        margin=dict(t=40, b=20, l=0, r=0),
+        font=dict(size=12, color='black'),
+        title_font=dict(color='black', size=24),
+        hoverlabel=dict(font=dict(size=24, color='black'))
+    )
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
+    )
+
+    # Add total task count as annotation
+    fig.add_annotation(
+        xref="paper",
+        yref="paper",
+        x=1.0,
+        y=1.00,
+        text=f"Out of {total_sum:,} Tasks",
+        showarrow=False,
+        font=dict(size=16, color='white'),
+        borderwidth=2,
+        borderpad=4
+    )
+
+    return fig
+
+@app.callback(
+    Output('rejection-rate-bar', 'figure'),
+    Input('dataset-selector', 'value'))
+
+def generate_rejection_rate(source):
+    df = df_work_od if source == 'od' else df_work_poi
+
+    # Clean before slicing for summary metrics
+    df['AVG annotation time per video (hours)'] = pd.to_numeric(df['AVG annotation time per video (hours)'], errors='coerce')
+    df['Total annotation time hours'] = pd.to_numeric(df['Total annotation time hours'], errors='coerce')
+    df['Submitted tasks'] = pd.to_numeric(df['Submitted tasks'], errors='coerce')
+
+    avg_total_wt = df['AVG annotation time per video (hours)'].iloc[-1]
+    total_hr = df['Total annotation time hours'].iloc[-1]
+
+    df = df.iloc[:-1].copy()  # Exclude the summary row
+
+    df['User'] = df['User'].str.split('@').str[0]
+    df['Tasks rejection rate'] = df['Tasks rejection rate'].astype(str).str.replace('%', '', regex=False)
+    df['Tasks rejection rate'] = pd.to_numeric(df['Tasks rejection rate'], errors='coerce')
+    df = df[df['Submitted tasks'] != 0].copy()
+
+    df = df.sort_values("Tasks rejection rate", ascending=True)
+
+    fig = px.bar(
+        df,
+        x='Tasks rejection rate',
+        y='User',
+        orientation='h',
+        color='Tasks rejection rate',
+        title='Rejection Rate by User (%)',
+        text='Tasks rejection rate'
+    )
+
+    fig.update_traces(
+        marker_line_width=1.5,
+        textposition='outside',
+        textfont=dict(size=12),
+        hovertemplate="User: %{y}<br>Rejection Rate: %{x:.2f}%"
+    )
+
+    fig.update_coloraxes(showscale=False)
+
+    fig.update_layout(
+        height=1000,
+        width=1000,
+        font=dict(size=12, color='black'),
+        title_font=dict(color='black'),
+        xaxis=dict(
+            color='black',
+            gridcolor='gray',
+            showgrid=False,
+            zeroline=False,
+            title_font=dict(color='black'),
+            tickfont=dict(color='black'),
+            range=[0, 1.25 * df['Tasks rejection rate'].max()]
+        ),
+        yaxis=dict(
+            color='yellow',
+            gridcolor='gray',
+            showgrid=False,
+            zeroline=False,
+            title_font=dict(color='black'),
+            tickfont=dict(color='black')
+        ),
+        hoverlabel=dict(font=dict(size=24, color='black')),
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background']
+    )
+
+    fig.add_annotation(
+        xref="paper",
+        yref="paper",
+        x=1.5,
+        y=0.97,
+        text=f"Overall Average Work Time: {avg_total_wt:.2f} hrs<br>Total Annotation Time: {total_hr:.2f} hrs",
+        showarrow=False,
+        font=dict(size=16, color='white'),
+        align="right",
+        bgcolor='black',
+        bordercolor='white',
+        borderwidth=2,
+        borderpad=4
+    )
+
+    return fig
+
+
+
+@app.callback(
+    Output('generate_avg_time_per_user', 'figure'),
+    Input('dataset-selector', 'value'))
+
+def generate_avg_time_per_user(source):
+    df = df_work_od if source == 'od' else df_work_poi
+    df0 = df[df['Submitted tasks'] > 0].copy()
+    df1 = df0.iloc[:-1].copy()
+    df1['User'] = df1['User'].str.split('@').str[0]
+    # Convert to numeric
+    df1['Total annotation time hours'] = pd.to_numeric(
+        df1['Total annotation time hours'], errors='coerce'
+    )
+    df2 = df1.sort_values("Total annotation time hours", ascending=True)
+    fig = px.bar(
+        df2,
+        x='Total annotation time hours',
+        y='User',
+        orientation='h',
+        labels={'Total annotation time hours': 'Total annotation time (hours)'},
+        title='Annotation Time by User',
+        category_orders={'User': df2['User'].tolist()[::-1]}  # top user on top
+    )
+    fig.update_traces(
+        marker_line_width=1.5,
+        textposition='outside',
+        textfont=dict(size=16),
+        hovertemplate="User: %{y}<br>Annotation Time: %{x}"
+    )
+    fig.update_layout(
+    width=1000,
+    height=1000,
+    xaxis_title='Total annotation time hours',
+    yaxis_title="User",
+    showlegend=False,
+    hovermode="y unified",
+    font=dict(size=20, color='black'),
+    title_font=dict(color='white'),
+    plot_bgcolor=colors['background'],
+    paper_bgcolor=colors['background'],
+    
+    xaxis=dict(
+        color='black',
+        gridcolor='gray',
+        showgrid=False,
+        zeroline=False,
+        title_font=dict(color='black'),
+        tickfont=dict(color='black'),
+        range=[0, 1.25 * df2['Total annotation time hours'].max()]
+    ),
+
+    yaxis=dict(
+        color='yellow',
+        gridcolor='gray',
+        showgrid=False,
+        zeroline=False,
+        title_font=dict(color='black'),
+        tickfont=dict(color='black')
+    ),
+
+    hoverlabel=dict(
+        font=dict(size=16, color='black')
+    )
+)
+
+    return fig
+
+    
+
     
 
 
@@ -1571,4 +2140,4 @@ def Dominant():
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(host='100.84.182.85', port=8050, debug=True)
+    app.run(host='100.84.182.85', port=8050, debug=True)
