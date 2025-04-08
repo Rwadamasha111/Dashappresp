@@ -809,14 +809,19 @@ def generate_interactive_bar_plot_2_city(df):
         color='Logos and text', 
         color_discrete_map=color_map4_city,
         title='Logos & Text',
-        text=source_counts['Percentage'].apply(lambda x: f'{x:.2f}%')  # Adding percentage labels
+        text=source_counts['Count'].apply(lambda x: f'{x}'),  
+        custom_data=['Percentage']   
+        
     )
     
     fig.update_traces(
-        marker_line_width=1.5, 
-        hovertemplate="Count: %{y}<br>Percentage: %{text}", 
+        marker_line_width=1.5,
+        hovertemplate=(
+            "Count: %{y}<br>"
+            "Percentage: %{customdata[0]:.2f}%"
+        ),
         textposition='outside',
-        textfont=dict(size=24)
+        textfont=dict(size=24),
     )
     
     fig.update_layout(
@@ -881,8 +886,6 @@ def generate_interactive_pie_chart_city(df):
     )
     return fig
 
-import plotly.express as px
-
 def generate_interactive_bar_chart_weather_city(df):
     weather_counts = df['Weather'].value_counts().reset_index()
     weather_counts.columns = ['Weather', 'Count']
@@ -896,12 +899,13 @@ def generate_interactive_bar_chart_weather_city(df):
         color='Weather',
         color_discrete_map=color_map3_city,
         title='Weather',
-        text=weather_counts['Percentage'].apply(lambda x: f'{x:.2f}%')  # Adding percentage labels
+        text=weather_counts['Count'].apply(lambda x: f'{x}'),
+        custom_data=['Percentage']  
     )
     
     fig.update_traces(
         marker_line_width=1.5,
-        hovertemplate="Count: %{x}<br>Percentage: %{text}",
+        hovertemplate="Count: %{x}<br>Percentage: %{customdata[0]:.2f}%",
         textposition='outside',
         textfont=dict(size=22)
     )
@@ -1205,7 +1209,17 @@ def tab_layout():
                                                     n_clicks=0,
                                                     style=button_clear
                                                 ),
-                                                width="auto"
+                                                width=4
+                                            ),
+                                            dbc.Col(
+                                                dbc.Button(
+                                                    "Update&Reset Log",
+                                                    id='update_log',
+                                                    color='primary',
+                                                    n_clicks=0,
+                                                    style=update_log_button
+                                                ),
+                                                width=4
                                             ),
                                             dbc.Col(
                                                 dbc.Button(
@@ -1215,8 +1229,9 @@ def tab_layout():
                                                     n_clicks=0,
                                                     style=export_button
                                                 ),
-                                                width="auto"
-                                            )
+                                                width=4
+                                            ),
+
                                             ])
                                 ],style={"textAlign": "center", "marginTop": "10px"}
                                     ),
@@ -1559,7 +1574,8 @@ def compute_filter_comp(
         Input('search_coord','n_clicks'),
         Input('check','n_clicks'),
         Input('modal-check','n_clicks'),
-        Input('export_log','n_clicks')
+        Input('export_log','n_clicks'),
+        Input('update_log','n_clicks')
 
 
     ],
@@ -1583,7 +1599,7 @@ def compute_filter_comp(
 def load_dashboards(load_btn, selected_city, city_options, update, pie_clickData, bar_weather_clickData,  
 bar_clickData, pie2_clickData,city_rec_clickdata, duration_range, selected_terrain,  
 selected_occluded, selected_VQ, selected_tilt, selected_distance,selected_distortions,  
-dropouts_n_clicks,clear_button, selected_row,search_button,checkif,check_modal,export_button,
+dropouts_n_clicks,clear_button, selected_row,search_button,checkif,check_modal,export_button,update_log_btn,
 current_data, reset_clicked, polygon_active,  
 polygon_coords_store, filter_comp_store, load_clicked,search_value,coord_modal_input,modal_window,original_total,last_labels,city_rec_data
 ):
@@ -2349,7 +2365,70 @@ polygon_coords_store, filter_comp_store, load_clicked,search_value,coord_modal_i
                 False,False,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update
             ,dash.no_update,dash.no_update)
                                             
+    elif triggered_id == 'update_log.n_clicks':
+        if filter_comp_store is not None:
+            filter_data = filter_comp_store
+            all_data =[]
+            cities_list = [city.strip() for entry in filter_data if 'City' in entry for city in entry['City'].split(',')]
 
+            print(cities_list)
+            for city in cities_list:
+                sid,srange,pid= load_selected_cities(city)
+                df_city_log = load_city(sid[0], srange[0])
+                df_city_log = df_city_log[df_city_log['Coordinates'].apply(is_valid_coord)]
+                df_city_log['Coordinates'] = df_city_log['Coordinates'].apply(clean_coordinate)           
+                df_records=len(df_city_log)
+                
+                duration_range=None,
+                selected_terrain=None,
+                selected_occluded=None,
+                selected_VQ=None,
+                selected_tilt=None,
+                selected_distance=None,
+                selected_distortions=None,
+                bar_weather_clickData=None,
+                pie_clickData=None,
+                pie2_clickData=None,
+                bar_weather_clickData=None,
+                polygon_active=None
+                
+                time_pie = extract_label(pie_clickData, key='label', figure_id="pie-chart")
+                weather_bar = extract_label(bar_weather_clickData, key='y', figure_id="bar-chart-weather")
+                logos_bar = extract_label(bar_clickData, key='x', figure_id="bar-plot-logos")
+                source_pie = extract_label(pie2_clickData, key='label', figure_id="source-pie")
+    
+                new_data = compute_filter_comp(
+                    filtered_df=df_city_log,
+                    original_total=df_records,
+                    city_name=city,
+                    selected_terrain=selected_terrain,
+                    selected_occluded=selected_occluded,
+                    selected_VQ=selected_VQ,
+                    selected_tilt=selected_tilt,
+                    selected_distance=selected_distance,
+                    selected_distortions=selected_distortions,
+                    pie_clickData=time_pie,
+                    bar_weather_clickData=weather_bar,
+                    bar_clickData=logos_bar,
+                    pie2_clickData=source_pie
+                )
+                all_data.extend(new_data) 
+            filter_data = [dict(t) for t in {tuple(d.items()) for d in all_data}]               
+            result_window = f"Filter Log Updated!"            
+            return (
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update,dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                dash.no_update, dash.no_update, dash.no_update, dash.no_update,
+                reset_clicked, dash.no_update, dash.no_update, dash.no_update,
+                filter_data, filter_data, load_clicked, "",dash.no_update,
+                False,True,result_window,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update,dash.no_update
+            ,dash.no_update,dash.no_update)
+            
     elif triggered_id == 'update.n_clicks':
         reset_clicked = True
         load_clicked = False
@@ -2390,12 +2469,14 @@ polygon_coords_store, filter_comp_store, load_clicked,search_value,coord_modal_i
             
             city_name = srange.split('!')[0]
 
-            df_records = len(df_city[df_city['Coordinates'].apply(is_valid_coord)])
+
             
             # Keep only rows with valid coordinates
             df_city = df_city[df_city['Coordinates'].apply(is_valid_coord)]
             df_city['Coordinates'] = df_city['Coordinates'].apply(clean_coordinate)
+
             
+            df_records = len(df_city)
             
             duration_range=None,
             selected_terrain=None,
@@ -2441,21 +2522,35 @@ polygon_coords_store, filter_comp_store, load_clicked,search_value,coord_modal_i
 
                 else:
                     print('exists')
-                    previous_city_data = filter_comp_store
-                    values_list = [entry.get('fvalue') for entry in previous_city_data if 'fvalue' in entry]
-                    values_list=[item.strip() for item in values_list[0].split(',')]
-                    print(values_list)
+                    fvalue_str = city_entry.get('fvalue', '')                    
+                    values_list = [item.strip() for item in fvalue_str.split(',') if item.strip()]
+                    filter_str = city_entry.get('Filters','')
+                    filter_list = [item.strip() for item in filter_str.split(',') if item.strip()]
+                    print(values_list,filter_list)
+
+                    from collections import Counter
 
                     def row_contains_all_substrings(row, substrings):
-                        # Convert entire row to a single string
+                        # Convert the entire row to a single string.
                         row_str = ' '.join(map(str, row.tolist()))
-                        # Check each substring
-                        return all(substring in row_str for substring in substrings) 
-                    df_filtered = df_city[
-                        df_city.apply(lambda r: row_contains_all_substrings(r, values_list), axis=1)
+                        # Count the occurrences of each substring required.
+                        required_counts = Counter(substrings)
+                        # Check that each substring appears at least the required number of times.
+                        for substring, count in required_counts.items():
+                            if row_str.count(substring) < count:
+                                return False
+                        return True
+
+
+                    # Example: Filter columns that have any of the filter strings in their header
+                    filtered_columns = [col for col in df_city.columns if any(flt in col for flt in filter_list)]
+                    df_filtered_city = df_city[filtered_columns]
+                    
+                    
+                    df_filtered = df_filtered_city[
+                        df_filtered_city.apply(lambda r: row_contains_all_substrings(r, values_list), axis=1)                        
                     ]
-                     
-                    print(len(df_filtered))
+
                     percentage = (len(df_filtered) / df_records * 100) if original_total else 0                  
                     city_entry['Percentage'] = f"{len(df_filtered)} - {percentage:.2f}%"
                     city_entry['total'] = df_records
