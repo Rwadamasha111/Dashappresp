@@ -36,13 +36,11 @@ from dotenv import load_dotenv
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.title = "Geo-Location Hub"
 
-# Load .env file
-load_dotenv()
 
 # Get the service account file path from the environment variable
-SERVICE_ACCOUNT_FILE = os.getenv("SERVICE_ACCOUNT_FILE")
-if SERVICE_ACCOUNT_FILE is None:
-    raise ValueError("SERVICE_ACCOUNT_FILE is not set in the environment variables.")
+SERVICE_ACCOUNT_FILE = r"C:\Users\roy\OneDrive\Desktop\ASR JSONS\Geo_Analysis\arabic-transcription-435113-c5acf93c0185.json"
+
+
 
 # Define scopes
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly', 
