@@ -796,27 +796,27 @@ def generate_interactive_countries_compaered_bar_plot(df):
         showlegend=False,
         hovermode="x unified",
         font=dict(size=20, color='white'),
-        plot_bgcolor='black',
-        paper_bgcolor='black',
-        title_font=dict(color='white'),
+        plot_bgcolor='#E0FFFF',
+        paper_bgcolor='#E0FFFF',
+        title_font=dict(color='black'),
         xaxis=dict(
-            color='white',
+            color='black',
             gridcolor='gray',
             showgrid=False,
             zeroline=False,
-            title_font=dict(color='white',size=28),
-            tickfont=dict(color='white')
+            title_font=dict(color='black',size=28,weight='bold'),
+            tickfont=dict(color='black')
         ),
         yaxis=dict(
             color='yellow',
             gridcolor='gray',
             showgrid=False,
             zeroline=False,
-            title_font=dict(color='white'),
-            tickfont=dict(color='white'),
+            title_font=dict(color='black'),
+            tickfont=dict(color='black'),
             range=[0, 1.25 * city_country_records['Records'].max()]
         ),
-        hoverlabel=dict(font=dict(size=24, color='white'))
+        hoverlabel=dict(font=dict(size=24, color='black'))
     )
 
     return fig
@@ -854,18 +854,18 @@ def generate_interactive_bar_plot_2_city(df):
         yaxis_title="Count", 
         showlegend=False,
         hovermode="x unified",
-        font=dict(size=20, color='white'),
-        plot_bgcolor='black',
-        paper_bgcolor='black',
-        title_font=dict(color='white'),
+        font=dict(size=20, color='black'),
+        plot_bgcolor='#E0FFFF',
+        paper_bgcolor='#E0FFFF',
+        title_font=dict(color='black',weight='bold'),
         xaxis=dict(
-            color='white',
+            color='black',
             gridcolor='gray',
             showgrid=False,  # Hide x-axis grid lines
             zeroline=False,  # Hide zero line
             zerolinecolor='gray',
-            title_font=dict(color='white'),
-            tickfont=dict(color='white')
+            title_font=dict(color='black'),
+            tickfont=dict(color='black')
         ),
         yaxis=dict(
             color='yellow',
@@ -873,11 +873,11 @@ def generate_interactive_bar_plot_2_city(df):
             showgrid=False,  # Hide x-axis grid lines
             zeroline=False,  # Hide zero line
             zerolinecolor='gray',
-            title_font=dict(color='white'),
-            tickfont=dict(color='white'),
+            title_font=dict(color='black'),
+            tickfont=dict(color='black'),
             range=[0, 1.25*(source_counts['Count'].max())]
         ),
-        hoverlabel=dict(font=dict(size=24, color='white'))
+        hoverlabel=dict(font=dict(size=24, color='black'))
     )
     
     return fig
@@ -895,21 +895,23 @@ def generate_interactive_pie_chart_city(df):
         title='Time'
     )
     fig.update_traces(
-        marker=dict(line=dict(color='white', width=2)),
+        marker=dict(line=dict(color='black', width=2)),
         textinfo='label+percent',
-        textfont=dict(color='white', size=22)
+        textfont=dict(color='#0000FF', size=22,weight='bold')
     )
     fig.update_layout(
         showlegend=False,
         hovermode="x unified",
         margin=dict(t=40, b=20, l=0, r=0),
-        font=dict(size=16, color='white'),
-        plot_bgcolor='black',
-        paper_bgcolor='black',
-        title_font=dict(color='white', size=24, ),
-        hoverlabel=dict(font=dict(size=24, color='white'))
+        font=dict(size=16, color='black'),
+        plot_bgcolor='#E0FFFF',
+        paper_bgcolor='#E0FFFF',
+        title_font=dict(color='black', size=24,weight='bold'),
+        hoverlabel=dict(font=dict(size=24, color='#0000FF',weight='bold'))
     )
     return fig
+
+import plotly.express as px
 
 def generate_interactive_bar_chart_weather_city(df):
     weather_counts = df['Weather'].value_counts().reset_index()
@@ -940,31 +942,31 @@ def generate_interactive_bar_chart_weather_city(df):
         yaxis_title="Weather",
         showlegend=False,
         hovermode="y unified",
-        font=dict(size=16, color='white'),
-        plot_bgcolor='black',
-        paper_bgcolor='black',
-        title_font=dict(color='white', size=24),
+        font=dict(size=16, color='black'),
+        plot_bgcolor='#E0FFFF',
+        paper_bgcolor='#E0FFFF',
+        title_font=dict(color='black', size=24,weight='bold'),
         xaxis=dict(
             color='yellow',
             gridcolor='gray',
             showgrid=False,  # Hide x-axis grid lines
             zeroline=False,  # Hide zero line
             zerolinecolor='gray',
-            title_font=dict(color='white'),
-            tickfont=dict(color='white'),
+            title_font=dict(color='black'),
+            tickfont=dict(color='black'),
             range=[0, 1.25*(weather_counts['Count'].max())]  # Adjusted range calculation
         ),
         yaxis=dict(
-            color='white',
+            color='black',
             gridcolor='gray',
             zerolinecolor='gray',
             showgrid=False,  # Hide x-axis grid lines
             zeroline=False,  # Hide zero line
-            title_font=dict(color='white'),
-            tickfont=dict(color='white')
+            title_font=dict(color='black'),
+            tickfont=dict(color='black')
         ),
         margin=dict(t=40, b=20, l=0, r=0),
-        hoverlabel=dict(font=dict(size=24, color='white'))
+        hoverlabel=dict(font=dict(size=24, color='black'))
     )
     
     return fig
@@ -995,20 +997,20 @@ def generate_interactive_pie_chart_source(df):
     )
     
     fig.update_traces(
-        marker=dict(line=dict(color='white', width=2)),
+        marker=dict(line=dict(color='black', width=2)),
         textinfo='label+percent',  # Added percent here
-        textfont=dict(color='white', size=22)
+        textfont=dict(color='black', size=22,weight='bold')
     )
     
     fig.update_layout(
         showlegend=False,
         hovermode="x unified",
         margin=dict(t=40, b=20, l=0, r=0),
-        font=dict(size=16, color='white'),
-        plot_bgcolor='black',
-        paper_bgcolor='black',
-        title_font=dict(color='white', size=24),
-        hoverlabel=dict(font=dict(size=24, color='white'))
+        font=dict(size=16, color='black'),
+        plot_bgcolor='#E0FFFF',
+        paper_bgcolor='#E0FFFF',
+        title_font=dict(color='black', size=24,weight='bold'),
+        hoverlabel=dict(font=dict(size=24, color='black'))
     )
     
     return fig
