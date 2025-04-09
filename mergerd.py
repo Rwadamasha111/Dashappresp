@@ -474,7 +474,7 @@ button_style_city = {
     "height": "60px",
     "margin": "30px",
     "background-color": '#F5F5DC',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "#ff1493",
@@ -486,7 +486,7 @@ insert_button = {
     "height": "60px",
     "margin": "30px",
     "background-color": '#F5F5DC',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "flex",  # changed from block to flex
     "justify-content": "center",  # centers horizontally
     "align-items": "center",      # centers vertically
@@ -502,7 +502,7 @@ button_search = {
     "height": "60px",
     "margin": "30px",
     "background-color": '#faf0e6',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "#ff1493",
@@ -510,11 +510,23 @@ button_search = {
 }
 
 export_button ={
+    "width": "90%",
+    "height": "60px",
+    "margin": "30px",
+    "background-color": '#F5DEB3',
+    "border": "2px solid black",
+    "display": "block",
+    "font-weight": "bold",
+    "color": "#ff1493",
+    "borderRadius": "50px",   
+}
+
+update_log_button ={
     "width": "100%",
     "height": "60px",
     "margin": "30px",
-    "background-color": '#faf0e6',
-    "border": "2px solid white",
+    "background-color": '#F0FFF0',
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "#ff1493",
@@ -526,7 +538,7 @@ button_check = {
     "height": "60px",
     "margin": "-60px 0px 0px 1550px",
     "background-color": '#fff6d2',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "#ff1493",
@@ -538,7 +550,7 @@ button_dropouts = {
     "height": "60px",
     "margin": "-50px 0px 0px 1300px",
     "background-color": '#c4b69e',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "#ff1493",
@@ -550,7 +562,7 @@ button_clear = {
     "height": "60px",
     "margin": "30px",
     "background-color": 'white',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "red",
@@ -562,7 +574,7 @@ button_style15 = {
     "height": "60px",
     "margin": "30px -5px",
     "background-color": '#dbd2c3',
-    "border": "2px solid white",
+    "border": "2px solid black",
     "display": "block",
     "font-weight": "bold",
     "color": "rgb(255,51,153)",
@@ -1115,7 +1127,7 @@ def tab_layout():
                                 ],
                                 center=(41.9028, 12.4964),  
                                 zoom=10,
-                                style={"width": "100%", "height": "500px", "margin": "6px"}
+                                style={"width": "100%", "height": "500px", "margin": "6px","border": "2px solid black"}
                             ),
                             dbc.Row([
                                 dbc.Col(
@@ -1256,7 +1268,7 @@ def tab_layout():
                     ]),
                     dbc.Col(
                         [
-                            dbc.Label("Search for a coordinate:", style=font_style),
+                            dbc.Label("Search for a coordinate:", style={'font-size': '36px', 'font-weight': 'bold'}),
                             dbc.Row(
                                 [
                                     dbc.Col(
@@ -1377,6 +1389,7 @@ def tab_layout():
                                 dbc.Row([
                                     dbc.Col(dcc.Graph(id='pie-chart', figure={}), width=6),
                                     dbc.Col(dcc.Graph(id='bar-chart-weather', figure={}), width=6),
+                                    html.Div(style={'marginTop': '150px'}),
                                     dbc.Col(dcc.Graph(id='bar-plot-logos', figure={}), width=6),
                                     dbc.Col(dcc.Graph(id='source-pie', figure={}), width=6),
                                     dbc.Col(dcc.Graph(id='compare-bar', figure={}), width=12,style={}),
@@ -1386,7 +1399,6 @@ def tab_layout():
                             ],
                         ),
                     ], style={'marginTop': '20px'}),
-                    html.Hr(),
                     html.Div([
                         html.H1("Quick Summary:", className='mb-4', style={'textAlign': 'center', 'color': 'rgb(255,51,153)'}),
                         html.Hr(),
@@ -1426,7 +1438,7 @@ def tab_layout():
                                         controls=True,
                                         width="1200px",
                                         height="600px",
-                                        style={"border": "2px solid white"}
+                                        style={"border": "2px solid black"}
                                     ),
                                     style={"display": "flex", "justifyContent": "center"}
                                 )                       
